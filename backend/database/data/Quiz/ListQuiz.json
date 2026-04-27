@@ -1,0 +1,85 @@
+[
+    {
+        "traditional_game": "Congklak",
+        "title": "Quiz Permainan Congklak",
+        "subtitle": "Uji pemahaman dasar tentang permainan tradisional Congklak",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Berapa jumlah lubang pada papan congklak?",
+                "options": [
+                    { "text": "10", "is_correct": false },
+                    { "text": "12", "is_correct": false },
+                    { "text": "14", "is_correct": true },
+                    { "text": "16", "is_correct": false }
+                ]
+            },
+            {
+                "question": "Congklak dimainkan oleh berapa orang?",
+                "options": [
+                    { "text": "Satu orang", "is_correct": false },
+                    { "text": "Dua orang", "is_correct": true },
+                    { "text": "Empat orang", "is_correct": false },
+                    { "text": "Banyak orang", "is_correct": false }
+                ]
+            },
+            {
+                "question": "Biji congklak biasanya terbuat dari?",
+                "options": [
+                    { "text": "Plastik", "is_correct": false },
+                    {
+                        "text": "Batu kecil atau biji-bijian",
+                        "is_correct": true
+                    },
+                    { "text": "Kertas", "is_correct": false },
+                    { "text": "Kayu besar", "is_correct": false }
+                ]
+            }
+        ]
+    },
+
+    {
+        "traditional_game": "Egrang",
+        "title": "Quiz Permainan Egrang",
+        "subtitle": "Mengenal permainan tradisional Egrang",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Egrang dimainkan dengan menggunakan?",
+                "options": [
+                    { "text": "Tali", "is_correct": false },
+                    { "text": "Kayu atau bambu", "is_correct": true },
+                    { "text": "Besi", "is_correct": false },
+                    { "text": "Plastik", "is_correct": false }
+                ]
+            },
+            {
+                "question": "Tujuan utama permainan egrang adalah?",
+                "options": [
+                    { "text": "Menghafal lagu", "is_correct": false },
+                    { "text": "Melatih keseimbangan", "is_correct": true },
+                    { "text": "Menggambar", "is_correct": false },
+                    { "text": "Menghitung angka", "is_correct": false }
+                ]
+            },
+            {
+                "question": "Permainan egrang berasal dari?",
+                "options": [
+                    { "text": "Luar negeri", "is_correct": false },
+                    { "text": "Permainan modern", "is_correct": false },
+                    {
+                        "text": "Tradisi masyarakat Indonesia",
+                        "is_correct": true
+                    },
+                    { "text": "Olahraga profesional", "is_correct": false }
+                ]
+            }
+        ]
+    }
+]
