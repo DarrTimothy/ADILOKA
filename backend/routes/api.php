@@ -31,7 +31,7 @@ Route::middleware(['auth:api', 'role:admin', 'throttle:api'])->group(function ()
 
 Route::middleware('auth:api')->group(function () {
     // traditional Games
-    Route::get('/regions/{kode_bps}', [TraditionalGamesController::class, 'index']);
+    Route::get('/traditional-games', [TraditionalGamesController::class, 'index']);
     Route::get('/traditional-games/{id}', [TraditionalGamesController::class, 'show']);
     Route::post('/games/{id}', [TraditionalGamesController::class, 'markCompleted']);
     Route::get('/popular-week', [TraditionalGamesController::class, 'popularThisWeek']);

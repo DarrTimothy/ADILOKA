@@ -1,106 +1,120 @@
 [
-  {
-    "region_bps_code": "11",
-    "games": [
-      {
-        "title": "Ula Uli",
-        "subtitle": "Permainan tradisional Aceh",
-        "slug": "ula-uli",
-        "description": "Permainan tradisional dari Aceh mirip petak umpet.",
-        "how_to_play": "Pemain mencari pemain lain yang bersembunyi.",
-        "min_players": 3,
-        "max_players": 10,
-        "duration": 15,
-        "images": [
-          { "image_url": "ula_uli.jpg", "order": 1 }
+    {
+        "region_bps_code": "11",
+        "games": [
+            {
+                "title": "Ula Uli",
+                "subtitle": "Permainan tradisional Aceh",
+                "slug": "ula-uli",
+                "description": "Permainan tradisional dari Aceh mirip petak umpet.",
+                "how_to_play": "Pemain mencari pemain lain yang bersembunyi.",
+                "min_players": 3,
+                "max_players": 10,
+                "duration": 15,
+                "media": [
+                    { "type": "image", "url": "ula_uli.jpg", "order": 1 },
+                    {
+                        "type": "video",
+                        "url": "ula_uli_tutorial.mp4",
+                        "order": 2
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  {
-    "region_bps_code": "32",
-    "games": [
-      {
-        "title": "Congklak",
-        "subtitle": "Permainan papan tradisional",
-        "slug": "congklak",
-        "description": "Congklak adalah permainan tradisional menggunakan papan berlubang dan biji.",
-        "how_to_play": "Dua pemain saling mengedarkan biji ke setiap lubang.",
-        "min_players": 2,
-        "max_players": 2,
-        "duration": 15,
-        "images": [
-          { "image_url": "congklak_1.jpg", "order": 1 },
-          { "image_url": "congklak_2.jpg", "order": 2 }
+    },
+    {
+        "region_bps_code": "32",
+        "games": [
+            {
+                "title": "Congklak",
+                "subtitle": "Permainan papan tradisional",
+                "slug": "congklak",
+                "description": "Congklak adalah permainan tradisional menggunakan papan berlubang dan biji.",
+                "how_to_play": "Dua pemain saling mengedarkan biji ke setiap lubang.",
+                "min_players": 2,
+                "max_players": 2,
+                "duration": 15,
+                "media": [
+                    { "type": "image", "url": "congklak_1.jpg", "order": 1 },
+                    { "type": "image", "url": "congklak_2.jpg", "order": 2 },
+                    {
+                        "type": "video",
+                        "url": "congklak_tutorial.mp4",
+                        "order": 3
+                    }
+                ]
+            },
+            {
+                "title": "Gobak Sodor",
+                "subtitle": "Permainan kejar-kejaran",
+                "slug": "gobak-sodor",
+                "description": "Permainan tradisional beregu yang menguji kelincahan.",
+                "how_to_play": "Tim penjaga menghalangi tim penyerang melewati garis.",
+                "min_players": 6,
+                "max_players": 10,
+                "duration": 20,
+                "media": [
+                    { "type": "image", "url": "gobak_1.jpg", "order": 1 },
+                    { "type": "video", "url": "gobak_sodor.mp4", "order": 2 }
+                ]
+            }
         ]
-      },
-      {
-        "title": "Gobak Sodor",
-        "subtitle": "Permainan kejar-kejaran",
-        "slug": "gobak-sodor",
-        "description": "Permainan tradisional beregu yang menguji kelincahan.",
-        "how_to_play": "Tim penjaga menghalangi tim penyerang melewati garis.",
-        "min_players": 6,
-        "max_players": 10,
-        "duration": 20,
-        "images": [
-          { "image_url": "gobak_1.jpg", "order": 1 }
+    },
+    {
+        "region_bps_code": "33",
+        "games": [
+            {
+                "title": "Egrang",
+                "subtitle": "Permainan keseimbangan",
+                "slug": "egrang",
+                "description": "Permainan berjalan menggunakan tongkat bambu.",
+                "how_to_play": "Pemain berjalan menggunakan bambu tanpa jatuh.",
+                "min_players": 1,
+                "max_players": 5,
+                "duration": 10,
+                "media": [
+                    { "type": "image", "url": "egrang_1.jpg", "order": 1 },
+                    { "type": "video", "url": "egrang_demo.mp4", "order": 2 }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  {
-    "region_bps_code": "33",
-    "games": [
-      {
-        "title": "Egrang",
-        "subtitle": "Permainan keseimbangan",
-        "slug": "egrang",
-        "description": "Permainan berjalan menggunakan tongkat bambu.",
-        "how_to_play": "Pemain berjalan menggunakan bambu tanpa jatuh.",
-        "min_players": 1,
-        "max_players": 5,
-        "duration": 10,
-        "images": [
-          { "image_url": "egrang_1.jpg", "order": 1 }
+    },
+    {
+        "region_bps_code": "34",
+        "games": [
+            {
+                "title": "Cublak-Cublak Suweng",
+                "subtitle": "Permainan lagu tradisional",
+                "slug": "cublak-cublak-suweng",
+                "description": "Permainan tradisional anak-anak yang diiringi lagu.",
+                "how_to_play": "Satu pemain menebak siapa yang memegang benda.",
+                "min_players": 5,
+                "max_players": 10,
+                "duration": 15,
+                "media": [
+                    { "type": "image", "url": "cublak_1.jpg", "order": 1 },
+                    { "type": "video", "url": "cublak_suweng.mp4", "order": 2 }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  {
-    "region_bps_code": "34",
-    "games": [
-      {
-        "title": "Cublak-Cublak Suweng",
-        "subtitle": "Permainan lagu tradisional",
-        "slug": "cublak-cublak-suweng",
-        "description": "Permainan tradisional anak-anak yang diiringi lagu.",
-        "how_to_play": "Satu pemain menebak siapa yang memegang benda.",
-        "min_players": 5,
-        "max_players": 10,
-        "duration": 15,
-        "images": [
-          { "image_url": "cublak_1.jpg", "order": 1 }
+    },
+    {
+        "region_bps_code": "31",
+        "games": [
+            {
+                "title": "Gobak Jin",
+                "subtitle": "Permainan tradisional Jakarta",
+                "slug": "gobak-jin",
+                "description": "Permainan anak tradisional di Jakarta.",
+                "how_to_play": "Satu tim menjaga garis, satu tim mencoba lewat.",
+                "min_players": 6,
+                "max_players": 10,
+                "duration": 20,
+                "media": [
+                  { "type": "image", "url": "gobak_jin.jpg", "order": 1 },
+                    { "type": "video", "url": "gobak_jin.mp4", "order": 2 }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  {
-    "region_bps_code": "31",
-    "games": [
-      {
-        "title": "Gobak Jin",
-        "subtitle": "Permainan tradisional Jakarta",
-        "slug": "gobak-jin",
-        "description": "Permainan anak tradisional di Jakarta.",
-        "how_to_play": "Satu tim menjaga garis, satu tim mencoba lewat.",
-        "min_players": 6,
-        "max_players": 10,
-        "duration": 20,
-        "images": [
-          { "image_url": "gobak_jin.jpg", "order": 1 }
-        ]
-      }
-    ]
-  }
+    }
 ]

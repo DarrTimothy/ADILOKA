@@ -21,7 +21,6 @@ class TraditionalGameSeeder extends Seeder
 
         $data = json_decode(file_get_contents($path), true);
 
-        // VALIDASI STRUKTUR UTAMA
         if (!is_array($data) || !array_is_list($data)) {
             throw new \Exception('Format JSON harus berupa array of regions');
         }
@@ -31,18 +30,13 @@ class TraditionalGameSeeder extends Seeder
 
         DB::transaction(function () use ($data, &$insertedGames, &$skippedGames) {
 
-            foreach ($data as $regionIndex => $regionData) {
+            foreach ($data as $regionData) {
 
-                // VALIDASI REGION
                 if (
                     !isset($regionData['region_bps_code']) ||
                     !isset($regionData['games']) ||
                     !is_array($regionData['games'])
                 ) {
-                    Log::warning('Region dilewati karena struktur tidak valid', [
-                        'index' => $regionIndex,
-                        'data'  => $regionData,
-                    ]);
                     continue;
                 }
 
@@ -55,10 +49,9 @@ class TraditionalGameSeeder extends Seeder
                     continue;
                 }
 
-                // LOOP GAME
-                foreach ($regionData['games'] as $gameIndex => $game) {
+                foreach ($regionData['games'] as $game) {
 
-                    // VALIDASI FIELD WAJIB
+                    // VALIDASI FIELD
                     $requiredFields = [
                         'title',
                         'description',
@@ -92,7 +85,7 @@ class TraditionalGameSeeder extends Seeder
 
                     $slug = $game['slug'] ?? Str::slug($game['title']);
 
-                    // UPSERT GAME (IDEMPOTENT)
+                    // UPSERT GAME
                     $traditionalGame = TraditionalGame::updateOrCreate(
                         ['slug' => $slug],
                         [
@@ -107,30 +100,44 @@ class TraditionalGameSeeder extends Seeder
                         ]
                     );
 
-                    // RESET IMAGES (IDEMPOTENT)
-                    DB::table('traditional_game_images')
+                    // RESET MEDIA
+                    DB::table('traditional_game_media')
                         ->where('traditional_game_id', $traditionalGame->id)
                         ->delete();
 
-                    // INSERT IMAGES (BATCH)
-                    if (!empty($game['images']) && is_array($game['images'])) {
+                    // INSERT MEDIA
+                    if (!empty($game['media']) && is_array($game['media'])) {
 
-                        $images = [];
+                        $mediaData = [];
 
-                        foreach ($game['images'] as $image) {
-                            if (!isset($image['image_url'])) {
+                        foreach ($game['media'] as $index => $media) {
+
+                            // VALIDASI
+                            if (
+                                !isset($media['type']) ||
+                                !isset($media['url'])
+                            ) {
                                 continue;
                             }
 
-                            $images[] = [
+                            if (!in_array($media['type'], ['image', 'video'])) {
+                                Log::warning('Media type tidak valid', [
+                                    'type' => $media['type'],
+                                    'game' => $game['title']
+                                ]);
+                                continue;
+                            }
+
+                            $mediaData[] = [
                                 'traditional_game_id' => $traditionalGame->id,
-                                'image_url' => $image['image_url'],
-                                'order' => $image['order'] ?? 0,
+                                'type'  => $media['type'],
+                                'url'   => $media['url'],
+                                'order' => $media['order'] ?? $index,
                             ];
                         }
 
-                        if (!empty($images)) {
-                            DB::table('traditional_game_images')->insert($images);
+                        if (!empty($mediaData)) {
+                            DB::table('traditional_game_media')->insert($mediaData);
                         }
                     }
 
@@ -139,7 +146,6 @@ class TraditionalGameSeeder extends Seeder
             }
         });
 
-        // OUTPUT
         $this->command->info("TraditionalGamesSeeder selesai:");
         $this->command->info("✔ Game masuk  : {$insertedGames}");
         $this->command->warn("⚠ Game dilewati: {$skippedGames}");

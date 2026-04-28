@@ -15,7 +15,8 @@ class TraditionalGamesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(string $kode_bps)
+
+    public function index(Request $request)
     {
         $user = JWTAuth::parseToken()->authenticate();
 
@@ -24,38 +25,46 @@ class TraditionalGamesController extends Controller
             ->pluck('traditional_games.id')
             ->toArray();
 
-        $region = Region::where('bps_code', $kode_bps)
-            ->with(['traditionalGames.images'])
-            ->first();
 
-        if (!$region) {
-            return ApiResponse::notFound(
-                'Region dengan kode BPS tersebut tidak ditemukan'
-            );
+        $query = TraditionalGame::with(['region', 'media']);
+
+        // filter region
+        if ($request->filled('region')) {
+            $query->whereHas('region', function ($q) use ($request) {
+                $q->where('bps_code', $request->region);
+            });
         }
 
-        $response = [
-            'province_name' => $region->province_name,
-            'bps_code'      => $region->bps_code,
-            'total_games'   => $region->traditionalGames->count(),
-            'games' => $region->traditionalGames->map(function ($game) use ($completedGameIds) {
-                return [
-                    'id'           => $game->id,
-                    'title'        => $game->title,
-                    'subtitle'     => $game->subtitle,
-                    'is_completed' => in_array($game->id, $completedGameIds),
+        // filter search
+        if ($request->filled('q')) {
+            $keyword = strtolower($request->q);
+            $query->whereRaw('LOWER(title) LIKE ?', ["%{$keyword}%"]);
+        }
 
-                    // 1 gambar saja untuk list
-                    'cover_img' => optional(
-                        $game->images->sortBy('order')->first()
-                    )->image_url,
-                ];
-            }),
-        ];
+        $games = $query->orderBy('title')->paginate(10);
+
+        $response = $games->through(function ($game) use ($completedGameIds) {
+            return [
+                'id' => $game->id,
+                'title' => $game->title,
+                'subtitle' => $game->subtitle,
+                'region' => [
+                    'province_name' => $game->region->province_name,
+                    'bps_code' => $game->region->bps_code,
+                ],
+                'duration' => $game->duration,
+                'is_completed' => in_array($game->id, $completedGameIds),
+
+                // 1 gambar saja untuk list
+                'cover_img' => optional(
+                    $game->images->sortBy('order')->first()
+                )->image_url,
+            ];
+        });
 
         return ApiResponse::success(
             $response,
-            'Daftar permainan berdasarkan region'
+            'Daftar permainan tradisional'
         );
     }
 
@@ -100,9 +109,10 @@ class TraditionalGamesController extends Controller
                 'province_name' => $game->region->province_name,
                 'bps_code' => $game->region->bps_code,
             ],
-            'images' => $game->images->map(fn($img) => [
-                'image_url' => $img->image_url,
-                'order' => $img->order,
+            'media' => $game->media->map(fn($media) => [
+                'type'  => $media->type,
+                'url'   => $media->url,
+                'order' => $media->order,
             ]),
         ];
 
@@ -150,60 +160,12 @@ class TraditionalGamesController extends Controller
         ], 'Game berhasil ditandai selesai');
     }
 
-    public function search(Request $request)
-    {
-        $user = JWTAuth::parseToken()->authenticate();
-
-        $validator = Validator::make($request->all(), [
-            'q' => 'required|string|min:2'
-        ]);
-
-        if ($validator->fails()) {
-            return ApiResponse::validationError($validator->errors());
-        }
-
-        $keyword = $request->q;
-
-        // game yang sudah completed oleh user
-        $completedGameIds = $user->traditionalGames()
-            ->wherePivot('is_completed', true)
-            ->pluck('traditional_games.id')
-            ->toArray();
-
-        $games = TraditionalGame::with(['region', 'images'])
-            ->where('title', 'ILIKE', "%{$keyword}%")
-            ->orderBy('title')
-            ->paginate(10);
-
-        $response = $games->through(function ($game) use ($completedGameIds) {
-            return [
-                'id' => $game->id,
-                'title' => $game->title,
-                'subtitle' => $game->subtitle,
-                'region' => [
-                    'province_name' => $game->region->province_name,
-                    'bps_code' => $game->region->bps_code,
-                ],
-                'duration' => $game->duration,
-                'is_completed' => in_array($game->id, $completedGameIds),
-                'images' => $game->images->map(fn($img) => [
-                    'image_url' => $img->image_url,
-                    'order' => $img->order,
-                ]),
-            ];
-        });
-
-        return ApiResponse::success(
-            $response,
-            'Hasil pencarian permainan tradisional'
-        );
-    }
 
     public function popularThisWeek()
     {
         JWTAuth::parseToken()->authenticate();
 
-        $games = TraditionalGame::with(['region', 'images'])
+        $games = TraditionalGame::with(['region', 'media'])
             ->select('traditional_games.*')
             ->join('traditional_game_user', 'traditional_games.id', '=', 'traditional_game_user.traditional_game_id')
             ->where('traditional_game_user.is_completed', true)
@@ -226,6 +188,7 @@ class TraditionalGamesController extends Controller
                 'province_name' => $game->region->province_name,
                 'bps_code' => $game->region->bps_code,
             ] : null,
+
             'cover_img' => optional(
                 $game->images->sortBy('order')->first()
             )->image_url,

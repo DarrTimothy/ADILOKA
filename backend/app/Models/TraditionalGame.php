@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TraditionalGame extends Model
 {
     use HasFactory;
+
     public $timestamps = false;
+
     protected $fillable = [
         'region_id',
         'title',
@@ -19,7 +21,6 @@ class TraditionalGame extends Model
         'min_players',
         'max_players',
         'duration',
-        'image_url',
     ];
 
     /** Relasi ke Region */
@@ -34,27 +35,34 @@ class TraditionalGame extends Model
         return $this->hasOne(Quiz::class, 'traditional_game_id');
     }
 
+    /** Relasi ke User */
     public function users()
     {
         return $this->belongsToMany(User::class)
             ->withPivot('is_completed');
     }
 
-    public function images()
+    /** Relasi ke Media (GENERIC) */
+    public function media()
     {
-        return $this->hasMany(
-            TraditionalGameImages::class,
-            'traditional_game_id'
-        )->orderBy('order');
+        return $this->hasMany(TraditionalGameMedia::class)
+            ->orderBy('order');
     }
 
-    /**
-     * NOTE:
-     * Ini seharusnya many-to-many
-     * Akan lebih benar pakai belongsToMany + pivot table
-     */
+    /** shortcut filter */
+    public function images()
+    {
+        return $this->media()->where('type', 'image');
+    }
+
+    public function videos()
+    {
+        return $this->media()->where('type', 'video');
+    }
+
+    /** relasi category */
     public function categories()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsToMany(Category::class);
     }
 }

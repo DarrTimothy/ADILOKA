@@ -31,18 +31,22 @@ return new class extends Migration {
         }
 
         // Tabel gambar (carousel)
-        if (!Schema::hasTable('traditional_game_images')) {
-            Schema::create('traditional_game_images', function (Blueprint $table) {
+        if (!Schema::hasTable('traditional_game_media')) {
+            Schema::create('traditional_game_media', function (Blueprint $table) {
                 $table->id();
 
                 $table->foreignId('traditional_game_id')
                     ->constrained('traditional_games')
                     ->cascadeOnDelete();
 
-                $table->string('image_url');
+                $table->enum('type', ['image', 'video']); // image / video
                 $table->unsignedInteger('order')->default(0);
+                $table->string('url');
+
+                $table->timestamps();
             });
         }
+
         if (!Schema::hasTable('traditional_game_user')) {
             Schema::create('traditional_game_user', function (Blueprint $table) {
                 $table->foreignId('user_id')->constrained()->cascadeOnDelete();
@@ -55,7 +59,7 @@ return new class extends Migration {
 
     public function down(): void
     {
-        Schema::dropIfExists('traditional_game_images');
+        Schema::dropIfExists('traditional_game_media');
         Schema::dropIfExists('traditional_games');
     }
 };
