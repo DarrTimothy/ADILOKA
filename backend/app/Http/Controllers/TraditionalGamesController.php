@@ -44,6 +44,9 @@ class TraditionalGamesController extends Controller
         $games = $query->orderBy('title')->paginate(10);
 
         $response = $games->through(function ($game) use ($completedGameIds) {
+
+            $cover = $game->coverImage ?? $game->media->first();
+
             return [
                 'id' => $game->id,
                 'title' => $game->title,
@@ -54,11 +57,7 @@ class TraditionalGamesController extends Controller
                 ],
                 'duration' => $game->duration,
                 'is_completed' => in_array($game->id, $completedGameIds),
-
-                // 1 gambar saja untuk list
-                'cover_img' => optional(
-                    $game->images->sortBy('order')->first()
-                )->image_url,
+                'cover_img' => optional($cover)->url,
             ];
         });
 
@@ -105,10 +104,14 @@ class TraditionalGamesController extends Controller
             'max_players' => $game->max_players,
             'duration' => $game->duration,
             'is_completed' => $isCompleted,
+
             'region' => [
                 'province_name' => $game->region->province_name,
                 'bps_code' => $game->region->bps_code,
             ],
+
+            'cover_img' => optional($game->coverImage)->url,
+
             'media' => $game->media->map(fn($media) => [
                 'type'  => $media->type,
                 'url'   => $media->url,
@@ -180,23 +183,24 @@ class TraditionalGamesController extends Controller
             return ApiResponse::success([], 'Belum ada permainan populer minggu ini');
         }
 
-        $response = $games->map(fn($game) => [
-            'id' => $game->id,
-            'title' => $game->title,
-            'subtitle' => $game->subtitle,
-            'region' => $game->region ? [
-                'province_name' => $game->region->province_name,
-                'bps_code' => $game->region->bps_code,
-            ] : null,
+        $response = $games->map(function ($game) {
 
-            'cover_img' => optional(
-                $game->images->sortBy('order')->first()
-            )->image_url,
-        ]);
+            $cover = $game->coverImage ?? $game->media->first();
 
-        return ApiResponse::success(
-            $response,
-            'Daftar permainan populer minggu ini'
-        );
+            return [
+                'id' => $game->id,
+                'title' => $game->title,
+                'subtitle' => $game->subtitle,
+
+                'region' => $game->region ? [
+                    'province_name' => $game->region->province_name,
+                    'bps_code' => $game->region->bps_code,
+                ] : null,
+
+                'cover_img' => optional($cover)->url,
+            ];
+        });
+
+        return ApiResponse::success($response, 'Daftar permainan populer minggu ini');
     }
 }

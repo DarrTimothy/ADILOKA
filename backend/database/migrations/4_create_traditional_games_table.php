@@ -41,6 +41,7 @@ return new class extends Migration {
 
                 $table->enum('type', ['image', 'video']); // image / video
                 $table->unsignedInteger('order')->default(0);
+                $table->boolean('is_cover')->default(false);
                 $table->string('url');
 
                 $table->timestamps();

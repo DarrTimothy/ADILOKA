@@ -14,15 +14,9 @@ use App\Models\QuizResult;
 
 class QuizController extends Controller
 {
-    public function showByGame($gameId)
+    public function showByGame(TraditionalGame $game)
     {
-        $game = TraditionalGame::with([
-            'quiz.questions.options'
-        ])->find($gameId);
-
-        if (!$game) {
-            return ApiResponse::notFound('Traditional game tidak ditemukan');
-        }
+        $game->load('quiz.questions.options');
 
         if (!$game->quiz) {
             return ApiResponse::notFound('Quiz tidak tersedia untuk permainan ini');
@@ -46,18 +40,17 @@ class QuizController extends Controller
             })
         ];
 
-        return ApiResponse::success(
-            $result,
-            'Quiz berhasil diambil'
-        );
+        return ApiResponse::success($result, 'Quiz berhasil diambil');
     }
 
-    public function submit(SubmitQuizRequest $request, $quizId)
+    public function submit(SubmitQuizRequest $request, TraditionalGame $game)
     {
         $user = $request->user();
 
+        $game->load('quiz.questions.options');
+
         // Ambil quiz lengkap dengan questions & options
-        $quiz = Quiz::with('questions.options')->find($quizId);
+        $quiz = $game->quiz;
 
         if (!$quiz || !$quiz->is_active) {
             return ApiResponse::notFound('Quiz tidak ditemukan atau tidak aktif');
@@ -126,17 +119,20 @@ class QuizController extends Controller
         ], 'Quiz berhasil disubmit');
     }
 
-    public function showResult(Request $request, $quizId)
+    public function showResult(Request $request, TraditionalGame $game)
     {
         $user = $request->user();
 
-        $quiz = Quiz::with('questions.options')->find($quizId);
+        $game->load('quiz.questions.options');
+
+        $quiz = $game->quiz;
+
         if (!$quiz) {
             return ApiResponse::notFound('Quiz tidak ditemukan');
         }
 
         $result = QuizResult::where('user_id', $user->id)
-            ->where('quiz_id', $quizId)
+            ->where('quiz_id', $quiz->id)
             ->first();
 
         if (!$result) {

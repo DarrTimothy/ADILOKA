@@ -37,9 +37,9 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/popular-week', [TraditionalGamesController::class, 'popularThisWeek']);
 
     // quiz
-    Route::get('/traditional-games/quiz/{gameId}', [QuizController::class, 'showByGame']);
-    Route::post('/traditional-games/quiz/{quizId}', [QuizController::class, 'submit']);
-    Route::get('/traditional-games/quiz/{quizId}/result', [QuizController::class, 'showResult']);
+    Route::get('/quiz/{game}', [QuizController::class, 'showByGame']);
+    Route::post('/quiz/{game}', [QuizController::class, 'submit']);
+    Route::get('/quiz/{game}/result', [QuizController::class, 'showResult']);
 });
 
 

@@ -65,4 +65,11 @@ class TraditionalGame extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+
+    public function coverImage()
+    {
+        return $this->hasOne(TraditionalGameMedia::class)
+            ->where('type', 'image')
+            ->where('is_cover', true);
+    }
 }
