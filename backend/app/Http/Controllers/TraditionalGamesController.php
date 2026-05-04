@@ -25,46 +25,33 @@ class TraditionalGamesController extends Controller
             ->pluck('traditional_games.id')
             ->toArray();
 
+        $query = $this->baseGameQuery();
 
-        $query = TraditionalGame::with(['region', 'media']);
-
-        // filter region
         if ($request->filled('region')) {
-            $query->whereHas('region', function ($q) use ($request) {
-                $q->where('bps_code', $request->region);
-            });
+            $query->whereHas(
+                'region',
+                fn($q) =>
+                $q->where('bps_code', $request->region)
+            );
         }
 
-        // filter search
         if ($request->filled('q')) {
-            $keyword = strtolower($request->q);
-            $query->whereRaw('LOWER(title) LIKE ?', ["%{$keyword}%"]);
+            $query->whereRaw('LOWER(title) LIKE ?', [
+                '%' . strtolower($request->q) . '%'
+            ]);
         }
 
         $games = $query->orderBy('title')->paginate(10);
 
-        $response = $games->through(function ($game) use ($completedGameIds) {
-
-            $cover = $game->coverImage ?? $game->media->first();
-
-            return [
-                'id' => $game->id,
-                'title' => $game->title,
-                'subtitle' => $game->subtitle,
-                'region' => [
-                    'province_name' => $game->region->province_name,
-                    'bps_code' => $game->region->bps_code,
-                ],
-                'duration' => $game->duration,
-                'is_completed' => in_array($game->id, $completedGameIds),
-                'cover_img' => optional($cover)->url,
-            ];
-        });
-
-        return ApiResponse::success(
-            $response,
-            'Daftar permainan tradisional'
+        $data = $games->map(
+            fn($game) =>
+            $this->transformGame(
+                $game,
+                in_array($game->id, $completedGameIds)
+            )
         );
+
+        return ApiResponse::success($data);
     }
 
     /**
@@ -82,8 +69,7 @@ class TraditionalGamesController extends Controller
     {
         $user = JWTAuth::parseToken()->authenticate();
 
-        $game = TraditionalGame::with(['region', 'images'])
-            ->find($id);
+        $game = $this->baseGameQuery()->find($id);
 
         if (!$game) {
             return ApiResponse::notFound('Game tidak ditemukan');
@@ -94,36 +80,11 @@ class TraditionalGamesController extends Controller
             ->where('traditional_games.id', $game->id)
             ->exists();
 
-        $response = [
-            'id' => $game->id,
-            'title' => $game->title,
-            'subtitle' => $game->subtitle,
-            'description' => $game->description,
-            'how_to_play' => $game->how_to_play,
-            'min_players' => $game->min_players,
-            'max_players' => $game->max_players,
-            'duration' => $game->duration,
-            'is_completed' => $isCompleted,
-
-            'region' => [
-                'province_name' => $game->region->province_name,
-                'bps_code' => $game->region->bps_code,
-            ],
-
-            'cover_img' => optional($game->coverImage)->url,
-
-            'media' => $game->media->map(fn($media) => [
-                'type'  => $media->type,
-                'url'   => $media->url,
-                'order' => $media->order,
-            ]),
-        ];
-
         return ApiResponse::success(
-            $response,
-            'Detail permainan tradisional'
+            $this->transformGame($game, $isCompleted, true)
         );
     }
+
     /**
      * Update the specified resource in storage.
      */
@@ -168,7 +129,7 @@ class TraditionalGamesController extends Controller
     {
         JWTAuth::parseToken()->authenticate();
 
-        $games = TraditionalGame::with(['region', 'media'])
+        $games = $this->baseGameQuery()
             ->select('traditional_games.*')
             ->join('traditional_game_user', 'traditional_games.id', '=', 'traditional_game_user.traditional_game_id')
             ->where('traditional_game_user.is_completed', true)
@@ -179,28 +140,63 @@ class TraditionalGamesController extends Controller
             ->limit(5)
             ->get();
 
-        if ($games->isEmpty()) {
-            return ApiResponse::success([], 'Belum ada permainan populer minggu ini');
+        $data = $games->map(
+            fn($game) =>
+            $this->transformGame($game)
+        );
+
+        return ApiResponse::success($data);
+    }
+    private function transformGame(TraditionalGame $game, bool $isCompleted = false, bool $withDetail = false)
+    {
+
+        $cover = $game->media()
+            ->where('type', 'image')
+            ->orderBy('id') // atau order kalau ada
+            ->first();
+
+        $data = [
+            'id' => $game->id,
+            'region' => [
+                'province_name' => $game->region->province_name,
+                'bps_code' => $game->region->bps_code,
+            ],
+            'title' => $game->title,
+            'subtitle' => $game->subtitle,
+
+
+            'duration' => $game->duration,
+            'is_completed' => $isCompleted,
+            'cover_img' => optional($cover)->url,
+        ];
+
+        if ($withDetail) {
+            $data = array_merge($data, [
+                'description' => $game->description,
+                'how_to_play' => $game->how_to_play,
+                'min_players' => $game->min_players,
+                'max_players' => $game->max_players,
+
+                'media' => $game->media->map(fn($m) => [
+                    'type'  => $m->type,
+                    'url'   => $m->url,
+                    // 'order' => $m->order,
+                ]),
+            ]);
         }
 
-        $response = $games->map(function ($game) {
+        return $data;
+    }
 
-            $cover = $game->coverImage ?? $game->media->first();
-
-            return [
-                'id' => $game->id,
-                'title' => $game->title,
-                'subtitle' => $game->subtitle,
-
-                'region' => $game->region ? [
-                    'province_name' => $game->region->province_name,
-                    'bps_code' => $game->region->bps_code,
-                ] : null,
-
-                'cover_img' => optional($cover)->url,
-            ];
-        });
-
-        return ApiResponse::success($response, 'Daftar permainan populer minggu ini');
+    private function baseGameQuery()
+    {
+        return TraditionalGame::with([
+            'region',
+            'coverImage',
+            'media' => function ($q) {
+                $q->orderByRaw("CASE WHEN type = 'image' THEN 0 ELSE 1 END")
+                    ->orderBy('order');
+            }
+        ]);
     }
 }

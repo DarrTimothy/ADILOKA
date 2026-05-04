@@ -45,8 +45,7 @@ class TraditionalGame extends Model
     /** Relasi ke Media (GENERIC) */
     public function media()
     {
-        return $this->hasMany(TraditionalGameMedia::class)
-            ->orderBy('order');
+        return $this->hasMany(TraditionalGameMedia::class);
     }
 
     /** shortcut filter */

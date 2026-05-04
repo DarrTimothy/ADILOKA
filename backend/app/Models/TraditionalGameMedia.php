@@ -21,4 +21,5 @@ class TraditionalGameMedia extends Model
     {
         return $this->belongsTo(TraditionalGame::class, 'traditional_game_id');
     }
+    
 }

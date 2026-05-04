@@ -132,7 +132,7 @@ class TraditionalGameSeeder extends Seeder
                                 'traditional_game_id' => $traditionalGame->id,
                                 'type'  => $media['type'],
                                 'url'   => $media['url'],
-                                'order' => $media['order'] ?? $index,
+                                // 'order' => $media['order'] ?? $index,
                             ];
                         }
 

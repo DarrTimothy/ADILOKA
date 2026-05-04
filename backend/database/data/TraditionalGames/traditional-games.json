@@ -3,20 +3,33 @@
         "region_bps_code": "11",
         "games": [
             {
-                "title": "Ula Uli",
-                "subtitle": "Permainan tradisional Aceh",
-                "slug": "ula-uli",
-                "description": "Permainan tradisional dari Aceh mirip petak umpet.",
-                "how_to_play": "Pemain mencari pemain lain yang bersembunyi.",
-                "min_players": 3,
-                "max_players": 10,
-                "duration": 15,
+                "title": "Tarek Situek",
+                "subtitle": "Permainan tradisional Aceh berbasis tarik menarik",
+                "slug": "tarek-situek",
+                "description": "Tarek Situek merupakan permainan tradisional dari Aceh yang dimainkan secara berkelompok dengan prinsip tarik menarik antar tim, mirip dengan permainan tarik tambang.",
+                "how_to_play": "Pemain dibagi menjadi dua tim yang saling berhadapan dan menarik tali atau objek tertentu. Tim yang berhasil menarik lawan melewati batas tertentu dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": 3,
                 "media": [
-                    { "type": "image", "url": "ula_uli.jpg", "order": 1 },
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek.gif",
+                        "source": "anakbisa",
+                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
+                        "caption": "Permainan Tarek Situek menggunakan pelepah pinang"
+                    },
                     {
                         "type": "video",
-                        "url": "ula_uli_tutorial.mp4",
-                        "order": 2
+                        "url": "https://www.youtube.com/embed/msKks6-G1AU"
+                    },
+                    {
+                        "order": 3,
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek2.gif",
+                        "source": "anakbisa",
+                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
+                        "caption": "Permainan Tarek Situek menggunakan pelepah pinang"
                     }
                 ]
             }
@@ -111,7 +124,7 @@
                 "max_players": 10,
                 "duration": 20,
                 "media": [
-                  { "type": "image", "url": "gobak_jin.jpg", "order": 1 },
+                    { "type": "image", "url": "gobak_jin.jpg", "order": 1 },
                     { "type": "video", "url": "gobak_jin.mp4", "order": 2 }
                 ]
             }
