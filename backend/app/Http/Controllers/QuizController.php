@@ -27,7 +27,6 @@ class QuizController extends Controller
         $result = [
             'id' => $quiz->id,
             'title' => $quiz->title,
-            'subtitle' => $quiz->subtitle,
             'min_score' => $quiz->min_score,
             'time_limit' => $quiz->time_limit,
             'is_active' => $quiz->is_active,

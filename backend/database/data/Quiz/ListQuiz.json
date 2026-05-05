@@ -1,83 +1,122 @@
 [
     {
-        "traditional_game": "Congklak",
-        "title": "Quiz Permainan Congklak",
-        "subtitle": "Uji pemahaman dasar tentang permainan tradisional Congklak",
+        "traditional_game_slug": "margala",
+        "title": "Quiz Permainan Margala",
         "total_questions": 3,
         "min_score": 60,
         "time_limit": 5,
         "is_active": true,
         "questions": [
             {
-                "question": "Berapa jumlah lubang pada papan congklak?",
+                "question": "Bagaimana cara memenangkan permainan Margala?",
                 "options": [
-                    { "text": "10", "is_correct": false },
-                    { "text": "12", "is_correct": false },
-                    { "text": "14", "is_correct": true },
-                    { "text": "16", "is_correct": false }
-                ]
-            },
-            {
-                "question": "Congklak dimainkan oleh berapa orang?",
-                "options": [
-                    { "text": "Satu orang", "is_correct": false },
-                    { "text": "Dua orang", "is_correct": true },
-                    { "text": "Empat orang", "is_correct": false },
-                    { "text": "Banyak orang", "is_correct": false }
-                ]
-            },
-            {
-                "question": "Biji congklak biasanya terbuat dari?",
-                "options": [
-                    { "text": "Plastik", "is_correct": false },
                     {
-                        "text": "Batu kecil atau biji-bijian",
+                        "text": "Berhasil melewati semua garis pertahanan tanpa tersentuh",
                         "is_correct": true
                     },
-                    { "text": "Kertas", "is_correct": false },
-                    { "text": "Kayu besar", "is_correct": false }
+                    {
+                        "text": "Mengumpulkan poin terbanyak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menjatuhkan lawan ke tanah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menghafal pola permainan",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Peran utama tim penjaga dalam permainan Margala adalah?",
+                "options": [
+                    {
+                        "text": "Menjaga garis dan menyentuh lawan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menyerang lawan dengan bola",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menghindari semua pemain",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Mengumpulkan benda di arena",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Arena permainan Margala biasanya berbentuk?",
+                "options": [
+                    {
+                        "text": "Lapangan dengan beberapa kotak berbaris",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Lingkaran besar",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Segitiga",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Lapangan tanpa garis",
+                        "is_correct": false
+                    }
                 ]
             }
         ]
     },
-
     {
-        "traditional_game": "Egrang",
-        "title": "Quiz Permainan Egrang",
-        "subtitle": "Mengenal permainan tradisional Egrang",
+        "traditional_game_slug": "tarek-situek",
+        "title": "Quiz Permainan Tarek Situek",
         "total_questions": 3,
         "min_score": 60,
         "time_limit": 5,
         "is_active": true,
         "questions": [
             {
-                "question": "Egrang dimainkan dengan menggunakan?",
+                "question": "Alat utama yang digunakan dalam permainan Tarek Situek adalah?",
                 "options": [
-                    { "text": "Tali", "is_correct": false },
-                    { "text": "Kayu atau bambu", "is_correct": true },
-                    { "text": "Besi", "is_correct": false },
-                    { "text": "Plastik", "is_correct": false }
+                    { "text": "Pelepah pinang atau tali", "is_correct": true },
+                    { "text": "Kayu panjang", "is_correct": false },
+                    { "text": "Bola karet", "is_correct": false },
+                    { "text": "Tongkat bambu", "is_correct": false }
                 ]
             },
             {
-                "question": "Tujuan utama permainan egrang adalah?",
+                "question": "Bagaimana cara menentukan pemenang dalam permainan Tarek Situek?",
                 "options": [
-                    { "text": "Menghafal lagu", "is_correct": false },
-                    { "text": "Melatih keseimbangan", "is_correct": true },
-                    { "text": "Menggambar", "is_correct": false },
-                    { "text": "Menghitung angka", "is_correct": false }
-                ]
-            },
-            {
-                "question": "Permainan egrang berasal dari?",
-                "options": [
-                    { "text": "Luar negeri", "is_correct": false },
-                    { "text": "Permainan modern", "is_correct": false },
                     {
-                        "text": "Tradisi masyarakat Indonesia",
+                        "text": "Tim yang menarik lawan melewati batas tertentu",
                         "is_correct": true
                     },
-                    { "text": "Olahraga profesional", "is_correct": false }
+                    {
+                        "text": "Tim yang paling cepat berlari",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tim yang memiliki anggota terbanyak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tim yang bertahan paling lama tanpa bergerak",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan Tarek Situek berasal dari daerah?",
+                "options": [
+                    { "text": "Aceh", "is_correct": true },
+                    { "text": "Jawa Tengah", "is_correct": false },
+                    { "text": "Sulawesi Selatan", "is_correct": false },
+                    { "text": "Kalimantan Timur", "is_correct": false }
                 ]
             }
         ]

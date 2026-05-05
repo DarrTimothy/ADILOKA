@@ -12,7 +12,9 @@ class TraditionalGameMedia extends Model
         'traditional_game_id',
         'type',
         'url',
-        'order',
+        'caption',
+        'source_page',
+        'is_cover',
     ];
 
     public $timestamps = false;
@@ -21,5 +23,4 @@ class TraditionalGameMedia extends Model
     {
         return $this->belongsTo(TraditionalGame::class, 'traditional_game_id');
     }
-    
 }

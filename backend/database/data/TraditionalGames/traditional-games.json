@@ -6,8 +6,8 @@
                 "title": "Tarek Situek",
                 "subtitle": "Permainan tradisional Aceh berbasis tarik menarik",
                 "slug": "tarek-situek",
-                "description": "Tarek Situek merupakan permainan tradisional dari Aceh yang dimainkan secara berkelompok dengan prinsip tarik menarik antar tim, mirip dengan permainan tarik tambang.",
-                "how_to_play": "Pemain dibagi menjadi dua tim yang saling berhadapan dan menarik tali atau objek tertentu. Tim yang berhasil menarik lawan melewati batas tertentu dinyatakan sebagai pemenang.",
+                "description": "Tarek Situek merupakan permainan tradisional dari Aceh yang dimainkan secara berkelompok dengan prinsip tarik menarik antar tim, mirip dengan permainan tarik tambang menggunakan pelepah pinang.",
+                "how_to_play": "Pemain dibagi menjadi dua tim yang saling berhadapan dan menarik pelepah pinang atau tali. Tim yang berhasil menarik lawan melewati batas tertentu dinyatakan sebagai pemenang.",
                 "min_players": 2,
                 "max_players": null,
                 "duration": 3,
@@ -15,118 +15,54 @@
                     {
                         "type": "image",
                         "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek.gif",
-                        "source": "anakbisa",
                         "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
                         "caption": "Permainan Tarek Situek menggunakan pelepah pinang"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/embed/msKks6-G1AU",
-                        "caption": "video Permainan Tarek Situek"
+                        "url": "https://www.youtube.com/watch?v=msKks6-G1AU",
+                        "caption": "Video permainan Tarek Situek"
                     },
                     {
-                        "order": 3,
                         "type": "image",
                         "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek2.gif",
-                        "source": "anakbisa",
                         "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
-                        "caption": "Permainan Tarek Situek menggunakan pelepah pinang"
+                        "caption": "Dua tim saling tarik dalam permainan Tarek Situek"
                     }
                 ]
             }
         ]
     },
     {
-        "region_bps_code": "32",
+        "region_bps_code": "12",
         "games": [
             {
-                "title": "Congklak",
-                "subtitle": "Permainan papan tradisional",
-                "slug": "congklak",
-                "description": "Congklak adalah permainan tradisional menggunakan papan berlubang dan biji.",
-                "how_to_play": "Dua pemain saling mengedarkan biji ke setiap lubang.",
-                "min_players": 2,
-                "max_players": 2,
-                "duration": 15,
+                "title": "Margala",
+                "subtitle": "Permainan tradisional Sumatera Utara berbasis strategi dan kerja sama tim",
+                "slug": "margala",
+                "description": "Margala adalah permainan tradisional dari Sumatera Utara yang dimainkan secara berkelompok dengan strategi menyerang dan bertahan di dalam arena berbentuk kotak-kotak.",
+                "how_to_play": "Permainan ini dimainkan oleh dua regu di atas arena tanah yang digaris membentuk beberapa kotak. Regu penjaga bertugas menjaga garis dan berusaha menyentuh lawan, sementara regu penyerang harus bekerja sama menerobos dari depan hingga belakang tanpa tersentuh.",
+                "min_players": 8,
+                "max_players": 12,
+                "duration": 20,
                 "media": [
-                    { "type": "image", "url": "congklak_1.jpg", "order": 1 },
-                    { "type": "image", "url": "congklak_2.jpg", "order": 2 },
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek.gif",
+                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
+                        "caption": "Ilustrasi permainan tradisional tim di lapangan"
+                    },
                     {
                         "type": "video",
-                        "url": "congklak_tutorial.mp4",
-                        "order": 3
+                        "url": "https://www.youtube.com/watch?v=HvrRTGT-BPM",
+                        "caption": "Video permainan Margala"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek2.gif",
+                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
+                        "caption": "Pemain bekerja sama menerobos pertahanan lawan"
                     }
-                ]
-            },
-            {
-                "title": "Gobak Sodor",
-                "subtitle": "Permainan kejar-kejaran",
-                "slug": "gobak-sodor",
-                "description": "Permainan tradisional beregu yang menguji kelincahan.",
-                "how_to_play": "Tim penjaga menghalangi tim penyerang melewati garis.",
-                "min_players": 6,
-                "max_players": 10,
-                "duration": 20,
-                "media": [
-                    { "type": "image", "url": "gobak_1.jpg", "order": 1 },
-                    { "type": "video", "url": "gobak_sodor.mp4", "order": 2 }
-                ]
-            }
-        ]
-    },
-    {
-        "region_bps_code": "33",
-        "games": [
-            {
-                "title": "Egrang",
-                "subtitle": "Permainan keseimbangan",
-                "slug": "egrang",
-                "description": "Permainan berjalan menggunakan tongkat bambu.",
-                "how_to_play": "Pemain berjalan menggunakan bambu tanpa jatuh.",
-                "min_players": 1,
-                "max_players": 5,
-                "duration": 10,
-                "media": [
-                    { "type": "image", "url": "egrang_1.jpg", "order": 1 },
-                    { "type": "video", "url": "egrang_demo.mp4", "order": 2 }
-                ]
-            }
-        ]
-    },
-    {
-        "region_bps_code": "34",
-        "games": [
-            {
-                "title": "Cublak-Cublak Suweng",
-                "subtitle": "Permainan lagu tradisional",
-                "slug": "cublak-cublak-suweng",
-                "description": "Permainan tradisional anak-anak yang diiringi lagu.",
-                "how_to_play": "Satu pemain menebak siapa yang memegang benda.",
-                "min_players": 5,
-                "max_players": 10,
-                "duration": 15,
-                "media": [
-                    { "type": "image", "url": "cublak_1.jpg", "order": 1 },
-                    { "type": "video", "url": "cublak_suweng.mp4", "order": 2 }
-                ]
-            }
-        ]
-    },
-    {
-        "region_bps_code": "31",
-        "games": [
-            {
-                "title": "Gobak Jin",
-                "subtitle": "Permainan tradisional Jakarta",
-                "slug": "gobak-jin",
-                "description": "Permainan anak tradisional di Jakarta.",
-                "how_to_play": "Satu tim menjaga garis, satu tim mencoba lewat.",
-                "min_players": 6,
-                "max_players": 10,
-                "duration": 20,
-                "media": [
-                    { "type": "image", "url": "gobak_jin.jpg", "order": 1 },
-                    { "type": "video", "url": "gobak_jin.mp4", "order": 2 }
                 ]
             }
         ]

@@ -180,6 +180,8 @@ class TraditionalGamesController extends Controller
                 'media' => $game->media->map(fn($m) => [
                     'type'  => $m->type,
                     'url'   => $m->url,
+                    'source_page' => $m->source_page,
+                    'caption'     => $m->caption,
                     // 'order' => $m->order,
                 ]),
             ]);
@@ -195,7 +197,7 @@ class TraditionalGamesController extends Controller
             'coverImage',
             'media' => function ($q) {
                 $q->orderByRaw("CASE WHEN type = 'image' THEN 0 ELSE 1 END")
-                    ->orderBy('order');
+                    ->orderBy('id');
             }
         ]);
     }

@@ -10,7 +10,6 @@ class Quiz extends Model
     protected $fillable = [
         'traditional_game_id',
         'title',
-        'subtitle',
         'total_questions',
         'min_score',
         'time_limit',

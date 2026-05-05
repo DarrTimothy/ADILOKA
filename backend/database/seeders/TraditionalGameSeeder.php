@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Str;
 use App\Models\Region;
 use App\Models\TraditionalGame;
 
@@ -51,13 +50,13 @@ class TraditionalGameSeeder extends Seeder
 
                 foreach ($regionData['games'] as $game) {
 
-                    // VALIDASI FIELD
+                    // VALIDASI FIELD (max_players tidak wajib)
                     $requiredFields = [
                         'title',
+                        'slug', // WAJIB untuk konsistensi lintas tabel
                         'description',
                         'how_to_play',
                         'min_players',
-                        'max_players',
                         'duration'
                     ];
 
@@ -73,8 +72,12 @@ class TraditionalGameSeeder extends Seeder
                         }
                     }
 
-                    // VALIDASI DOMAIN
-                    if ($game['min_players'] > $game['max_players']) {
+                    // VALIDASI DOMAIN (handle null)
+                    if (
+                        isset($game['max_players']) &&
+                        $game['max_players'] !== null &&
+                        $game['min_players'] > $game['max_players']
+                    ) {
                         Log::warning('Game dilewati karena min_players > max_players', [
                             'region' => $region->bps_code,
                             'game'   => $game['title'],
@@ -83,7 +86,7 @@ class TraditionalGameSeeder extends Seeder
                         continue;
                     }
 
-                    $slug = $game['slug'] ?? Str::slug($game['title']);
+                    $slug = $game['slug'];
 
                     // UPSERT GAME
                     $traditionalGame = TraditionalGame::updateOrCreate(
@@ -95,24 +98,23 @@ class TraditionalGameSeeder extends Seeder
                             'description' => $game['description'],
                             'how_to_play' => $game['how_to_play'],
                             'min_players' => $game['min_players'],
-                            'max_players' => $game['max_players'],
+                            'max_players' => $game['max_players'] ?? null,
                             'duration'    => $game['duration'],
                         ]
                     );
 
-                    // RESET MEDIA
+                    // RESET MEDIA (masih OK untuk seeder)
                     DB::table('traditional_game_media')
                         ->where('traditional_game_id', $traditionalGame->id)
                         ->delete();
 
-                    // INSERT MEDIA
+                    // INSERT MEDIA (lebih lengkap)
                     if (!empty($game['media']) && is_array($game['media'])) {
 
                         $mediaData = [];
 
                         foreach ($game['media'] as $index => $media) {
 
-                            // VALIDASI
                             if (
                                 !isset($media['type']) ||
                                 !isset($media['url'])
@@ -130,9 +132,10 @@ class TraditionalGameSeeder extends Seeder
 
                             $mediaData[] = [
                                 'traditional_game_id' => $traditionalGame->id,
-                                'type'  => $media['type'],
-                                'url'   => $media['url'],
-                                // 'order' => $media['order'] ?? $index,
+                                'type'        => $media['type'],
+                                'url'         => $media['url'],
+                                'caption'     => $media['caption'] ?? null,
+                                'source_page' => $media['source_page'] ?? null,
                             ];
                         }
 
@@ -146,8 +149,9 @@ class TraditionalGameSeeder extends Seeder
             }
         });
 
+        //  SUMMARY 
         $this->command->info("TraditionalGamesSeeder selesai:");
-        $this->command->info("✔ Game masuk  : {$insertedGames}");
+        $this->command->info("✔ Game masuk   : {$insertedGames}");
         $this->command->warn("⚠ Game dilewati: {$skippedGames}");
     }
 }

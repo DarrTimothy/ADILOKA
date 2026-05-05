@@ -18,7 +18,6 @@ return new class extends Migration
                     ->constrained('traditional_games')
                     ->cascadeOnDelete();
                 $table->string('title');
-                $table->string('subtitle')->nullable();
                 $table->unsignedInteger('total_questions');
                 $table->unsignedInteger('min_score')->default(0);
                 $table->unsignedInteger('time_limit')->comment('dalam menit');
