@@ -1,48 +1,51 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\TraditionalGamesController;
 use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Route;
 
-// login / register
-
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/refresh', [AuthController::class, 'refresh']);
-
-// authenticated user
-Route::middleware('auth:api')->group(function () {
-    Route::get('/me', [AuthController::class, 'me']);
-    Route::post('/logout', [AuthController::class, 'logout']);
-});
-
-// regions - public / user (read only)
+/**
+ * PUBLIC
+ */
 Route::get('/regions', [RegionController::class, 'index']);
 
-// regions - admin only (CRUD)
-Route::middleware(['auth:api', 'role:admin', 'throttle:api'])->group(function () {
+/**
+ * PROTECTED
+ */
+Route::middleware(['auth:sanctum'])->group(function () {
+
+    // traditional games
+    Route::prefix('/traditional-games')->group(function () {
+        Route::get('/popular-week', [TraditionalGamesController::class, 'popularThisWeek']);
+        Route::get('/', [TraditionalGamesController::class, 'index']);
+        Route::get('/{id}', [TraditionalGamesController::class, 'show']);
+        Route::post('/{id}/complete', [TraditionalGamesController::class, 'markCompleted']);
+    });
+
+    // quiz
+    Route::prefix('/quiz')->group(function () {
+        Route::get('/{game}', [QuizController::class, 'showByGame']);
+        Route::post('/{game}', [QuizController::class, 'submit']);
+        Route::get('/{game}/result', [QuizController::class, 'showResult']);
+    });
+});
+
+/**
+ * ADMIN (CRUD)
+ */
+Route::middleware(['auth:sanctum', 'role:admin', 'throttle:api'])->group(function () {
     Route::post('/regions', [RegionController::class, 'store']);
     Route::patch('/regions/{id}', [RegionController::class, 'update']);
     Route::delete('/regions/{id}', [RegionController::class, 'destroy']);
 });
 
-
-Route::middleware('auth:api')->group(function () {
-    // traditional Games
-    Route::get('/traditional-games', [TraditionalGamesController::class, 'index']);
-    Route::get('/traditional-games/{id}', [TraditionalGamesController::class, 'show']);
-    Route::post('/games/{id}', [TraditionalGamesController::class, 'markCompleted']);
-    Route::get('/popular-week', [TraditionalGamesController::class, 'popularThisWeek']);
-
-    // quiz
-    Route::get('/quiz/{game}', [QuizController::class, 'showByGame']);
-    Route::post('/quiz/{game}', [QuizController::class, 'submit']);
-    Route::get('/quiz/{game}/result', [QuizController::class, 'showResult']);
-});
-
-
+/**
+ * FALLBACK
+ */
 Route::fallback(function () {
-    return response()->json(['success' => 'false', 'message' => 'Endpoint Not Found, Please recheck the url ...'], 404);
+    return response()->json([
+        'success' => false,
+        'message' => 'Endpoint Not Found'
+    ], 404);
 });

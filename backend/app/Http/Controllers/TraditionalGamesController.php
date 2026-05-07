@@ -3,27 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
-use App\Models\Region;
 use App\Models\TraditionalGame;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\DB;
-use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class TraditionalGamesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-
     public function index(Request $request)
     {
-        $user = JWTAuth::parseToken()->authenticate();
+        /** @var User $user */
+
+        $user = Auth::user();
+
+        if (!$user) {
+            return ApiResponse::unauthorized();
+        }
 
         $completedGameIds = $user->traditionalGames()
             ->wherePivot('is_completed', true)
             ->pluck('traditional_games.id')
             ->toArray();
+
 
         $query = $this->baseGameQuery();
 
@@ -54,20 +55,10 @@ class TraditionalGamesController extends Controller
         return ApiResponse::success($data);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
-        $user = JWTAuth::parseToken()->authenticate();
+        /** @var User $user */
+        $user = Auth::user();
 
         $game = $this->baseGameQuery()->find($id);
 
@@ -85,25 +76,10 @@ class TraditionalGamesController extends Controller
         );
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
-
     public function markCompleted(string $gameId)
     {
-        $user = JWTAuth::parseToken()->authenticate();
+        /** @var User $user */
+        $user = Auth::user();
 
         $game = TraditionalGame::find($gameId);
 
@@ -124,10 +100,8 @@ class TraditionalGamesController extends Controller
         ], 'Game berhasil ditandai selesai');
     }
 
-
     public function popularThisWeek()
     {
-        JWTAuth::parseToken()->authenticate();
 
         $games = $this->baseGameQuery()
             ->select('traditional_games.*')
@@ -147,12 +121,12 @@ class TraditionalGamesController extends Controller
 
         return ApiResponse::success($data);
     }
+
     private function transformGame(TraditionalGame $game, bool $isCompleted = false, bool $withDetail = false)
     {
-
         $cover = $game->media()
             ->where('type', 'image')
-            ->orderBy('id') // atau order kalau ada
+            ->orderBy('id')
             ->first();
 
         $data = [
@@ -163,8 +137,6 @@ class TraditionalGamesController extends Controller
             ],
             'title' => $game->title,
             'subtitle' => $game->subtitle,
-
-
             'duration' => $game->duration,
             'is_completed' => $isCompleted,
             'cover_img' => optional($cover)->url,
@@ -176,13 +148,11 @@ class TraditionalGamesController extends Controller
                 'how_to_play' => $game->how_to_play,
                 'min_players' => $game->min_players,
                 'max_players' => $game->max_players,
-
                 'media' => $game->media->map(fn($m) => [
                     'type'  => $m->type,
                     'url'   => $m->url,
                     'source_page' => $m->source_page,
                     'caption'     => $m->caption,
-                    // 'order' => $m->order,
                 ]),
             ]);
         }
@@ -194,7 +164,6 @@ class TraditionalGamesController extends Controller
     {
         return TraditionalGame::with([
             'region',
-            'coverImage',
             'media' => function ($q) {
                 $q->orderByRaw("CASE WHEN type = 'image' THEN 0 ELSE 1 END")
                     ->orderBy('id');

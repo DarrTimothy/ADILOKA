@@ -56,6 +56,6 @@ return [
     | false = token/JWT
     | true  = cookie/Sanctum
     */
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];

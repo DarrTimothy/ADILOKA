@@ -6,14 +6,12 @@ use App\Helpers\ApiResponse;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    /**
-     * Register user baru + auto login (JWT)
-     */
     public function register(RegisterRequest $request)
     {
         $user = User::create([
@@ -23,70 +21,69 @@ class AuthController extends Controller
             'role'     => 'user',
         ]);
 
-        // LOGIN PAKAI GUARD API (JWT)
-        $token = Auth::guard('api')->login($user);
+        // login otomatis setelah register
+        Auth::guard('web')->login($user);
 
-        return $this->respondWithToken(
-            $token,
-            'Selamat datang ' . $user->username
+        // regenerate session untuk keamanan
+        $request->session()->regenerate();
+
+        return ApiResponse::success(
+            $this->transformUser($user),
+            'Selamat datang, ' . $user->username
         );
     }
 
-    /**
-     * Login user (JWT)
-     */
+
     public function login(LoginRequest $request)
     {
         $credentials = $request->only('username', 'password');
-        // AUTH VIA JWT GUARD
-        if (! $token = Auth::guard('api')->attempt($credentials)) {
+
+        if (! Auth::guard('web')->attempt($credentials)) {
             return ApiResponse::unauthorized(
-                'username atau password salah'
+                'Username atau password salah'
             );
         }
 
-        return $this->respondWithToken(
-            $token,
-            'Selamat datang ' . Auth::guard('api')->user()->username
+        // regenerate session untuk mencegah session fixation
+        $request->session()->regenerate();
+
+        /** @var User $user */
+        $user = Auth::guard('web')->user();
+
+        return ApiResponse::success(
+            $this->transformUser($user),
+            'Selamat datang kembali, ' . $user->username
         );
     }
 
-    public function refresh()
+
+    public function me(Request $request)
     {
-        try {
-            /** @var JWTGuard $guard */
-            $guard = Auth::guard('api');
+        /** @var User|null $user */
+        $user = $request->user();
 
-            $newToken = $guard->refresh();
-
-            return $this->respondWithToken(
-                $newToken,
-                'Token berhasil diperbarui'
-            );
-        } catch (\Exception $e) {
+        if (! $user) {
             return ApiResponse::unauthorized(
-                'Refresh token tidak valid atau sudah expired'
+                'Unauthenticated'
             );
         }
-    }
 
-    /**
-     * Ambil data user dari token
-     */
-    public function me()
-    {
         return ApiResponse::success(
-            Auth::guard('api')->user(),
+            $this->transformUser($user),
             'Data user berhasil diambil'
         );
     }
 
-    /**
-     * Logout (invalidate JWT)
-     */
-    public function logout()
+
+    public function logout(Request $request)
     {
-        Auth::guard('api')->logout(true);
+        Auth::guard('web')->logout();
+
+        // hapus session lama
+        $request->session()->invalidate();
+
+        // regenerate csrf token baru
+        $request->session()->regenerateToken();
 
         return ApiResponse::success(
             null,
@@ -94,25 +91,13 @@ class AuthController extends Controller
         );
     }
 
-    /**
-     * Response token standar
-     */
-    protected function respondWithToken(?string $token, string $message)
+    private function transformUser(User $user): array
     {
-        /** @var JWTGuard $guard */
-        $guard = auth('api');
-
-        $user = $guard->user();
-
-        return ApiResponse::success([
-            'id'            => $user->id,
-            'username'      => $user->username,
-            'email'         => $user->email,
-            'role'          => $user->role,
-
-
-            'access_token'  => $token,
-            'expires_in'    => $guard->factory()->getTTL(),
-        ], $message);
+        return [
+            'id'       => $user->id,
+            'username' => $user->username,
+            'email'    => $user->email,
+            'role'     => $user->role,
+        ];
     }
 }
