@@ -59,12 +59,6 @@ class TraditionalGame extends Model
         return $this->media()->where('type', 'video');
     }
 
-    /** relasi category */
-    public function categories()
-    {
-        return $this->belongsToMany(Category::class);
-    }
-
     public function coverImage()
     {
         return $this->hasOne(TraditionalGameMedia::class)
