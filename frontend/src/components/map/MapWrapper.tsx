@@ -8,5 +8,9 @@ const ChoroplethMap = dynamic(
 );
 
 export default function MapWrapper() {
-    return <ChoroplethMap/>;
+  return (
+    <div className="flex-1">
+      <ChoroplethMap />
+    </div>
+  );
 }

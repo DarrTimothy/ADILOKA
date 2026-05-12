@@ -8,6 +8,7 @@ import type { LatLngExpression } from "leaflet";
 const center: LatLngExpression = [-2.5, 118];
 
 export default function ChoroplethMap() {
+  const [selectedProvince, setSelectedProvince] = useState<any>(null);
   const [geoData, setGeoData] = useState<any>(null);
   const indonesiaBounds: [[number, number], [number, number]] = [
     [-25.0, 90.0],
@@ -33,16 +34,11 @@ export default function ChoroplethMap() {
       const props = feature.properties;
 
       layer.bindTooltip(props.province_name, {
-        permanent: true,
+        sticky: true,
         direction: "center",
         className: "province-label",
         opacity: 1,
       });
-
-      layer.bindPopup(`
-        <strong>${props.province_name}</strong><br/>
-        BPS Code: ${props.bps_code}
-      `);
 
       layer.on({
         mouseover: (e: any) => {
@@ -58,6 +54,8 @@ export default function ChoroplethMap() {
         },
 
         click: () => {
+          setSelectedProvince(props);
+
           const isActive = (layer as any)._isActive;
 
           if (isActive) {
@@ -118,8 +116,12 @@ export default function ChoroplethMap() {
           const res = await fetch(url);
 
           if (!res.ok) {
+            const errorText = await res.text();
+
             console.error("HTTP error:", res.status);
-            break; // ⛔ hentikan loop, jangan throw
+            console.error("DETAIL ERROR:", errorText);
+
+            return;
           }
 
           const json = await res.json();
@@ -166,21 +168,33 @@ export default function ChoroplethMap() {
   }, []);
 
   return (
-    <MapContainer
-      center={center}
-      zoom={5}
-      minZoom={5}
-      maxZoom={9}
-      maxBounds={indonesiaBounds}
-      maxBoundsViscosity={1.0}
-      style={{ height: "100vh", width: "100%" }}
-    >
-      <TileLayer
-        attribution="&copy; OpenStreetMap contributors &copy; CARTO"
-        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"
-      />
+    <div className="relative h-screen w-full">
+      <MapContainer
+        center={center}
+        zoom={5}
+        minZoom={5}
+        maxZoom={9}
+        maxBounds={indonesiaBounds}
+        maxBoundsViscosity={1.0}
+        style={{ height: "100%", width: "100%" }}
+      >
+        <TileLayer
+          attribution="&copy; OpenStreetMap contributors &copy; CARTO"
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"
+        />
 
-      {geoData && <InteractiveProvinces data={geoData} />}
-    </MapContainer>
+        {geoData && <InteractiveProvinces data={geoData} />}
+
+        <div className="absolute top-0 right-0 h-full w-[350px] bg-white z-[1000] shadow-xl p-6">
+          <h1 className="text-3xl font-bold">
+            {selectedProvince?.province_name || "Pilih Provinsi"}
+          </h1>
+
+          <p className="mt-4 text-gray-500">
+            Informasi permainan tradisional akan tampil di sini.
+          </p>
+        </div>
+      </MapContainer>
+    </div>
   );
 }

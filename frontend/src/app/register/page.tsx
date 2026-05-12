@@ -86,7 +86,7 @@ export default function RegisterPage() {
           onSubmit={handleSubmit}
           className="w-full max-w-md bg-white rounded-xl shadow p-6 space-y-4"
         >
-          <h1 className="text-3xl font-bold mb-2 text-black">
+          <h1 className="text-3xl text-center font-bold mb-2 text-black">
             Bergabung dengan Kami
           </h1>
           <p className="text-gray-500 mb-8 text-center text-bold text-xl">

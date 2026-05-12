@@ -1,14 +1,14 @@
 import MapWrapper from "@/components/map/MapWrapper";
-import Header from "@/components/layout/Header";
 import ProvinceSidebar from "@/components/sidebar/ProvinceSidebar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen">
-      <Header />
-      <div className="flex flex-1 overflow-hidden">
+    <div className="flex flex-col min-h-screen">
+      <div className="flex flex-1">
         <ProvinceSidebar />
-        <MapWrapper />
+        <div className="flex-1 flex">
+          <MapWrapper />
+        </div>
       </div>
     </div>
   );
