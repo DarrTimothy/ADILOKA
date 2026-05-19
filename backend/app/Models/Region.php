@@ -26,4 +26,17 @@ class Region extends Model
     {
         return $this->hasMany(TraditionalGame::class);
     }
+
+    public function userProgress()
+    {
+        return $this->belongsToMany(
+            User::class,
+            'region_user'
+        )
+            ->withPivot([
+                'is_completed',
+                'completed_at'
+            ])
+            ->withTimestamps();
+    }
 }

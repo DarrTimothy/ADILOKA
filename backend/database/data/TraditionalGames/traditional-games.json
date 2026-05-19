@@ -66,5 +66,39 @@
                 ]
             }
         ]
+    },
+    {
+        "region_bps_code": "12",
+        "games": [
+            {
+                "title": "Marsitekka",
+                "subtitle": "Permainan tradisional Batak berbasis ketangkasan melompat dan keseimbangan",
+                "slug": "marsitekka",
+                "description": "Marsitekka adalah permainan tradisional masyarakat Batak di Sumatera Utara yang dimainkan dengan melompati susunan batu secara bergantian. Permainan ini melatih kelincahan, keseimbangan, dan konsentrasi pemain.",
+                "how_to_play": "Beberapa batu disusun bertingkat di tanah. Pemain harus melompati susunan batu menggunakan satu kaki tanpa menjatuhkan batu tersebut. Tingkat kesulitan bertambah dengan susunan batu yang semakin tinggi. Pemain yang menjatuhkan batu atau kehilangan keseimbangan dianggap gugur.",
+                "min_players": 2,
+                "max_players": 6,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Hopscotch_game.jpg",
+                        "source_page": "https://commons.wikimedia.org/wiki/File:Hopscotch_game.jpg",
+                        "caption": "Ilustrasi permainan melompat tradisional mirip Marsitekka"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=2R8v6mCYj6Q",
+                        "caption": "Video permainan tradisional Marsitekka"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Children_playing_hopscotch.jpg",
+                        "source_page": "https://commons.wikimedia.org/wiki/File:Children_playing_hopscotch.jpg",
+                        "caption": "Anak-anak memainkan permainan lompat tradisional"
+                    }
+                ]
+            }
+        ]
     }
 ]

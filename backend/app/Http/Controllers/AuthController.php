@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Helpers\ApiResponse;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Models\Region;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -68,10 +70,28 @@ class AuthController extends Controller
             );
         }
 
-        return ApiResponse::success(
-            $this->transformUser($user),
-            'Data user berhasil diambil'
-        );
+        $completedRegions = DB::table('region_user')
+            ->where('user_id', $user->id)
+            ->where('is_completed', true)
+            ->count();
+
+        $totalRegions = Region::count();
+
+        $percentage = $totalRegions > 0
+            ? round(
+                ($completedRegions / $totalRegions) * 100,
+                2
+            )
+            : 0;
+
+        return ApiResponse::success([
+            'user' => $this->transformUser($user),
+            'progress' => [
+                'completed_regions' => $completedRegions,
+                'total_regions' => $totalRegions,
+                'percentage' => $percentage,
+            ],
+        ], 'Data user berhasil diambil');
     }
 
 

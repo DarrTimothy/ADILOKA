@@ -16,10 +16,38 @@ return new class extends Migration {
                 $table->jsonb('coordinates');    // array koordinat
             });
         }
+
+        if (!Schema::hasTable('region_user')) {
+            Schema::create('region_user', function (Blueprint $table) {
+                $table->id();
+
+                $table->foreignId('user_id')
+                    ->constrained()
+                    ->cascadeOnDelete();
+
+                $table->foreignId('region_id')
+                    ->constrained()
+                    ->cascadeOnDelete();
+
+                $table->boolean('is_completed')
+                    ->default(false);
+
+                $table->timestamp('completed_at')
+                    ->nullable();
+
+                $table->timestamps();
+
+                $table->unique([
+                    'user_id',
+                    'region_id'
+                ]);
+            });
+        }
     }
 
     public function down(): void
     {
         Schema::dropIfExists('regions');
+        Schema::dropIfExists('region_user');
     }
 };

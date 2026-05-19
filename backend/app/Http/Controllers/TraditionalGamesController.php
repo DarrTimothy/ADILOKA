@@ -55,7 +55,7 @@ class TraditionalGamesController extends Controller
         return ApiResponse::success($data);
     }
 
-    public function show(string $id)
+    public function show(int $id)
     {
         /** @var User $user */
         $user = Auth::user();
@@ -76,12 +76,13 @@ class TraditionalGamesController extends Controller
         );
     }
 
-    public function markCompleted(string $gameId)
+    public function markCompleted(int $gameId)
     {
         /** @var User $user */
         $user = Auth::user();
 
-        $game = TraditionalGame::find($gameId);
+        $game = TraditionalGame::with('region')
+            ->find($gameId);
 
         if (!$game) {
             return ApiResponse::notFound('Game tidak ditemukan');
@@ -93,6 +94,8 @@ class TraditionalGamesController extends Controller
                 'completed_at' => now()
             ]
         ]);
+
+        $this->updateRegionProgress($user, $game);
 
         return ApiResponse::success([
             'game_id' => $game->id,
@@ -168,6 +171,41 @@ class TraditionalGamesController extends Controller
                 $q->orderByRaw("CASE WHEN type = 'image' THEN 0 ELSE 1 END")
                     ->orderBy('id');
             }
+        ]);
+    }
+
+    private function updateRegionProgress(
+        User $user,
+        TraditionalGame $game
+    ): void {
+
+        $region = $game->region;
+
+        if (! $region) {
+            return;
+        }
+
+        $totalGames = $region->traditionalGames()->count();
+
+        $completedGames = $region->traditionalGames()
+            ->whereHas('users', function ($query) use ($user) {
+                $query->where('user_id', $user->id)
+                    ->where('is_completed', true);
+            })
+            ->count();
+
+        $isCompleted = (
+            $totalGames > 0 &&
+            $totalGames === $completedGames
+        );
+
+        $user->regionProgress()->syncWithoutDetaching([
+            $region->id => [
+                'is_completed' => $isCompleted,
+                'completed_at' => $isCompleted
+                    ? now()
+                    : null,
+            ]
         ]);
     }
 }

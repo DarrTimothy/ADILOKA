@@ -55,6 +55,7 @@ return new class extends Migration {
                 $table->foreignId('traditional_game_id')->constrained()->cascadeOnDelete();
                 $table->boolean('is_completed')->default(false);
                 $table->timestamp('completed_at')->nullable()->after('is_completed');
+                $table->timestamps();
             });
         }
     }

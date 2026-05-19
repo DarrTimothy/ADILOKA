@@ -21,15 +21,35 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function traditionalGames()
+    {
+        return $this->belongsToMany(
+            TraditionalGame::class,
+            'traditional_game_user'
+        )
+            ->withPivot([
+                'is_completed',
+                'completed_at'
+            ])
+            ->withTimestamps();
+    }
+
+    public function regionProgress()
+    {
+        return $this->belongsToMany(
+            Region::class,
+            'region_user'
+        )
+            ->withPivot([
+                'is_completed',
+                'completed_at'
+            ])
+            ->withTimestamps();
+    }
+
     /** Relasi: User → Quiz Results */
     public function quizResults()
     {
         return $this->hasMany(QuizResult::class);
-    }
-
-    public function traditionalGames()
-    {
-        return $this->belongsToMany(TraditionalGame::class)
-            ->withPivot('is_completed');
     }
 }

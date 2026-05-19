@@ -9,12 +9,12 @@ return [
     | Path mana yang boleh diakses cross-origin
     */
     'paths' => [
-    'api/*',
-    'sanctum/csrf-cookie',
-    'login',
-    'logout',
-    'register',
-],
+        'api/*',
+        'sanctum/csrf-cookie',
+        'login',
+        'logout',
+        'register',
+    ],
 
     /*
     |--------------------------------------------------------------------------
