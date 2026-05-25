@@ -3,7 +3,7 @@ import { FaInstagram, FaYoutube, FaGlobe } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 border-t">
+    <footer className="bg-white border-t">
       <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
         
         {/* Kolom 1 */}

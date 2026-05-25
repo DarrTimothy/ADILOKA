@@ -1,16 +1,24 @@
-"use client"
+"use client";
 
 import dynamic from "next/dynamic";
 
-const ChoroplethMap = dynamic(
-    () => import("./ChoroplethMap"),
-    { ssr:false }
-);
+const ChoroplethMap = dynamic(() => import("./ChoroplethMap"), { ssr: false });
 
-export default function MapWrapper() {
+type Props = {
+  selectedProvince: any;
+  setSelectedProvince: (province: any) => void;
+};
+
+export default function MapWrapper({
+  selectedProvince,
+  setSelectedProvince,
+}: Props) {
   return (
     <div className="flex-1">
-      <ChoroplethMap />
+      <ChoroplethMap
+        selectedProvince={selectedProvince}
+        setSelectedProvince={setSelectedProvince}
+      />
     </div>
   );
 }

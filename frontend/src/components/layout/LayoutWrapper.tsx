@@ -12,7 +12,10 @@ export default function LayoutWrapper({
 }) {
   const pathname = usePathname();
 
-  const hideLayout = pathname === "/login" || pathname === "/register";
+  const hideLayout =
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname.startsWith("/quiz");
 
   return (
     <>
