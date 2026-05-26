@@ -32,15 +32,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 
 /**
- * ADMIN (CRUD)
- */
-Route::middleware(['auth:sanctum', 'role:admin', 'throttle:api'])->group(function () {
-    Route::post('/regions', [RegionController::class, 'store']);
-    Route::patch('/regions/{id}', [RegionController::class, 'update']);
-    Route::delete('/regions/{id}', [RegionController::class, 'destroy']);
-});
-
-/**
  * FALLBACK
  */
 Route::fallback(function () {
