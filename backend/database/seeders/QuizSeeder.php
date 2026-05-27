@@ -28,13 +28,12 @@ class QuizSeeder extends Seeder
             return;
         }
 
-        $total   = count($quizList);
         $success = 0;
         $skipped = 0;
 
         foreach ($quizList as $quizData) {
 
-            // VALIDASI LEVEL QUIZ
+            // VALIDASI FIELD WAJIB
             if (
                 !isset(
                     $quizData['traditional_game_slug'],
@@ -45,7 +44,6 @@ class QuizSeeder extends Seeder
                     $quizData['questions']
                 )
             ) {
-                $this->command->warn("⚠ Struktur quiz tidak lengkap");
                 $skipped++;
                 continue;
             }
@@ -57,38 +55,79 @@ class QuizSeeder extends Seeder
             )->first();
 
             if (!$game) {
-                $this->command->warn(
-                    "⚠ Game slug '{$quizData['traditional_game_slug']}' tidak ditemukan"
-                );
                 $skipped++;
                 continue;
             }
 
-            // DUPLIKASI
-            if (Quiz::where('traditional_game_id', $game->id)->exists()) {
-                $this->command->warn(
-                    "⚠ Quiz untuk '{$quizData['traditional_game_slug']}' sudah ada"
-                );
+            // CEK DUPLIKAT QUIZ
+            if (
+                Quiz::where('traditional_game_id', $game->id)->exists()
+            ) {
                 $skipped++;
                 continue;
             }
 
             // VALIDASI JUMLAH SOAL
-            if (count($quizData['questions']) !== (int) $quizData['total_questions']) {
-                $this->command->warn(
-                    "⚠ Jumlah soal tidak sesuai pada '{$quizData['title']}'"
-                );
+            if (
+                count($quizData['questions']) !==
+                (int) $quizData['total_questions']
+            ) {
                 $skipped++;
                 continue;
             }
 
-            // VALIDASI SEMUA SOAL DULU
-            if (!$this->validateQuestions($quizData['questions'], $quizData['title'])) {
+            $isInvalid = false;
+
+            // VALIDASI SEMUA SOAL
+            foreach ($quizData['questions'] as $questionData) {
+
+                // VALIDASI STRUKTUR SOAL
+                if (
+                    !isset($questionData['question']) ||
+                    !isset($questionData['options'])
+                ) {
+                    $isInvalid = true;
+                    break;
+                }
+
+                // HARUS 4 OPTIONS
+                if (count($questionData['options']) !== 4) {
+                    $isInvalid = true;
+                    break;
+                }
+
+                $correctCount = 0;
+
+                foreach ($questionData['options'] as $option) {
+
+                    // VALIDASI OPTION
+                    if (
+                        !isset($option['text']) ||
+                        !isset($option['is_correct'])
+                    ) {
+                        $isInvalid = true;
+                        break 2;
+                    }
+
+                    // HITUNG JAWABAN BENAR
+                    if ($option['is_correct'] === true) {
+                        $correctCount++;
+                    }
+                }
+
+                // MINIMAL 1 JAWABAN BENAR
+                if ($correctCount < 1) {
+                    $isInvalid = true;
+                    break;
+                }
+            }
+
+            if ($isInvalid) {
                 $skipped++;
                 continue;
             }
 
-            // INSERT
+            // INSERT QUIZ
             DB::transaction(function () use ($quizData, $game, &$success) {
 
                 $quiz = Quiz::create([
@@ -123,49 +162,7 @@ class QuizSeeder extends Seeder
 
         // SUMMARY
         $this->command->info("QuizSeeder selesai:");
-        $this->command->info("✔ Quiz masuk     : {$success}");
-        $this->command->warn("⚠ Quiz dilewati  : {$skipped}");
-    }
-
-    // VALIDASI SOAL
-    private function validateQuestions(array $questions, string $quizTitle): bool
-    {
-        foreach ($questions as $index => $questionData) {
-
-            // Struktur dasar
-            if (
-                !isset($questionData['question'], $questionData['options']) ||
-                count($questionData['options']) !== 4
-            ) {
-                $this->command->warn(
-                    "⚠ Soal ke-" . ($index + 1) . " pada '{$quizTitle}' tidak valid (struktur/options)"
-                );
-                return false;
-            }
-
-            // Validasi option
-            foreach ($questionData['options'] as $optIndex => $option) {
-                if (!isset($option['text'], $option['is_correct'])) {
-                    $this->command->warn(
-                        "⚠ Option ke-" . ($optIndex + 1) . " pada soal ke-" . ($index + 1) . " tidak valid"
-                    );
-                    return false;
-                }
-            }
-
-            // Validasi 1 jawaban benar
-            $correctCount = collect($questionData['options'])
-                ->where('is_correct', true)
-                ->count();
-
-            if ($correctCount !== 1) {
-                $this->command->warn(
-                    "⚠ Soal ke-" . ($index + 1) . " pada '{$quizTitle}' harus punya tepat 1 jawaban benar"
-                );
-                return false;
-            }
-        }
-
-        return true;
+        $this->command->info("✔ Quiz masuk   : {$success}");
+        $this->command->warn("⚠ Quiz dilewati: {$skipped}");
     }
 }

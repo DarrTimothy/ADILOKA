@@ -20,128 +20,155 @@ class TraditionalGameSeeder extends Seeder
 
         $data = json_decode(file_get_contents($path), true);
 
-        if (!is_array($data) || !array_is_list($data)) {
-            throw new \Exception('Format JSON harus berupa array of regions');
+        if (!is_array($data)) {
+            throw new \Exception('Format JSON tidak valid');
         }
 
         $insertedGames = 0;
-        $skippedGames  = 0;
+        $skippedGames = 0;
 
         DB::transaction(function () use ($data, &$insertedGames, &$skippedGames) {
 
             foreach ($data as $regionData) {
 
-                if (
-                    !isset($regionData['region_bps_code']) ||
-                    !isset($regionData['games']) ||
-                    !is_array($regionData['games'])
-                ) {
-                    continue;
-                }
-
-                $region = Region::where('bps_code', $regionData['region_bps_code'])->first();
+                $region = Region::where(
+                    'bps_code',
+                    $regionData['region_bps_code'] ?? null
+                )->first();
 
                 if (!$region) {
-                    Log::warning('Region tidak ditemukan', [
-                        'bps_code' => $regionData['region_bps_code'],
-                    ]);
                     continue;
                 }
 
-                foreach ($regionData['games'] as $game) {
+                foreach ($regionData['games'] ?? [] as $game) {
 
-                    // VALIDASI FIELD (max_players tidak wajib)
+                    // FIELD WAJIB
                     $requiredFields = [
                         'title',
-                        'slug', // WAJIB untuk konsistensi lintas tabel
+                        'slug',
                         'description',
                         'how_to_play',
                         'min_players',
-                        'duration'
                     ];
 
+                    $isInvalid = false;
+
                     foreach ($requiredFields as $field) {
-                        if (!isset($game[$field])) {
+
+                        if (
+                            !isset($game[$field]) ||
+                            $game[$field] === ''
+                        ) {
+
                             Log::warning('Game dilewati karena field wajib kosong', [
-                                'region' => $region->bps_code,
-                                'field'  => $field,
-                                'game'   => $game['title'] ?? '(tanpa judul)',
+                                'field' => $field,
+                                'game' => $game['title'] ?? '(tanpa judul)',
                             ]);
+
                             $skippedGames++;
-                            continue 2;
+                            $isInvalid = true;
+
+                            break;
                         }
                     }
 
-                    // VALIDASI DOMAIN (handle null)
+                    if ($isInvalid) {
+                        continue;
+                    }
+
+                    // VALIDASI MIN PLAYERS
                     if (
-                        isset($game['max_players']) &&
-                        $game['max_players'] !== null &&
-                        $game['min_players'] > $game['max_players']
+                        !is_numeric($game['min_players']) ||
+                        $game['min_players'] <= 0
                     ) {
-                        Log::warning('Game dilewati karena min_players > max_players', [
-                            'region' => $region->bps_code,
-                            'game'   => $game['title'],
+
+                        Log::warning('min_players tidak valid', [
+                            'game' => $game['title'],
                         ]);
+
                         $skippedGames++;
                         continue;
                     }
 
-                    $slug = $game['slug'];
+                    // VALIDASI MAX PLAYERS
+                    if (
+                        isset($game['max_players']) &&
+                        $game['max_players'] !== null
+                    ) {
+
+                        if (
+                            !is_numeric($game['max_players']) ||
+                            $game['max_players'] <= 0
+                        ) {
+
+                            Log::warning('max_players tidak valid', [
+                                'game' => $game['title'],
+                            ]);
+
+                            $skippedGames++;
+                            continue;
+                        }
+
+                        if ($game['min_players'] > $game['max_players']) {
+
+                            Log::warning('min_players > max_players', [
+                                'game' => $game['title'],
+                            ]);
+
+                            $skippedGames++;
+                            continue;
+                        }
+                    }
 
                     // UPSERT GAME
                     $traditionalGame = TraditionalGame::updateOrCreate(
-                        ['slug' => $slug],
                         [
-                            'region_id'   => $region->id,
-                            'title'       => $game['title'],
-                            'subtitle'    => $game['subtitle'] ?? null,
+                            'slug' => $game['slug'],
+                        ],
+                        [
+                            'region_id' => $region->id,
+                            'title' => $game['title'],
+                            'subtitle' => $game['subtitle'] ?? null,
                             'description' => $game['description'],
                             'how_to_play' => $game['how_to_play'],
                             'min_players' => $game['min_players'],
                             'max_players' => $game['max_players'] ?? null,
-                            'duration'    => $game['duration'],
+                            'duration' => $game['duration'] ?? null,
                         ]
                     );
 
-                    // RESET MEDIA (masih OK untuk seeder)
+                    // RESET MEDIA
                     DB::table('traditional_game_media')
                         ->where('traditional_game_id', $traditionalGame->id)
                         ->delete();
 
-                    // INSERT MEDIA (lebih lengkap)
-                    if (!empty($game['media']) && is_array($game['media'])) {
+                    // INSERT MEDIA
+                    $mediaData = [];
 
-                        $mediaData = [];
+                    foreach ($game['media'] ?? [] as $media) {
 
-                        foreach ($game['media'] as $index => $media) {
-
-                            if (
-                                !isset($media['type']) ||
-                                !isset($media['url'])
-                            ) {
-                                continue;
-                            }
-
-                            if (!in_array($media['type'], ['image', 'video'])) {
-                                Log::warning('Media type tidak valid', [
-                                    'type' => $media['type'],
-                                    'game' => $game['title']
-                                ]);
-                                continue;
-                            }
-
-                            $mediaData[] = [
-                                'traditional_game_id' => $traditionalGame->id,
-                                'type'        => $media['type'],
-                                'url'         => $media['url'],
-                                'caption'     => $media['caption'] ?? null,
-                                'source_page' => $media['source_page'] ?? null,
-                            ];
+                        if (
+                            !isset($media['type']) ||
+                            !isset($media['url'])
+                        ) {
+                            continue;
                         }
 
-                        if (!empty($mediaData)) {
-                            DB::table('traditional_game_media')->insert($mediaData);
+                        if (!in_array($media['type'], ['image', 'video'])) {
+                            continue;
                         }
+
+                        $mediaData[] = [
+                            'traditional_game_id' => $traditionalGame->id,
+                            'type' => $media['type'],
+                            'url' => $media['url'],
+                            'caption' => $media['caption'] ?? null,
+                            'source_page' => $media['source_page'] ?? null,
+                        ];
+                    }
+
+                    if (!empty($mediaData)) {
+                        DB::table('traditional_game_media')->insert($mediaData);
                     }
 
                     $insertedGames++;
@@ -149,8 +176,8 @@ class TraditionalGameSeeder extends Seeder
             }
         });
 
-        //  SUMMARY 
-        $this->command->info("TraditionalGamesSeeder selesai:");
+        // SUMMARY
+        $this->command->info('TraditionalGameSeeder selesai:');
         $this->command->info("✔ Game masuk   : {$insertedGames}");
         $this->command->warn("⚠ Game dilewati: {$skippedGames}");
     }

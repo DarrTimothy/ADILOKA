@@ -20,7 +20,6 @@ class AuthController extends Controller
             'username' => $request->username,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
-            'role'     => 'user',
         ]);
 
         // login otomatis setelah register
@@ -29,10 +28,11 @@ class AuthController extends Controller
         // regenerate session untuk keamanan
         $request->session()->regenerate();
 
-        return ApiResponse::success(
-            $this->transformUser($user),
-            'Selamat datang, ' . $user->username
-        );
+        return ApiResponse::success([
+            'id'       => $user->id,
+            'username' => $user->username,
+            'email'    => $user->email,
+        ], 'Selamat datang, ' . $user->username);
     }
 
 
@@ -52,10 +52,11 @@ class AuthController extends Controller
         /** @var User $user */
         $user = Auth::guard('web')->user();
 
-        return ApiResponse::success(
-            $this->transformUser($user),
-            'Selamat datang kembali, ' . $user->username
-        );
+        return ApiResponse::success([
+            'id'       => $user->id,
+            'username' => $user->username,
+            'email'    => $user->email,
+        ], 'Selamat datang kembali, ' . $user->username);
     }
 
 
@@ -85,11 +86,15 @@ class AuthController extends Controller
             : 0;
 
         return ApiResponse::success([
-            'user' => $this->transformUser($user),
+            'user' => [
+                'id'       => $user->id,
+                'username' => $user->username,
+                'email'    => $user->email,
+            ],
             'progress' => [
                 'completed_regions' => $completedRegions,
-                'total_regions' => $totalRegions,
-                'percentage' => $percentage,
+                'total_regions'     => $totalRegions,
+                'percentage'        => $percentage,
             ],
         ], 'Data user berhasil diambil');
     }
@@ -109,15 +114,5 @@ class AuthController extends Controller
             null,
             'Logout berhasil'
         );
-    }
-
-    private function transformUser(User $user): array
-    {
-        return [
-            'id'       => $user->id,
-            'username' => $user->username,
-            'email'    => $user->email,
-            'role'     => $user->role,
-        ];
     }
 }
