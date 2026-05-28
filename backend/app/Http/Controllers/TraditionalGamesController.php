@@ -125,38 +125,58 @@ class TraditionalGamesController extends Controller
         return ApiResponse::success($data);
     }
 
-    private function transformGame(TraditionalGame $game, bool $isCompleted = false, bool $withDetail = false)
-    {
-        $cover = $game->media()
+    private function transformGame(
+        TraditionalGame $game,
+        bool $isCompleted = false,
+        bool $withDetail = false
+    ) {
+        $cover = $game->media
             ->where('type', 'image')
-            ->orderBy('id')
             ->first();
 
         $data = [
             'id' => $game->id,
+
             'region' => [
                 'province_name' => $game->region->province_name,
                 'bps_code' => $game->region->bps_code,
             ],
+
             'title' => $game->title,
             'subtitle' => $game->subtitle,
             'duration' => $game->duration,
             'is_completed' => $isCompleted,
-            'cover_img' => optional($cover)->url,
+
+            'cover_img' => $cover
+                ? asset('storage/' . ltrim($cover->url, '/'))
+                : null,
         ];
 
         if ($withDetail) {
+
             $data = array_merge($data, [
+
                 'description' => $game->description,
+
                 'how_to_play' => $game->how_to_play,
+
                 'min_players' => $game->min_players,
+
                 'max_players' => $game->max_players,
-                'media' => $game->media->map(fn($m) => [
-                    'type'  => $m->type,
-                    'url'   => $m->url,
-                    'source_page' => $m->source_page,
-                    'caption'     => $m->caption,
-                ]),
+
+                'media' => $game->media->map(function ($m) {
+
+                    $url = $m->type === 'image'
+                        ? asset('storage/' . ltrim($m->url, '/'))
+                        : $m->url;
+
+                    return [
+                        'type' => $m->type,
+                        'url' => $url,
+                        'source_page' => $m->source_page,
+                        'caption' => $m->caption,
+                    ];
+                }),
             ]);
         }
 

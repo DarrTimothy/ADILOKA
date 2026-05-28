@@ -14,10 +14,10 @@ class QuizSeeder extends Seeder
 {
     public function run(): void
     {
-        $path = database_path('data/Quiz/ListQuiz.json');
+        $path = database_path('data/Quiz/list-quiz.json');
 
         if (!File::exists($path)) {
-            $this->command->error('File ListQuiz.json tidak ditemukan');
+            $this->command->error('File list-quiz.json tidak ditemukan');
             return;
         }
 

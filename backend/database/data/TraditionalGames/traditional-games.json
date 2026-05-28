@@ -6,28 +6,21 @@
                 "title": "Tarek Situek",
                 "subtitle": "Permainan tradisional Aceh berbasis tarik menarik",
                 "slug": "tarek-situek",
-                "description": "Tarek Situek merupakan permainan tradisional dari Aceh yang dimainkan secara berkelompok dengan prinsip tarik menarik antar tim, mirip dengan permainan tarik tambang menggunakan pelepah pinang.",
-                "how_to_play": "Pemain dibagi menjadi dua tim yang saling berhadapan dan menarik pelepah pinang atau tali. Tim yang berhasil menarik lawan melewati batas tertentu dinyatakan sebagai pemenang.",
+                "description": "Tarek Situek merupakan permainan tradisional dari Aceh yang dimainkan secara berkelompok dengan prinsip tarik menarik antar tim, mirip dengan permainan tarik tambang.",
+                "how_to_play": "1. Siapkan pelepah pinang atau pelepah kelapa sebagai alat permainan.\n2. Bagi pemain menjadi beberapa kelompok atau pasangan.\n3. Tentukan garis start dan garis finish permainan.\n4. Satu pemain duduk di atas pelepah sebagai penumpang.\n5. Satu pemain lain memegang ujung pelepah untuk menariknya.\n6. Permainan dimulai setelah aba-aba diberikan.\n7. Setiap kelompok berlomba menarik pelepah menuju garis finish.\n8. Kelompok yang mencapai finish paling cepat menjadi pemenang.",
                 "min_players": 2,
                 "max_players": null,
-                "duration": 3,
+                "duration": 15,
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek.gif",
-                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
-                        "caption": "Permainan Tarek Situek menggunakan pelepah pinang"
+                        "url": "games/Aceh/tarek-situek/tarek-situek1.webp",
+                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/"
                     },
                     {
                         "type": "video",
                         "url": "https://www.youtube.com/watch?v=msKks6-G1AU",
-                        "caption": "Video permainan Tarek Situek"
-                    },
-                    {
-                        "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek2.gif",
-                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
-                        "caption": "Dua tim saling tarik dalam permainan Tarek Situek"
+                        "caption": "video Permainan Tarek Situek"
                     }
                 ]
             }
@@ -38,64 +31,1078 @@
         "games": [
             {
                 "title": "Margala",
-                "subtitle": "Permainan tradisional Sumatera Utara berbasis strategi dan kerja sama tim",
+                "subtitle": "Permainan tradisional dengan strategi dan kerja sama tim",
                 "slug": "margala",
-                "description": "Margala adalah permainan tradisional dari Sumatera Utara yang dimainkan secara berkelompok dengan strategi menyerang dan bertahan di dalam arena berbentuk kotak-kotak.",
-                "how_to_play": "Permainan ini dimainkan oleh dua regu di atas arena tanah yang digaris membentuk beberapa kotak. Regu penjaga bertugas menjaga garis dan berusaha menyentuh lawan, sementara regu penyerang harus bekerja sama menerobos dari depan hingga belakang tanpa tersentuh.",
-                "min_players": 8,
-                "max_players": 12,
+                "description": "Margala merupakan permainan tradiisional suku batak di kawasan Danau Toba, Sumatera Utara. Permainan ini dimainkan secara berkelompok dan mengandalkan strategi dan kecepatan.",
+                "how_to_play": "1. Buat garis lapangan berbentuk persegi panjang yang dibagi menjadi beberapa kolom dan baris (kotak-kotak). Semakin banyak pemain yang ikut bermain maka panjang lapangan yang dibutuhkan kerena perlu penyesuaian jumlah garis horizontal pada lapangan.\n2. Pemain dibagi menjadi dua kelompok: Tim Penjaga dan Tim Penyerang.\n3. Tugas Penjaga: Setiap anggota tim penjaga berdiri di sepanjang garis horizontal. Satu orang (biasanya kapten/sodur) bertugas menjaga garis vertikal tengah dan garis depan. Mereka harus menghalangi penyerang dengan cara menyentuh (tag) tubuh lawan tanpa keluar dari garis.\n4. Tugas Penyerang: Tim ini harus berusaha melewati seluruh garis dari depan hingga paling belakang, lalu kembali lagi ke garis depan tanpa tersentuh oleh penjaga.\n5. Tim penyerang mendapat poin jika ada anggotanya yang berhasil kembali ke garis awal (garis \"garis\") tanpa tersentuh. Jika satu saja anggota penyerang tersentuh penjaga, maka kedua tim bertukar posisi.\n",
+                "min_players": 6,
+                "max_players": null,
                 "duration": 20,
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek.gif",
-                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
-                        "caption": "Ilustrasi permainan tradisional tim di lapangan"
+                        "url": "https://tobaria.com/wp-content/uploads/2021/05/IMG_20210525_094715_161.jpg",
+                        "source_page": "https://tobaria.com/margala-pastap-permainan-tradisional-ala-toba/",
+                        "caption": "Bermain margala"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=HvrRTGT-BPM",
-                        "caption": "Video permainan Margala"
-                    },
-                    {
-                        "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/04/tarek-situek2.gif",
-                        "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/",
-                        "caption": "Pemain bekerja sama menerobos pertahanan lawan"
+                        "url": "https://www.youtube.com/watch?v=5v35galQisg",
+                        "caption": "video Permainan Margala"
                     }
                 ]
             }
         ]
     },
     {
-        "region_bps_code": "12",
+        "region_bps_code": "13",
         "games": [
             {
-                "title": "Marsitekka",
-                "subtitle": "Permainan tradisional Batak berbasis ketangkasan melompat dan keseimbangan",
-                "slug": "marsitekka",
-                "description": "Marsitekka adalah permainan tradisional masyarakat Batak di Sumatera Utara yang dimainkan dengan melompati susunan batu secara bergantian. Permainan ini melatih kelincahan, keseimbangan, dan konsentrasi pemain.",
-                "how_to_play": "Beberapa batu disusun bertingkat di tanah. Pemain harus melompati susunan batu menggunakan satu kaki tanpa menjatuhkan batu tersebut. Tingkat kesulitan bertambah dengan susunan batu yang semakin tinggi. Pemain yang menjatuhkan batu atau kehilangan keseimbangan dianggap gugur.",
+                "title": "Badia batuang",
+                "subtitle": "Permainan tradisional dengan ketangkasan dan kreativitas menggunakan bambu",
+                "slug": "badia-batuang",
+                "description": "Badia batung merupakan permainan tradisional Sumatera Barat berupa meriam bambu berdiameter besar (15 cm) yang menghasilkan dentuman keras saat disulut. Permainan ini melibatkan membuat dan menggunakan meriam bambu, dan sering dimainkan dibulan ramadan menjelang berbuka atau sahur.",
+                "how_to_play": "1. Siapkan bambu tua berukuran besar sepanjang 4 sampai 5 ruas (sekitar 2 sampai 3 meter), minyak tanah, serta sumbu atau kain.\n2. Lubangi setiap sekat (ruas) bambu di bagian dalam, kecuali ruas terakhir, agar ruang di dalam bambu saling terhubung.\n3. Buat lubang kecil di bagian pangkal bambu sebagai tempat penyulutan api, menyerupai prinsip kerja meriam.\n4. Tuangkan minyak tanah ke dalam bambu secukupnya.\n5. Sumbat lubang pangkal menggunakan kain yang telah diberi minyak tanah, lalu nyalakan api pada kain tersebut.\n6. Pembakaran akan menghasilkan bunyi dentuman keras menyerupai meriam.",
+                "min_players": 1,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://i0.wp.com/langgam.id/wp-content/uploads/2021/04/meriam-bambu-www.goodnewsfromindonesia.org_.jpeg?w=545&ssl=1",
+                        "source_page": "https://langgam.id/badia-batuang-permainan-ngabuburit-jaman-dulu-yang-mulai-ditinggalkan/"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Meriam_bambu_%281%29.jpg/960px-Meriam_bambu_%281%29.jpg?utm_source=id.wikibooks.org&utm_campaign=parser&utm_content=thumbnail",
+                        "source_page": "https://id.wikibooks.org/wiki/Permainan_Tradisional_Sumatera_Barat/Badia_Batuang"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=zrZqznBv6Lk",
+                        "caption": "video permainan badia batuang"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "14",
+        "games": [
+            {
+                "title": "Ligu",
+                "subtitle": "Permainan tradisional masyarakat Melayu Riau",
+                "slug": "ligu",
+                "description": "Ligu atau Sengki adalah permainan tradisional masyarakat Melayu di wilayah Indragiri Hilir dan Indragiri Hulu, Riau. Permainan ini menggunakan tempurung kelapa sebagai target permainan dan tongkat bambu sebagai alat pemukul.\n\nPermainan dilakukan secara individu maupun beregu dengan tujuan memukul ligu milik lawan menggunakan tongkat. Ligu mengajarkan ketangkasan, strategi, kerja sama tim, dan sportivitas dalam bermain. Selain menjadi hiburan masyarakat, permainan ini juga merupakan bagian dari warisan budaya Melayu yang berkembang di daerah pesisir dan perkebunan kelapa.",
+                "how_to_play": "1. Siapkan permainan\n   Pemain menyiapkan ligu dari tempurung kelapa dan tongkat bambu sebagai alat pemukul. Permainan dapat dimainkan oleh 2 orang atau 2 tim.\n2. Tentukan giliran bermain\n   Pemain menentukan regu yang bermain lebih dahulu menggunakan suit atau kesepakatan bersama.\n3. Pasang target permainan\n   Tim yang kalah giliran akan menempatkan ligu mereka sebagai target di area permainan.\n4. Mulai memukul ligu\n   Tim yang mendapat giliran menyerang memukul ligu menggunakan tongkat bambu ke arah target lawan.\n5. Dapatkan poin\n   Pemain mendapatkan poin jika berhasil mengenai ligu lawan. Jika gagal mengenai target, giliran berpindah ke lawan.\n6. Tentukan pemenang\n   Tim dengan poin terbanyak menjadi pemenang permainan.\n",
                 "min_players": 2,
-                "max_players": 6,
+                "max_players": 12,
+                "duration": 20,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPH59Cqa2zoL3TK6AGPiPn7qL-9TLsCUnkTd_WTyi75rJYIXXxk7pEhvTk3strtlj5TiUF1aAltg282ZDaLRZ5vDT3FfrH0BKHScv5bCBDHzg7oIOrRCJDcqCsg3V18n68-PaLbO3XC6KB/s640/7.jpg",
+                        "source_page": "https://surgaresepracikan.blogspot.com/2017/07/ligu-permainan-daerah-riau-yang-hampir_12.html"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://guruku.kosabudaya.id/wp-content/uploads/2024/05/legu_guruku.kosabudaya.id_.jpg",
+                        "source_page": "https://guruku.kosabudaya.id/materipembelajaran/budayamelayuriau/permainan-tradisional-dengan-peralatan/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=jarnbk4Y8mw",
+                        "caption": "Video pembuatan dan permainan ligu"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "21",
+        "games": [
+            {
+                "title": "Lulu cina buta",
+                "subtitle": "Permainan tradisional dengan kerja sama, konsentrasi, dan strategi pemain",
+                "slug": "lulu-cina-buta",
+                "description": "Permainan dilakukan secara individu maupun beregu dengan tujuan memukul ligu milik lawan menggunakan tongkat. Ligu mengajarkan ketangkasan, strategi, kerja sama tim, dan sportivitas dalam bermain. Selain menjadi hiburan masyarakat, permainan ini juga merupakan bagian dari warisan budaya Melayu yang berkembang di daerah pesisir dan perkebunan kelapa",
+                "how_to_play": "1. Lakukan hompimpa untuk menentukan pemain yang kalah.\n2. Pemain yang kalah hompimpa ditutup matanya menggunakan kain atau sapu tangan.\n3. Pemain tersebut berdiri di tengah lingkaran yang dibuat oleh pemain lain.\n4. Pemain lain membentuk lingkaran sambil saling berpegangan tangan.\n5. Para pemain yang membentuk lingkaran berjalan mengelilingi pemain di tengah sambil menyanyikan lagu:\n\n Lulu cina buta\n Lu banyak tai mata\n Sekilo dua kilo\n Tak dapat dibagi dua\n Lu buta cari saya\n\n\n6. Setelah lagu selesai, pemain yang ditutup matanya berhenti di tempat.\n7. Pemain tersebut mencoba menebak salah satu pemain yang berada di dalam lingkaran.\n8. Jika tebakan benar, pemain yang ditebak akan berganti peran menjadi pemain yang ditutup matanya.\n9. Jika tebakan salah, pemain yang ditutup matanya melanjutkan permainan dengan menebak pemain lain.\n10. Permainan diulangi dengan langkah yang sama.\n",
+                "min_players": 5,
+                "max_players": 10,
                 "duration": 15,
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Hopscotch_game.jpg",
-                        "source_page": "https://commons.wikimedia.org/wiki/File:Hopscotch_game.jpg",
-                        "caption": "Ilustrasi permainan melompat tradisional mirip Marsitekka"
-                    },
-                    {
-                        "type": "video",
-                        "url": "https://www.youtube.com/watch?v=2R8v6mCYj6Q",
-                        "caption": "Video permainan tradisional Marsitekka"
+                        "url": "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-lu-lu-cina-buta-permainan-tradisional-yang-berasal-dari-indragiri-hilir-riau-hhsB5FGoUa.jpg?tr=w-730,h-486,fo-center",
+                        "source_page": "https://www.goodnewsfromindonesia.id/2024/09/27/lu-lu-cina-buta-permainan-tradisional-yang-berasal-dari-indragiri-hilir-riau"
                     },
                     {
                         "type": "image",
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Children_playing_hopscotch.jpg",
-                        "source_page": "https://commons.wikimedia.org/wiki/File:Children_playing_hopscotch.jpg",
-                        "caption": "Anak-anak memainkan permainan lompat tradisional"
+                        "url": "https://www.melayupedia.com/foto_berita/2021/08/2021-08-23-lu-lu-cina-buta-permainan-seru-tebak-nama-khas-kepri.jpg",
+                        "source_page": "https://www.melayupedia.com/berita/434/lu-lu-cina-buta-permainan-seru-tebak-nama-khas-kepri"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=zC4Lftj_m-g",
+                        "caption": "Permainan lulu cinta buta"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "17",
+        "games": [
+            {
+                "title": "Bicau",
+                "subtitle": "Permainan strategi tradisional masyarakat Bengkulu",
+                "slug": "bicau",
+                "description": "Bicau adalah permainan rakyat tradisional Bengkulu yang dimainkan oleh dua orang menggunakan biji-bijian kecil sebagai buah permainan. Permainan ini juga dikenal dengan nama Bikau, Capicau, atau Seletak di beberapa daerah.",
+                "how_to_play": "1. Permainan dimainkan oleh 2 orang. Masing-masing pemain memiliki 12 buah permainan kecil. Buah setiap pemain harus memiliki warna atau bentuk berbeda agar mudah dikenali. Garis permainan dapat dibuat di tanah, papan, atau kertas.\n\n2. Pemain menentukan siapa yang bermain lebih dahulu, biasanya menggunakan suit atau kesepakatan bersama.\n\n3. Pemain menggerakkan satu buah secara bergiliran dari satu titik ke titik lain. Perpindahan hanya boleh menuju titik kosong.\n\n4. Tangkap buah lawan jika buah lawan dapat dilompati, maka buah tersebut dianggap kalah atau “mati” atau Buah yang kalah diambil keluar dari area permainan.\n\n5. Susun strategi dengan pemain harus memperhitungkan langkah dengan hati-hati agar tidak mudah dilompati lawan. Pemain juga harus mencari peluang untuk menangkap buah lawan sebanyak mungkin.\n\n6. Tentukan pemenang yaitu emain yang lebih dahulu kehilangan seluruh buah permainannya dinyatakan kalah.\n",
+                "min_players": 2,
+                "max_players": 2,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZKkdqotiMvdSGALIY-MoRkY_Z_SLG6-ZV4UIa_Xw1rO2u9Vgd5P4l-RS-xzY4WwV1C7SczKJKIQQiAOY__jFSpxNj_0r8l0x-uMbAV0xYpwD74w-VkW4oV1_qZmGiBR6LL29mR_7GyfsH/s16000-rw/permainan+bicau.png",
+                        "source_page": "https://aturanpermainan.blogspot.com/2021/05/31-permainan-asli-khas-bengkulu-yang-sudah-jarang-dimainkan.html"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=j4ViZYUuPxQ",
+                        "caption": "permainan bicau"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "15",
+        "games": [
+            {
+                "title": "Tejek-tejekan",
+                "subtitle": "Permainan Melompat dengan Satu Kaki dari Jambi",
+                "slug": "tejek-tejekan",
+                "description": "Tejek-tejekan merupakan permainan tradisional melompat dengan mengangkat satu kaki dari Jambi. Permainan serupa juga cukup banyak tersebar di Indonesia dengan berbagai sebutan di antaranya dampu bulan dari Betawi atau sekarang Jakarta, engklek dari Jawa, dan setatak dari Riau, serta masih banyak sebutan lainnya. Permainan ini dimainkan dengan cara mengangkat satu kaki sambil melompat pada area yang telah ditentukan. Permainan ini melatih ketangkasan juga keseimbangan pemain. Melompat dengan satu kaki inilah yang di Jambi disebut bertejek, yang menjadi asal usul nama permainan ini disana. ",
+                "how_to_play": "1. Siapkan lapangan permainan dengan petak-petak yang telah digambar.\n2. Setiap pemain menyiapkan kuju dari pecahan genteng.\n3. Letakkan seluruh kuju pemain di dalam petak pertama.\n4. Tentukan urutan bermain pemain.\n5. Pemain pertama memulai permainan dengan melempar kuju ke petak kedua.\n6. Pastikan kuju jatuh tepat di dalam petak sasaran.\n7. Jika lemparan berhasil, pemain mulai berjalan bertejek (melompat dengan satu kaki) dari petak kedua hingga petak terakhir.\n8. Saat perjalanan kembali dan tiba di petak ketiga, ambil kuju yang berada di petak kedua.\n9. Lanjutkan bertejek kembali menuju petak pertama tanpa menginjak kuju milik pemain lain.\n10. Jika tahap berhasil, lempar kembali kuju ke petak berikutnya, yaitu petak ketiga.\n11. Lakukan kembali gerakan bertejek hingga petak terakhir.\n12. Saat perjalanan kembali dan tiba di petak setelah kuju berada, ambil kuju tersebut lalu kembali menuju petak pertama.\n13. Ulangi langkah permainan secara berurutan hingga kuju berhasil dilempar dan dimainkan sampai petak terakhir.\n14. Pemain yang berhasil menyelesaikan seluruh petak memperoleh tanda bintang pada petak yang dipilihnya.\n15. Pemilik bintang diperbolehkan menginjak petak bintangnya sendiri.\n16. Pemain lain tidak diperbolehkan menginjak petak yang memiliki bintang milik pemain lain.\n17. Permainan dinyatakan mati atau giliran berakhir apabila:\n    a. Kuju yang dilempar jatuh di luar petak sasaran.\n    b. Pemain menginjak garis petak saat bertejek.\n    c. Pemain menginjak kuju milik pemain lain.\n    d. Pemain menginjak petak bintang milik pemain lain.\n18. Giliran bermain berpindah kepada pemain berikutnya jika terjadi kesalahan.\n19. Hitung jumlah bintang yang diperoleh setiap pemain setelah permainan selesai.\n20. Pemain dengan jumlah bintang terbanyak dinyatakan sebagai pemenang pertama.\n21. Pemenang berikutnya ditentukan berdasarkan jumlah bintang terbanyak selanjutnya.",
+                "min_players": 5,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://outdoorplayground.co.id/wp-content/uploads/2025/01/sejarah-permainan-engklek.jpg",
+                        "source_page": "https://outdoorplayground.co.id/permainan-tradisional-engklek/",
+                        "caption": "Ilustrasi permainan engklek yang merupakan varian dari permainan tejek-tejekan, dikenal juga sebagai sebutan, beberapa diantarnya seperti dende-dende, kengkeng, dan masih banyak lagi."
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
+                        "caption": "permainan engklek dengan mekanik serupa atau varian dari tejek-tejekan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "18",
+        "games": [
+            {
+                "title": "Yeye",
+                "subtitle": "Permainan Lompat Tinggi dari Lampung",
+                "slug": "yeye",
+                "description": "Yeye merupakan permainan tradisional dari Lampung yang umumnya populer di kalangan anak perempuan, meskipun permainan ini juga populer di kalangan anak laki-laki pada daerah-daerah lain yang memiliki permainan serupa. Permainan menggunakan tali yang terbuat dari karet. Permainan ini memerlukan ketangkasan dan kelincahan pemain untuk dapat melompati tali karet.",
+                "how_to_play": "1. Kumpulkan seluruh pemain di area permainan.\n2. Tentukan dua pemain sebagai pemegang ujung tali dan pemain lainnya sebagai pelompat.\n3. Pemegang tali mengambil posisi saling berhadapan dengan jarak yang cukup agar tali terbentang lurus.\n4. Bentangkan tali pada ketinggian awal, yaitu setinggi lutut.\n5. Pemain melompati tali secara bergiliran.\n6. Naikkan ketinggian tali secara bertahap setelah semua pemain berhasil melewati ketinggian sebelumnya.\n7. Tingkatkan ketinggian tali hingga mencapai posisi tertinggi, yaitu setinggi tangan yang diacungkan ke atas.\n8. Pemain dapat menggunakan tangan sebagai alat bantu saat melompati tali pada tingkat ketinggian tertentu.\n9. Perhatikan setiap lompatan pemain.\n10. Pemain dinyatakan gagal apabila tidak dapat melompati tali pada ketinggian tertentu, baik dengan bantuan tangan maupun tanpa bantuan tangan.\n11. Pemain yang gagal akan berganti tugas menjadi pemegang ujung tali atau berhenti bermain sesuai kesepakatan permainan.\n12. Permainan dilanjutkan hingga seluruh pemain mendapat giliran.",
+                "min_players": 3,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/11JheHyi9Vo"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://nusakata.com/wp-content/uploads/2025/01/20191710Lompat-tali-duniamainananakdotcom-768x512-1.jpg",
+                        "source_page": "https://www.beritasatu.com/network/nusakata/431827/budaya-indonesia-yang-hampir-punah-permainan-yeye"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "16",
+        "games": [
+            {
+                "title": "Zondag maandag",
+                "subtitle": "Permainan Melompat dengan Satu Kaki dari Sumatera Selatan",
+                "slug": "zondag-maandag",
+                "description": "Zondag Maandag merupakan varian permainan engklek dari Sumatera Selatan. Permainan ini sering juga disebut dengan sebutan sunda manda, namun pada zaman kolonial Belanda permainan ini juga cukup populer dikalangan anak-anak belanda dan mereka menyebutnya dengan sebutan zondag maandag yang memiliki arti \"minggu-senin\" dalam bahasa belanda",
+                "how_to_play": "1. Siapkan area permainan yang datar.\n2. Gambar petak-petak permainan di tanah atau lantai menggunakan kapur atau garis.\n3. Siapkan gacuk atau pecahan genting sebagai alat lempar.\n4. Tentukan urutan bermain seluruh pemain.\n5. Pemain pertama melempar gacuk ke petak pertama.\n6. Pastikan gacuk jatuh tepat di dalam petak sasaran.\n7. Pemain mulai melompat menggunakan satu kaki melewati petak-petak permainan.\n8. Pemain tidak boleh menginjak garis petak atau petak yang berisi gacuk.\n9. Setelah mencapai petak terakhir, pemain berbalik arah untuk kembali ke titik awal.\n10. Saat perjalanan kembali, pemain mengambil gacuk dari petak sasaran tanpa menjatuhkan keseimbangan.\n11. Jika berhasil, pemain melanjutkan permainan dengan melempar gacuk ke petak berikutnya.\n12. Giliran pemain berakhir apabila gacuk keluar dari petak, pemain menginjak garis, atau kehilangan keseimbangan.\n13. Permainan dilanjutkan secara bergiliran hingga seluruh pemain mendapat kesempatan bermain.\n14. Pemain yang berhasil menyelesaikan seluruh petak terlebih dahulu dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://tgpbelajarjurnalistik.wordpress.com/wp-content/uploads/2012/12/new-picture-23.png",
+                        "source_page": "https://tgpbelajarjurnalistik.wordpress.com/2012/12/25/zondag-maandag-permainan-tradisional-beragam-nama/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/XTbgGPZtk5k",
+                        "caption": "Cara bermain zondag maandag atau yang lebih dikenal dengan sebutan engklek"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "19",
+        "games": [
+            {
+                "title": "Pangkak igik karet",
+                "subtitle": "Permainan Beradu Biji Karet",
+                "slug": "pangkak-igik-karet",
+                "description": "Pangkak igik karet merupakan permainan beradu biji karet dari Bangka Belitung. permainan ini melibatkan mengadu 2 biji karet, karena biji karet mudah didapat, mengingat komoditas karet di Bangka Belitung, membuat permainan ini sangat populer dan mudah dimainkan.",
+                "how_to_play": "1. Siapkan beberapa biji karet yang akan diadu sesuai kesepakatan bersama.\n2. Setiap pemain memilih satu biji karet miliknya.\n3. Salah satu pemain meletakkan kedua biji karet di antara kedua telapak tangannya atau menyusunnya di atas alas yang keras.\n4. Jepit dan tekan kedua biji karet secara bersamaan menggunakan kedua tangan, atau jika biji karet disusun di atas alas yang keras, biji karet dapat dipukul menggunakan telapak tangan.\n5. Lanjutkan menekan atau memukul hingga salah satu biji karet pecah.\n6. Periksa kondisi kedua biji karet setelah ditekan atau dipukul.\n7. Pemain yang biji karetnya tidak pecah dinyatakan sebagai pemenang.\n8. Permainan dapat diulangi dengan menggunakan biji karet lainnya.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=iF37mPXCHIA",
+                        "caption": "PANGKAK IGIK KARET, Permainan Tradisional Bangka yang Sudah Punah? by Begagit TV"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYnvDqZdX04slEqO_MZtL7hspHRG_V6XKCA_JxhB0IXJXmzCJn_XXRl1POrKRwsAFR_nh5VWGjtHCM7wJEdcypH75nZlf6QIQF-XOuPDpNRa7GAsz8BUmBVZWcMiki8n-yPsmXzRMtPNiq/s16000-rw/adu+biji+karet.gif",
+                        "source_page": "https://aturanpermainan.blogspot.com/2021/05/permainan-tradisional-khas-kepulauan-riau.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "36",
+        "games": [
+            {
+                "title": "Gatrik",
+                "subtitle": "Permainan tradisional Banten dengan ketangkasan memukul kayu",
+                "slug": "gatrik",
+                "description": "Gatrik adalah permainan tradisional wilayah Sunda termasuk Banten yang dimainkan menggunakan dua batang kayu dengan ukuran berbeda. Permainan ini melatih ketangkasan, konsentrasi, dan kerja sama antar pemain.",
+                "how_to_play": "1. Pemain dibagi menjadi dua kelompok.\n2. Kayu kecil diletakkan di antara dua batu.\n3. Salah satu pemain mencungkil kayu kecil menggunakan kayu panjang.\n4. Setelah kayu kecil melambung, pemain memukulnya sejauh mungkin.\n5. Kelompok lawan berusaha menangkap kayu kecil sebelum jatuh ke tanah.\n6. Jika kayu berhasil ditangkap, giliran bermain berpindah ke kelompok lawan.\n7. Jika tidak tertangkap, permainan dilanjutkan dan poin dihitung berdasarkan jarak pukulan.",
+                "min_players": 2,
+                "max_players": 10,
+                "duration": 20,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://image.idntimes.com/post/20220324/screen-shot-2022-03-24-at-141425-a8e022d7ceacf86ac7e73d3e75a1a553.png?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75",
+                        "source_page": "https://banten.idntimes.com/news/banten/gatrik-permainan-tradisional-banten-yang-kian-jarang-dimainkan-00-lm183-8tyt2s"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://aktual.com/wp-content/uploads/2016/03/Permainan-tradisional.jpg",
+                        "source_page": "https://aktual.com/pelestarian-budaya-permainan-tradisional-bangka-perlu-didokumentasikan/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=4o8HcLSgh8Q",
+                        "caption": "bermain gatrik"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "31",
+        "games": [
+            {
+                "title": "Wak-wak gung",
+                "subtitle": "Permainan tradisional Betawi dengan kerja sama dan ketangkasan kelompok",
+                "slug": "wak-wak-gung",
+                "description": "Wak-wak Gung adalah permainan tradisional Betawi yang dimainkan secara berkelompok dengan membentuk terowongan dari tangan pemain. Permainan ini diiringi lagu khas Betawi dan melatih kerja sama, kelincahan, serta kebersamaan antar pemain.",
+                "how_to_play": "1. Dua orang pemain berdiri saling berhadapan sambil mengangkat tangan membentuk terowongan.\n2. Pemain lain berbaris memanjang sambil memegang pundak teman di depannya.\n3. Seluruh pemain berjalan melewati terowongan sambil menyanyikan lagu Wak Wak Gung.\n4. Saat lagu berhenti, kedua pemain yang menjadi terowongan menurunkan tangan untuk menangkap satu pemain.\n6. Pemain yang tertangkap memilih bergabung dengan salah satu penjaga.\n7. Permainan dilanjutkan hingga seluruh pemain tertangkap dan terbentuk dua kelompok.\n8. Kelompok kemudian melanjutkan permainan ke tahap kejar-kejaran seperti induk ayam dan elang.",
+                "min_players": 6,
+                "max_players": 20,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://dinaskebudayaan.jakarta.go.id/content/redaktur_2025/Wak%20wak%20Gung.jpg",
+                        "source_page": "https://dinaskebudayaan.jakarta.go.id/page/512/2400"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://lahatpos.bacakoran.co/upload/a62fa3de40b5997a635e3fb0b4c63724.jpg",
+                        "source_page": "https://lahatpos.bacakoran.co/read/7217/permainan-ular-naga-panjang-sudah-ada-sejak-zaman-penjajahan-belanda"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=bA6LGXb0c3Y",
+                        "caption": "bermain wak wak gung"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "32",
+        "games": [
+            {
+                "title": "Cingciripit",
+                "subtitle": "Permainan tradisional Sunda dengan konsentrasi dan refleks pemain",
+                "slug": "cingciripit",
+                "description": "Cingciripit adalah permainan tradisional anak dari Jawa Barat yang dimainkan sambil menyanyikan lagu khas Sunda. Permainan ini melatih konsentrasi, refleks, kerja sama, dan kecepatan pemain.",
+                "how_to_play": "1. Pemain berkumpul membentuk lingkaran atau kelompok kecil.\n2. Salah satu pemain membuka telapak tangannya di tengah permainan.\n3. Pemain lain meletakkan satu jari telunjuk di atas telapak tangan tersebut.\n4. Seluruh pemain menyanyikan lagu “Cingciripit”.\n5. Saat lagu selesai, telapak tangan ditutup dengan cepat.\n6. Pemain lain harus segera menarik jarinya agar tidak tertangkap.\n7. Pemain yang jarinya tertangkap menjadi “ucing” atau penjaga pada permainan berikutnya.",
+                "min_players": 2,
+                "max_players": 12,
+                "duration": 10,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://www.bbpmpjabar.id/wp-content/uploads/2023/03/Permainan-Tradisional-Jabar-Cingciripit-700x394-1.jpg",
+                        "source_page": "https://www.bbpmpjabar.id/cingciripit/"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://image.popmama.com/post/20221116/permainan-tradisional-sunda-jawa-barat-cing-ciripit-2ee91f9b1ed0d8d5279fd2f937b7ba12.png?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75",
+                        "source_page": "https://www.popmama.com/big-kid/6-9-years-old/fakta-permainan-tradisional-cing-ciripit-anak-wajib-tahu-00-tpmt6-94tjck"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=rAwWO-St_LA",
+                        "caption": "Permainan cing ciripit"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "33",
+        "games": [
+            {
+                "title": "Cublak-cublak suweng",
+                "subtitle": "Permainan tradisional Jawa dengan konsentrasi dan kerja sama pemain",
+                "slug": "cublak-cublak-suweng",
+                "description": "Cublak-cublak Suweng adalah permainan tradisional anak dari Jawa yang dimainkan sambil menyanyikan lagu daerah. Permainan ini mengajarkan konsentrasi, kejujuran, kerja sama, dan kemampuan menebak antar pemain.",
+                "how_to_play": "1. Beberapa pemain duduk melingkar menghadap satu pemain yang tengkurap di tengah.\n2. Sebuah benda kecil seperti batu atau biji disembunyikan di telapak tangan pemain.\n3. Para pemain menggerakkan tangan di atas punggung pemain yang tengkurap sambil menyanyikan lagu Cublak Cublak Suweng.\n4. Salah satu pemain diam-diam menyimpan benda kecil tersebut di tangannya.\n5. Setelah lagu selesai, pemain yang tengkurap menebak siapa yang menyimpan benda tersebut.\n6. Jika tebakan benar, pemain yang menyimpan benda berganti posisi menjadi penebak.\n7. Permainan diulang secara bergantian hingga seluruh pemain mendapat giliran.",
+                "min_players": 3,
+                "max_players": 10,
+                "duration": 10,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://cdn.antaranews.com/cache/1200x800/2022/04/08/61.jpg.webp",
+                        "source_page": "https://www.antaranews.com/berita/4311763/lirik-lagu-cublak-cublak-suweng-dan-penjelasannya"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://assets.promediateknologi.id/crop/0x0:0x0/1200x0/webp/photo/2023/07/24/Suweng-1902051734.jpg",
+                        "source_page": "https://depok.urbanjabar.com/lifestyle/2559574488/mengenal-cublak-cublak-suweng-permainan-tradisional-yang-asyik-ini-cara-mainnya"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=uHTnviRGiwc",
+                        "caption": "permainan cublak cublak suweng"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "34",
+        "games": [
+            {
+                "title": "Jamuran",
+                "subtitle": "Permainan tradisional Yogyakarta dengan kerja sama dan kreativitas gerak",
+                "slug": "jamuran",
+                "description": "Jamuran adalah permainan tradisional anak dari Yogyakarta yang dimainkan secara berkelompok sambil menyanyikan lagu daerah Jawa. Permainan ini melatih kerja sama, konsentrasi, kreativitas, dan interaksi sosial antar pemain.",
+                "how_to_play": "1. Pemain membentuk lingkaran sambil bergandengan tangan.\n2. Salah satu pemain berada di tengah lingkaran sebagai pemimpin permainan.\n3. Seluruh pemain berjalan memutar sambil menyanyikan lagu “Jamuran”.\n4. Setelah lagu selesai, pemain di tengah menyebutkan jenis “jamur” atau gerakan tertentu.\n5. Semua pemain harus segera menirukan gerakan atau posisi yang diperintahkan.\n6. Pemain yang salah gerakan atau terlambat akan menggantikan posisi pemain di tengah.\n7. Permainan diulang dengan gerakan dan instruksi yang berbeda.",
+                "min_players": 5,
+                "max_players": 15,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://tgrcampaign.com/media_library/posts/large/3f96e05c68518b27bc985f134bbf6c80.jpg",
+                        "source_page": "https://tgrcampaign.com/read/306/yuk-kenalan-dengan-jamuran-permainan-tradisional-khas-yogyakarta"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Kendari/o/1765461548641-jamuran/z8hnm9l3ebw18d3.jpeg",
+                        "source_page": "http://rri.co.id/kendari/regional/2036071/permainan-tradisional-jamuran-dan-nilai-kebersamaan-masyarakat-jawa"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=NWeNArDJ_tc&list=RDNWeNArDJ_tc&start_radio=1",
+                        "caption": "permainan jamuran"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "35",
+        "games": [
+            {
+                "title": "Pesapean",
+                "subtitle": "Permainan tradisional Madura balapan mini menyerupai karapan sapi",
+                "slug": "pesapean",
+                "description": "Pesapean adalah permainan tradisional khas Madura yang menyerupai miniatur karapan sapi. Permainan ini menggunakan roda kecil yang dipacu hingga melaju cepat menuju garis akhir dan melatih ketangkasan, kreativitas, serta sportivitas pemain.",
+                "how_to_play": "1. Pemain menyiapkan alat pesapean yang terbuat dari roda kecil dan karet pelontar.\n2. Roda dipasang pada alat permainan menyerupai miniatur kerapan sapi.\n3. Pemain memutar roda atau karet ke arah berlawanan untuk menghasilkan tenaga dorong.\n4. Setelah siap, alat dilepaskan secara bersamaan menuju lintasan.\n5. Pesapean yang melaju paling cepat dan mencapai garis akhir terlebih dahulu menjadi pemenang.\n6. Permainan dilakukan secara bergantian atau dalam beberapa putaran perlombaan.",
+                "min_players": 2,
+                "max_players": 6,
+                "duration": 10,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://www.lontarmadura.com/wp-content/uploads/2025/02/PESAPEAN.jpg",
+                        "source_page": "https://www.lontarmadura.com/permainan-anak-madura-dan-nilai-kehidupan-yang-terkandung-di-dalamnya/"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://i0.wp.com/maduraindepth.com/wp-content/uploads/2023/01/images-13.jpeg",
+                        "source_page": "https://maduraindepth.com/permainan-unik-kerapan-pesapean-dari-desa-arok"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=4_Pd_0uSSAM",
+                        "caption": "Permainan Karapan Pesapean"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "51",
+        "games": [
+            {
+                "title": "Deduplak",
+                "subtitle": "Permainan tradisional Bali dengan keseimbangan dan kerja sama tim",
+                "slug": "deduplak",
+                "description": "Dedeplak adalah permainan tradisional anak dari Bali yang dimainkan menggunakan tempurung kelapa sebagai pijakan kaki. Permainan ini melatih keseimbangan tubuh, konsentrasi, koordinasi gerak, dan kerja sama antar pemain.",
+                "how_to_play": "1. Pemain menggunakan dua buah tempurung kelapa yang telah diberi tali sebagai alat pijakan.\n2. Kedua kaki ditempatkan di atas tempurung kelapa sambil memegang tali penyeimbang.\n3. Pemain berjalan perlahan menggunakan alat tersebut menuju garis akhir.\n4. Permainan dapat dilakukan secara individu maupun perlombaan antar kelompok.\n5. Pemain yang mampu mencapai garis akhir tanpa terjatuh menjadi pemenang.\n6. Permainan dilakukan di area datar dan terbuka agar pemain lebih leluasa bergerak.",
+                "min_players": 2,
+                "max_players": 10,
+                "duration": 10,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://img.antaranews.com/cache/1200x800/2019/02/10/antarafoto-pelestarian-permainan-tradisional-denpasar-100219-nhw-5.jpg.webp",
+                        "source_page": "https://www.antaranews.com/foto/796610/pelestarian-permainan-tradisional-bali"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://pramukaku.com/wp-content/uploads/2023/09/permainan-tradisional-bali-deduplak.webp",
+                        "source_page": "https://pramukaku.com/permainan-tradisional-bali/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=nK6Yq5y2_zg",
+                        "caption": "Permainan deduplak"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "52",
+        "games": [
+            {
+                "title": "Belompongan",
+                "subtitle": "Permainan tradisional NTB berbasis ketangkasan memukul dan kerja sama tim",
+                "slug": "belompongan",
+                "description": "Belompongan adalah permainan tradisional anak dari Lombok, Nusa Tenggara Barat, yang dimainkan secara beregu menggunakan bola dan sasaran tertentu. Permainan ini melatih kerja sama, ketangkasan, konsentrasi, dan strategi antar pemain.",
+                "how_to_play": "1. Siapkan lapangan permainan, garis “mate” sebagai batas memukul, sebuah patok dari batu atau bata, dan sebuah bola kecil. Pemain dibagi menjadi dua regu yaitu regu pemukul (pihak dalam) dan regu penjaga (pihak luar).\n2. Regu pemukul berada di belakang garis mate, sedangkan regu penjaga menyebar di area lapangan.\n3. Pemain memukul bola menggunakan tangan dengan enam tahapan pukulan berbeda:\n\n   * Pukulan biasa: bola dipukul langsung dengan satu tangan.\n   * Andang julu: bola dilempar ke atas lalu dipukul menghadap depan.\n   * Nepak dada: pemain menepuk dada sebelum memukul bola.\n   * Telenjek engkeng / negtik kelelek: pemain berkacak pinggang atau memegang ketiak sebelum memukul bola.\n   * Bawaq langkang: bola dilempar melalui sela kaki lalu dipukul.\n   * Ngengacut: bola dilempar ke atas lalu ditendang menggunakan kaki.\n4. Setelah bola dipukul, regu penjaga berusaha menangkap bola secara langsung sebelum menyentuh tanah.\n5. Jika bola tidak tertangkap, regu penjaga harus menggelindingkan bola ke arah patok.\n6. Pemain dinyatakan “mate” apabila bola tertangkap langsung, bola mengenai patok, atau pukulan tidak melewati garis mate.\n7. Pemain berikutnya melanjutkan permainan dari tahapan pukulan terakhir jika pemain sebelumnya mati.\n8. Regu yang berhasil menyelesaikan seluruh tahapan pukulan menjadi pemenang.\n",
+                "min_players": 5,
+                "max_players": 12,
+                "duration": 20,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "*image ambil dari video youtubenya saja "
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=T3gVyP48NMY",
+                        "caption": "permainan belompongan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "53",
+        "games": [
+            {
+                "title": "Rangku alu",
+                "subtitle": "Permainan tradisional Nusa Tenggara Timur yang mengandalkan koordinasi gerak dengan irama",
+                "slug": "rangku-alu",
+                "description": "Rangku Alu adalah permainan tradisional dari Flores, Nusa Tenggara Timur, yang dimainkan menggunakan bambu panjang yang digerakkan secara berirama. Permainan ini melatih ketangkasan, konsentrasi, kelincahan, koordinasi gerak, dan kerja sama antar pemain.",
+                "how_to_play": "1. Siapkan empat batang bambu panjang dengan ukuran yang hampir sama.\n2. Dua pasang pemain duduk berhadapan sambil memegang ujung bambu di lantai atau tanah.\n3. Bambu disusun membentuk pola persegi atau silang sehingga dapat digerakkan membuka dan menutup.\n4. Pemain penggerak bambu mulai menggeser bambu secara perlahan sambil mengikuti hitungan atau irama lagu daerah.\n5. Pemain lain bergantian masuk ke tengah susunan bambu untuk melompat mengikuti irama gerakan bambu.\n6. Pemain harus melompat dengan tepat saat bambu membuka dan menutup agar kaki tidak terjepit.\n7. Setelah beberapa putaran, tempo gerakan bambu biasanya dipercepat untuk meningkatkan tingkat kesulitan permainan.\n8. Jika kaki pemain terkena atau terjepit bambu, pemain dianggap kalah dan bergantian menjadi penggerak bambu.\n9. Permainan dilakukan secara bergantian hingga seluruh pemain mendapat giliran menjadi pelompat maupun penggerak bambu.\n10. Pemain yang mampu bertahan paling lama tanpa terjepit dianggap sebagai pemenang.",
+                "min_players": 6,
+                "max_players": 12,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/rangku-alu.jpg",
+                        "source_page": "https://www.anakbisa.com/kb/rangku-alu/",
+                        "caption": "anak-anak yang sedang bermain rangka alu"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://klasika.kompas.id/wp-content/uploads/2024/04/shutterstock_2284227099.webp",
+                        "source_page": "https://klasika.kompas.id/baca/kenalan-dengan-tari-rangkuk-alu/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=SxxN1JFsy5g",
+                        "caption": "Permainan rangka alu"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "61",
+        "games": [
+            {
+                "title": "Sepak Sawut",
+                "subtitle": "Permainan tradisional masyarakat Dayak dengan ketangkasan dan kerja sama tim",
+                "slug": "sepak-sawut",
+                "description": "Sepak Sawut adalah permainan tradisional masyarakat Dayak yang dimainkan menggunakan bola dari sabut kelapa yang dibakar hingga menyala. Permainan ini menyerupai sepak bola dan dikenal di beberapa wilayah masyarakat Dayak di Kalimantan. Sepak Sawut melatih ketangkasan, kerja sama tim, keberanian, dan sportivitas pemain.",
+                "how_to_play": "1. Siapkan lapangan permainan, dua gawang, dan bola dari sabut kelapa kering yang telah direndam minyak tanah lalu dibakar hingga menyala.\n2. Pemain dibagi menjadi dua tim dengan jumlah pemain yang sama.\n3. Permainan biasanya dilakukan pada malam hari agar api pada bola terlihat jelas.\n4. Bola api ditendang menggunakan kaki seperti permainan sepak bola pada umumnya.\n4. Setiap tim berusaha menggiring dan memasukkan bola ke gawang lawan untuk mencetak gol.\n5. Pemain harus berhati-hati saat merebut atau menendang bola karena bola dalam keadaan terbakar.\n6. Tim dengan jumlah gol terbanyak menjadi pemenang permainan.",
+                "min_players": 10,
+                "max_players": 14,
+                "duration": 20,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://infopublik.id/assets/upload/headline//WhatsApp_Image_2023-05-24_at_12_36_59.jpeg",
+                        "source_page": "https://infopublik.id/kategori/nusantara/743676/sepak-sawut-kearifan-lokal-yang-harus-dilestarikan"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://palangkaraya.go.id/wp-content/uploads/2023/05/WhatsApp-Image-2023-05-24-at-12.36.59-1.jpeg",
+                        "source_page": "https://palangkaraya.go.id/sepak-sawut-kearifan-lokal-yang-harus-dilestarikan/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=YrKjaPB3on4",
+                        "caption": "Permainan Sepak Sawut"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "62",
+        "games": [
+            {
+                "title": "Habayang",
+                "subtitle": "Permainan tradisional Kalimantan Tengah dengan ketangkasan memutar dan adu kekuatan gasing",
+                "slug": "habayang",
+                "description": "Habayang atau Bagasing adalah permainan tradisional masyarakat Dayak di Kalimantan Tengah yang menggunakan gasing kayu berbentuk kerucut. Permainan ini dimainkan anak-anak hingga orang dewasa untuk mengadu kekuatan maupun ketahanan putaran gasing.",
+                "how_to_play": "1. Siapkan gasing kayu berbentuk kerucut dan tali lilitan untuk memutar gasing.\n2. Pemain berdiri di area permainan dengan masing-masing membawa satu gasing.\n3. Tali dililitkan pada badan gasing hingga rapat sebelum dilempar ke arena.\n4. Pemain melempar gasing secara bersamaan agar berputar sekuat mungkin di arena permainan.\n5. Pada permainan “batikam”, pemain saling mengarahkan gasing untuk membentur gasing lawan.\n6. Gasing yang pecah, berhenti lebih dulu, atau keluar arena dianggap kalah.\n7. Pada jenis permainan ketahanan, pemain berusaha membuat gasing berputar selama mungkin.\n8. Gasing yang mampu bertahan berputar paling lama menjadi pemenang permainan",
+                "min_players": 2,
+                "max_players": 8,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://mmc.kalteng.go.id/files/berita/04072019022527_0.jpg",
+                        "source_page": "https://mmc.kalteng.go.id/berita/read/6918/bagasing-habayang-permainan-tradisional-yang-terlupakan",
+                        "caption": "nostalgia bermain habayang/bagasing"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://palangkaraya.go.id/wp-content/uploads/2025/04/Lomba-Habayang_3.3.jpg",
+                        "source_page": "https://palangkaraya.go.id/ikat-tali-gasing/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=uIlEKT2Ay-Y",
+                        "caption": "Permainan habayang"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "63",
+        "games": [
+            {
+                "title": "Balogo",
+                "subtitle": "Permainan tradisional Kalimantan Selatan dengan ketepatan dan strategi pemain",
+                "slug": "balogo",
+                "description": "Balogo adalah permainan tradisional khas suku Banjar di Kalimantan Selatan yang menggunakan alat bernama logo, yaitu kepingan dari tempurung kelapa berbentuk bundar atau menyerupai daun. Permainan ini biasanya dimainkan anak-anak dan remaja laki-laki di area tanah datar untuk melatih ketepatan, strategi, dan sportivitas pemain.",
+                "how_to_play": "1. Siapkan logo dari tempurung kelapa dan alat pemukul yang disebut panapak atau campa.\n2. Permainan dilakukan di tanah datar dengan susunan logo sebagai sasaran permainan.\n3. Pemain dibagi menjadi dua regu atau dimainkan secara bergantian.\n4. Setiap pemain meluncurkan logo menggunakan panapak ke arah target lawan.\n5. Pemain harus mengenai atau menjatuhkan logo sasaran untuk mendapatkan poin.\n6. Jika lemparan meleset atau keluar area permainan, giliran berpindah ke pemain berikutnya.\n7. Permainan dilakukan bergantian hingga seluruh target berhasil dijatuhkan.\nPemain atau regu dengan poin terbanyak menjadi pemenang.",
+                "min_players": 2,
+                "max_players": 10,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://banuakita.com/wp-content/uploads/2025/10/IMG_20251011_162057.jpg",
+                        "source_page": "https://banuakita.com/budaya/balogo-permainan-tradisional-yang-masih-jadi-kebanggaan-warga-kalimantan-selatan/"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://img.antaranews.com/cache/1200x800/2023/10/22/IMG-20231016-WA00012.jpg.webp",
+                        "source_page": "https://kalsel.antaranews.com/berita/391659/ratusan-peserta-ikuti-lomba-balogo-se-kalsel-di-hsu"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=V2ukmULEIAU",
+                        "caption": "Permainan Balogo"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "64",
+        "games": [
+            {
+                "title": "Pindah Bintang",
+                "subtitle": "Permainan tradisional Kalimantan Timur dengan kecepatan dan ketepatan berpindah tempat",
+                "slug": "pindah-bintang",
+                "description": "Pindah Bintang adalah permainan tradisional dari Kalimantan Timur yang terinspirasi dari gerakan bintang di langit yang tampak berpindah-pindah. Permainan ini dimainkan dengan berlari dan berpindah dari satu lingkaran ke lingkaran lain untuk melatih kecepatan, ketepatan, kerja sama, dan konsentrasi pemain.",
+                "how_to_play": "1. Siapkan area permainan dengan beberapa tonggak, tiang, atau lingkaran di tanah sebagai tempat berpijak pemain.\n2. Jumlah tonggak atau lingkaran harus lebih sedikit satu dari jumlah pemain.\n3. Pemain melakukan undian menggunakan hompimpa atau suit untuk menentukan satu pemain yang menjadi “ajak” atau penjaga.\n4. Pemain selain penjaga berdiri di tonggak atau lingkaran masing-masing, sedangkan penjaga berada di tengah area permainan.\n5. Salah satu pemain memberikan aba-aba untuk memulai permainan, biasanya dengan hitungan “satu, dua, tiga”.\n6. Setelah aba-aba diberikan, seluruh pemain harus berlari dan berpindah ke tonggak atau lingkaran lain.\n7. Penjaga ikut berlari untuk merebut salah satu tempat kosong sebelum ditempati pemain lain.\n8. Pemain yang tidak mendapatkan tempat akan menjadi penjaga pada putaran berikutnya.\n9. Pemain tidak diperbolehkan mendorong atau merebut tempat secara kasar saat permainan berlangsung.\n10. Permainan dilakukan berulang secara bebas hingga para pemain merasa lelah atau ingin mengakhiri permainan.",
+                "min_players": 5,
+                "max_players": 10,
+                "duration": 15,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/PJOK-KELAS-3-permainan-tradisional-pindah-bintang-1-50-screenshot.png",
+                        "source_page": "https://www.anakbisa.com/kb/pindah-bintang/"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQH7-R2CFj1fDF6Phnc26MnQrngnXaJjtxb5_nbUa7KBL5jy7AZkBZBBGkuCuZnTUnjJxDCUmOUHB4DHTtvTQc8ygYmaoyA4pGam2YET-G-FjtCW0rHeGyr7fA41sGefxxEkCTEpFR5i8/s1600/pindah+rumah.jpg",
+                        "source_page": "https://rushartono.blogspot.com/2017/03/permainan-tempo-dulu.html"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=2clwvarh5rQ",
+                        "caption": "permainan pindah bintang"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "65",
+        "games": [
+            {
+                "title": "Cekang",
+                "subtitle": "Permainan ketapel dari Kalimantan Utara",
+                "slug": "cekang",
+                "description": "Cekang merupakan permainan ketapel dari Kalimantan Utara, lebih tepatnya dari Tana Tidung. Permainan ini menggunakan ketapel dan buah-buahan kecil sebagai peluru untuk menembak sasaran seperti cicak di dinding. Ketapel biasanya dibuat dari ranting mangrove dan karet.",
+                "how_to_play": "1. Siapkan ketapel yang terbuat dari cabang kayu dan karet sebagai pelontar.\n2. Siapkan buah kecil, seperti buah pisangan atau buah bongsai, untuk digunakan sebagai peluru.\n3. Tentukan area permainan dan sasaran yang akan ditembak.\n4. Tentukan urutan bermain seluruh pemain.\n5. Pemain pertama memasang buah pada karet ketapel.\n6. Arahkan ketapel ke sasaran yang telah ditentukan.\n7. Tarik karet ketapel ke belakang lalu lepaskan untuk melontarkan buah.\n8. Perhatikan hasil tembakan pemain.\n9. Pemain lain melakukan tembakan secara bergiliran sesuai urutan bermain.\n10. Pemain yang paling banyak mengenai sasaran dinyatakan sebagai pemenang.\n11. Permainan dapat diulangi kembali sesuai kesepakatan bersama.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": 10,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/hJa7Ky97Tx4",
+                        "caption": "cara membuat cekang atau ketapel"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://blogger.googleusercontent.com/img/a/AVvXsEg8jYyndlhmHTZGk53Tt-1xZOzonxYT32GejPcK9VWuDZhvhIqJCk-Yw-GrkasUz1qUIamuzatkvhoBLLpVrxyPx5RCH_IhnWjEyNYzo-GeofLi8zgKpOyKimPaKrxjiJWricnQQxtTuQAAEqP1uoYnMh9anLF19Aoe0wpT0LxWx4ycyZfPiYyI77KBqg=s16000-rw",
+                        "source_page": "https://aturanpermainan.blogspot.com/2021/11/daftar-permainan-tradisional-provinsi-kaltara.html",
+                        "caption": "Ilustrasi permainan cekang atau ketapel"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "75",
+        "games": [
+            {
+                "title": "Awuta",
+                "subtitle": "Permainan Congklak khas dari Gorontalo",
+                "slug": "awuta",
+                "description": "Awuta adalah permainan tradisional mirip dengan congklak dari Gorontalo. Permainan ini biasanya dimainkan menggunakan lubang di tanah dan biji-bijian atau batu kecil. Awuta memiliki makna filosofis tentang manusia yang berasal dari tanah dan akan kembali ke tanah",
+                "how_to_play": "1. Buat 14 lubang di tanah yang terdiri dari 12 lubang kecil dan 2 lubang besar di kedua sisi.\n2. Susun lubang kecil saling berhadapan membentuk dua baris.\n3. Siapkan biji-bijian, batu kecil, atau kerang sebagai isi permainan.\n4. Masukkan masing-masing 4 biji ke dalam setiap lubang kecil.\n5. Tentukan dua pemain yang akan bermain.\n6. Setiap pemain menempati satu sisi lubang beserta satu lubang besar miliknya.\n7. Tentukan giliran bermain pertama.\n8. Pemain mengambil seluruh biji dari salah satu lubang kecil di wilayahnya.\n9. Sebarkan biji satu per satu ke lubang berikutnya secara berurutan berlawanan arah jarum jam.\n10. Jika biji terakhir jatuh pada lubang yang masih berisi biji, pemain mengambil seluruh isi lubang tersebut dan melanjutkan permainan.\n11. Jika biji terakhir jatuh pada lubang kosong, pemain mengucapkan “denggu” dan giliran bermain berakhir.\n12. Pemain berikutnya melanjutkan permainan dengan langkah yang sama.\n13. Permainan dilakukan secara bergantian hingga seluruh biji habis atau permainan selesai sesuai aturan yang disepakati.\n14. Pemain dengan jumlah biji terbanyak di lubang besar dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": 2,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/QY9LuuL2HWY",
+                        "caption": "Cara bermain awuta"
+                    },
+                    {
+                        "type": "image",
+                        "url": "ambil dari youtube saja"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "76",
+        "games": [
+            {
+                "title": "Dodorobe",
+                "subtitle": "Permainan perang-perangan dari Sulawesi Barat",
+                "slug": "dodorobe",
+                "description": "Dodorobe adalah permainan tradisional perang-perangan menggunakan senjata mainan dari bambu kecil dari Sulawesi Barat. Permainan ini cukup terkenal dan juga dimainkan di beberapa wilayah lain, termasuk Sulawesi Utara dan Maluku Utara. Pelurunya biasanya terbuat dari kertas basah, daun, atau biji buah kecil.",
+                "how_to_play": "1. Siapkan bambu kecil untuk dijadikan dodorobe atau alat tembak.\n2. Buat dodorobe dari dua bagian, yaitu pipa bambu dan batang pendorong.\n3. Siapkan peluru dari kertas basah, daun, atau buah kecil.\n4. Tentukan area permainan yang aman dan cukup luas.\n5. Bagi pemain menjadi dua kelompok.\n6. Tentukan batas wilayah atau benteng untuk masing-masing kelompok.\n7. Masukkan peluru ke dalam lubang pipa bambu.\n8. Dorong peluru menggunakan batang pendorong hingga keluar dari pipa dan menghasilkan bunyi.\n9. Pemain saling menembakkan peluru ke arah kelompok lawan seperti permainan perang-perangan.\n10. Pemain yang terkena tembakan dianggap kalah atau keluar dari permainan sesuai aturan yang disepakati.\n11. Kelompok yang paling banyak bertahan atau berhasil menguasai benteng lawan dinyatakan sebagai pemenang.\n12. Permainan dapat diulangi kembali sesuai kesepakatan bersama.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZen9ydgftgkfi65oraJlZg_rpS4bil9WBU40PHrzWoGPXVhaavqqqqdGNIIu7DMl0DjSDkoueXAvZc1AZvlllMRgAFl0k9IGPzDEhhUJ-Fpl1IurLIPY00hpnkNxviPn2tD_lB6cN4wSp/s16000-rw/bebeletokan.jpg",
+                        "source_page": "https://aturanpermainan.blogspot.com/2021/12/permainan-tradisional-sulawesi-barat.html"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=uuOcpIFdhoI",
+                        "caption": "Cara membuat pletokan dari betawi, alat yang serupa yang digunakan dalam permianan dodorobe"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "71",
+        "games": [
+            {
+                "title": "Tumbu-tumbu blanga",
+                "subtitle": "Permainan berbasis syair dari Sulawesi Utara",
+                "slug": "tumbu-tumbu-blanga",
+                "description": "Tumbu-Tumbu Blanga merupakan permainan tradisional dari Sulawesi Utara yang biasanya dimainkan oleh anak-anak perempuan secara berkelompok sambil bernyanyi. Permainan ini juga cukup terkenal di sekitaran daerah utara Sulawesi lainnya seperti Gorntalo. Permainan ini dilakukan dengan menyusun kepalan tangan secara bertingkat di tengah lingkaran.",
+                "how_to_play": "1. Kumpulkan 5 sampai 6 orang pemain di area permainan.\n2. Pemain duduk bersila membentuk lingkaran.\n3. Setiap pemain meluruskan tangan ke arah tengah lingkaran sambil mengepalkan tangan.\n4. Kepalan tangan seluruh pemain disusun dan disilangkan secara bertingkat dari bawah ke atas.\n5. Setelah semua tangan tersusun, pemain mulai menyanyikan lagu Tumbu-Tumbu Blanga secara bersama-sama.\n6. Saat lagu dinyanyikan, kepalan tangan paling bawah dibuka terlebih dahulu menjadi telapak tangan.\n7. Lagu diulangi kembali hingga tangan berikutnya terbuka secara bergantian dari bawah ke atas.\n8. Permainan dilanjutkan sampai seluruh kepalan tangan terbuka.\n9. Setelah seluruh tangan terbuka, permainan dapat diakhiri dengan saling menyentuh atau menyubit punggung tangan sebagai bagian akhir permainan.\n10. Permainan dapat diulangi kembali sesuai kesepakatan bersama.",
+                "min_players": 5,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Gorontalo/o/1716097399297-PERMAINAN_TUMBU_TUMBU_BALANGA_-_Copy/plzn3l3k8b7lffy.jpeg",
+                        "source_page": "http://rri.co.id/gorontalo/hobi/699668/tumbu-tumbu-balanga-permaian-tradisional-ala-gorontalo"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/luJA7wDZUwI",
+                        "caption": "Permaianan tumbu-tumbu blanga dari Sulawesi Utara"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "72",
+        "games": [
+            {
+                "title": "Nobangan",
+                "subtitle": "Permaian melempar kemiri asal Sulawesi Tengah",
+                "slug": "nobangan",
+                "description": "Nobangan merupakan sebutan untuk permainan melempar kemiri dari Sulawesi Tengah. Permainan ini dimainkan dengan cara melempar kemiri ke sebuah lingkaran yang di dalamnya terdapat kemiri lain yang menjadi taruhannya.",
+                "how_to_play": "1. Siapkan beberapa butir kemiri untuk dijadikan taruhan dan satu butir kemiri sebagai gacu lempar.\n2. Buat sebuah lingkaran kecil di atas tanah dengan diameter sekitar 10 cm.\n3. Letakkan beberapa butir kemiri taruhan di dalam lingkaran.\n4. Tentukan garis batas lempar dengan jarak sekitar 6 sampai 10 meter dari lingkaran.\n5. Tentukan urutan bermain seluruh pemain.\n6. Pemain pertama berdiri di belakang garis lempar.\n7. Pemain melempar kemiri gacu ke arah lingkaran taruhan.\n8. Perhatikan hasil lemparan pemain.\n9. Jika gacu mengenai dan mengeluarkan kemiri dari dalam lingkaran, kemiri tersebut menjadi milik pemain.\n10. Pemain lain melanjutkan permainan secara bergiliran sesuai urutan bermain.\n11. Permainan dilanjutkan hingga seluruh kemiri taruhan habis atau permainan dihentikan sesuai kesepakatan bersama.\n12. Pemain yang memperoleh kemiri paling banyak dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://blogger.googleusercontent.com/img/a/AVvXsEhjOko0_sNrLGgrUXXHPCpHLSG9o3ehaHlEXP6Oh_kaUudOyDwdjtF9alirsc04wxaOPCImvHEqSphW8B8MgvcY21bHMVH1yx1zEpyacpaTYUoJXz0l7d1nYx2XSw1XYbOvw1W_YrBI6qg-R5sBAxOLoOKydtqBEZsbLtf-kcH6M2CTEPcCjMmV2mZaIg=s16000-rw",
+                        "source_page": "https://aturanpermainan.blogspot.com/2021/12/permainan-tradisional-provinsi-sulteng.html"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/Cz3_XqTYHzI?t=109"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "74",
+        "games": [
+            {
+                "title": "Kengkeng",
+                "subtitle": "Permainan tradisional lompat petak khas Sulawesi Tenggara",
+                "slug": "kengkeng",
+                "description": "Kengkeng merupakan salah satu varian permainan engklek dari Sulawesi Tengara. Permainan ini disebut dengan berbagai nama bahkan di Sulawesi Tenggara sendiri memiliki banyak nama untuk permainan ini. ",
+                "how_to_play": "1. Siapkan area permainan yang datar dan aman.\n2. Gambar petak-petak permainan di tanah menggunakan kapur, kayu, atau garis.\n3. Siapkan gacuk atau batu kecil sebagai alat lempar.\n4. Tentukan urutan bermain seluruh pemain.\n5. Pemain pertama melempar gacuk ke petak pertama.\n6. Pastikan gacuk jatuh tepat di dalam petak sasaran.\n7. Pemain mulai melompat menggunakan satu kaki melewati petak-petak permainan.\n8. Pemain tidak boleh menginjak garis petak atau petak yang berisi gacuk.\n9. Pada petak tertentu yang berdampingan, pemain dapat menggunakan kedua kaki sesuai aturan permainan.\n10. Setelah mencapai petak terakhir, pemain berbalik arah untuk kembali ke titik awal.\n11. Saat perjalanan kembali, pemain mengambil gacuk dari petak sasaran tanpa kehilangan keseimbangan.\n12. Jika berhasil, pemain melanjutkan permainan dengan melempar gacuk ke petak berikutnya.\n13. Giliran pemain berakhir apabila gacuk keluar dari petak, pemain menginjak garis, atau kehilangan keseimbangan.\n14. Permainan dilanjutkan secara bergiliran hingga seluruh pemain mendapat kesempatan bermain.\n15. Pemain yang berhasil menyelesaikan seluruh tahapan permainan dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
+                        "caption": "Permainan engklek dengan mekanik serupa atau varian dari kengkeng"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://outdoorplayground.co.id/wp-content/uploads/2025/01/sejarah-permainan-engklek.jpg",
+                        "source_page": "https://outdoorplayground.co.id/permainan-tradisional-engklek/",
+                        "caption": "Ilustrasi permainan engklek yang merupakan varian dari permainan kengkeng, dikenal juga sebagai sebutan, beberapa diantarnya seperti dampu bulan, dende-dende, tejek-tejekan, dan masih banyak lagi."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "73",
+        "games": [
+            {
+                "title": "Dende",
+                "subtitle": "Permainan petak lompat tradisional dari Sulawesi Selatan",
+                "slug": "dende",
+                "description": "Dende-dende atau yang sering disebut dende merupakan permainan dari Sulawesi Selatan. Ini merupakan permainan sejenis engklek yang khas di Sulawesi Selatan. Dende sendiri memiliki arti gulir atau guling, yang dipilih karena batu tau gacuk yang digunakan digulir atau dilempar ke kotak. Dende-dende juga memiliki arti sebagai berjalan menggunakan satu kaki. Permainan ini melatih keseimbangan, ketangkasan, dan juga koordinasi motorik.",
+                "how_to_play": "1. Siapkan area permainan yang datar dan aman.\n2. Gambar arena permainan di tanah atau lantai menggunakan kapur atau kayu.\n3. Bentuk arena permainan dengan susunan beberapa kotak dan satu bagian setengah lingkaran di bagian puncak.\n4. Siapkan satu buah batu kecil sebagai alat lempar.\n5. Tentukan urutan bermain seluruh pemain.\n6. Pemain pertama melempar batu ke kotak pertama pada arena permainan.\n7. Pastikan batu jatuh tepat di dalam kotak sasaran.\n8. Pemain mulai melompat melewati kotak pertama dengan satu kaki apabila lemparan berhasil.\n9. Pemain melanjutkan lompatan ke kotak berikutnya sesuai bentuk arena permainan.\n10. Gunakan satu kaki saat melewati satu kotak dan gunakan dua kaki saat melewati dua kotak berdampingan.\n11. Saat mencapai bagian puncak berbentuk setengah lingkaran, pemain menempatkan kedua kaki lalu berbalik arah.\n12. Pemain kembali menuju titik awal sambil tetap melompat sesuai aturan permainan.\n13. Pemain mengambil batu saat perjalanan kembali tanpa menginjak garis arena.\n14. Giliran pemain berakhir apabila batu kel\n::contentReference[oaicite:1]{index=1}\nuar dari kotak, pemain menginjak garis, atau kehilangan keseimbangan.\n15. Permainan dilanjutkan secara bergiliran hingga seluruh pemain mendapat kesempatan bermain.\n16. Pemain yang berhasil menyelesaikan seluruh tahapan permainan dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
+                        "caption": "permainan engklek dengan mekanik serupa atau varian dari Dende"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://basasulselwiki.org/w/images/basasulselwiki.org!w/thumb/4/41/20220810T015656097Z028550.jpg/525px-20220810T015656097Z028550.jpg",
+                        "caption": "Ilustrasi permainan dende, yang dikenal juga sebagai engklek, dampu bulan, dan berbagai sebutan lainnya di berbagai daerah"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "81",
+        "games": [
+            {
+                "title": "Hela rotan",
+                "subtitle": "Permainan tarik tambang asal Maluku",
+                "slug": "hela-rotan",
+                "description": "Hela rotan merupakan permainan tarik tambang dari Maluku. Yang membedakan Permainan ini dengan tarik tambang biasa adalah media tali yang digunakan, alih-alih menggunakan tali tambang, permainan ini menggunkan tari yang terbuat dari rotan. Permainan ini melambangkan kebersamaan, persatuan, dan kerja sama masyarakat Maluku. Permainan ini bisa digabungkan dengan tradisi lain di Maluku seperti Badendang, yang merupakan tradisi menyanyi dan menari tradisional Maluku bersama keluarga dan kerabat, yang disebut Badendang Rotan.",
+                "how_to_play": "1. Siapkan rotan panjang atau anyaman rotan yang kuat untuk digunakan dalam permainan.\n2. Tentukan area permainan yang cukup luas dan aman.\n3. Bagi pemain menjadi dua kelompok dengan jumlah anggota yang seimbang.\n4. Buat garis batas di tengah area permainan sebagai penanda.\n5. Masing-masing kelompok berdiri saling berhadapan di kedua sisi garis batas.\n6. Setiap kelompok memegang ujung rotan dengan kuat.\n7. Tentukan aba-aba mulai permainan.\n8. Kedua kelompok menarik rotan secara bersamaan ke arah kelompok masing-masing.\n9. Setiap kelompok berusaha menarik lawan melewati garis batas yang telah ditentukan.\n10. Kelompok dinyatakan menang apabila berhasil menarik kelompok lawan melewati garis batas atau membuat lawan melepaskan pegangan rotan.\n11. Permainan dapat diulangi beberapa putaran sesuai kesepakatan bersama.",
+                "min_players": 4,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://akcdn.detik.net.id/visual/2024/12/19/tradisi-badendang-rotan-di-maluku-foto-tabaosid_169.png?w=700&q=90",
+                        "source_page": "https://www.beautynesia.id/life/mengenal-badendang-rotan-tradisi-menyambut-tahun-baru-di-maluku/b-299201"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://youtube.com/shorts/Fd9Q46uG70U?si=yGVkEtUCkPsQ-zkQ"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://akcdn.detik.net.id/visual/2024/12/19/ajarkan-kebersamaan-dan-solidaritas-foto-radarbanyumasdiswayid.png?w=700&q=90",
+                        "source_page": "https://www.beautynesia.id/life/mengenal-badendang-rotan-tradisi-menyambut-tahun-baru-di-maluku/b-299201"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "82",
+        "games": [
+            {
+                "title": "Boi tampurung",
+                "subtitle": "Permainan ketangkasan, kerja sama, dan kecepatan dari Maluku Utara",
+                "slug": "boi-tampurung",
+                "description": "Boi Tampurung merupakan permainan tradisional yang melibatkan tempurung kelapa dan bola asal Maluku Utara. Permainan ini banyak variasinya dan tersebar di Indonesia biasanya variasi pada media yang digunakan misalnya ada yang menggunakan pecahan genteng atau pun kaleng sebagai penganti tempurung kelapa. Permainan ini melatih kerjasama tim dan ketepatan dalam melempar.",
+                "how_to_play": "1. Siapkan beberapa tempurung kelapa dan satu buah bola untuk permainan.\n2. Bentuk dua kelompok dengan jumlah anggota yang sama.\n3. Susun tempurung kelapa secara bertumpuk di tengah area permainan.\n4. Tentukan kelompok yang mendapat giliran pertama melalui undian atau suit.\n5. Kelompok pertama berdiri pada jarak tertentu dari susunan tempurung.\n6. Salah satu pemain melempar bola ke arah susunan tempurung kelapa.\n7. Jika susunan tempurung roboh, kelompok pelempar segera berusaha menyusun kembali tempurung secara vertikal.\n8. Kelompok lawan mengambil bola dan melemparkannya ke arah anggota kelompok pelempar.\n9. Pemain yang terkena lemparan bola dinyatakan gugur.\n10. Pemain dari kelompok penyusun dapat melindungi diri dengan memukul atau menahan bola menggunakan tempurung kelapa.\n11. Kelompok penyusun harus menyusun kembali tempurung secara vertikal sebanyak tiga kali untuk memenangkan ronde permainan.\n12. Permainan dilanjutkan secara bergantian hingga seluruh kelompok mendapat giliran bermain.\n13. Kelompok yang paling banyak memenangkan ronde dinyatakan sebagai pemenang.",
+                "min_players": 4,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/uMGrD-EKZvc?t=757",
+                        "caption": "PERMAINAN TRADISIONAL BOI TAMPURUNG by BP PAUD dan Dikmas Maluku Utara"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Ternate/o/1729373638137-50697448_2884869334888913_6267031710693588992_n/0nr2ymfmiyibgw4.jpeg",
+                        "source_page": "https://rri.co.id/ternate/hiburan/1057723/mengenal-boi-tampurung-permainan-khas-anak-maluku-utara"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "94",
+        "games": [
+            {
+                "title": "Kayu malele",
+                "subtitle": "Permainan ketangkasan dari Papua",
+                "slug": "kayu-malele",
+                "description": "Kayu malele merupakan permainan traditional dari Papua, yang menggunakan bilah kayu sebagai media bermainnya. Permainan serupa juga dapat ditemukan di beberapa daerah di Indonesia dengan berbagai sebutan diantarnya ada bentik dan patil lele. Permainan ini memerlukan 2 batang kayu, satu berukuran 30 hingga 50 cm sebagi pemukul dan satu sebagai anak tongkat(kayu yang akan dipukul). Permainan melatih ketangkasan dan kerja sama kelompok",
+                "how_to_play": "1. Siapkan satu batang kayu pendek berukuran sekitar 20 cm dan satu batang kayu panjang berukuran sekitar 50 cm.\n2. Buat lubang kecil di tanah dengan kedalaman sekitar 10 cm.\n3. Bentuk dua kelompok yang masing-masing terdiri dari 3 sampai 5 pemain.\n4. Tentukan kelompok yang bermain pertama melalui undian atau suten.\n5. Kelompok yang kalah bertugas menjaga area permainan.\n6. Letakkan kayu pendek secara melintang di atas lubang.\n7. Pemain dari kelompok penyerang memegang kayu panjang dengan kedua tangan.\n8. Tempatkan ujung kayu panjang di belakang kayu pendek.\n9. Ayunkan kayu panjang untuk memukul kayu pendek hingga terlempar ke udara.\n10. Kelompok penjaga berusaha menangkap kayu pendek sebelum menyentuh tanah.\n11. Jika kayu berhasil ditangkap, giliran bermain berpindah kepada kelompok penjaga.\n12. Jika kayu tidak berhasil ditangkap, permainan dilanjutkan oleh kelompok penyerang sesuai aturan yang disepakati.\n13. Permainan dilakukan secara bergantian hingga seluruh pemain mendapat giliran.\n14. Kelompok dengan hasil permainan terbaik dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/Screenshot-2023-02-23-101744.png",
+                        "source_page": "https://www.anakbisa.com/kb/kayu-malele/"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/patoklele.jpg",
+                        "source_page": "https://www.anakbisa.com/kb/kayu-malele/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/itzqcb07oqE",
+                        "caption": "Permainan Tradisional Kayu Malele"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "91",
+        "games": [
+            {
+                "title": "Korkouria",
+                "subtitle": "Permainan ayunan ekstrim dari Papua Barat",
+                "slug": "korkouria",
+                "description": "Korkouria adalah permainan tradisional dari Papua Barat yang membutuhkan ketangkasan dan keberanian. Permainan ini melibatkan berayun pada tali ataupun pada tumbuhan menjalar. Untuk lokasi permainan biasanya di tempat yang cukup menantang seperti tebing di pinggir sungai atau di tepi laut sehingga jika tali yang digunakan putus, akan langsung jatuh ke dalam air.",
+                "how_to_play": "1. Siapkan tali hutan atau tumbuhan menjalar yang kuat untuk digunakan sebagai ayunan.\n2. Tentukan lokasi permainan yang aman, biasanya di dekat tebing sungai atau tepi laut.\n3. Ikat tali pada batang pohon atau tempat yang kuat.\n4. Tentukan urutan pemain yang akan menggunakan ayunan.\n5. Pemain memegang tali dengan kedua tangan.\n6. Pemain mulai berayun dari tempat yang lebih tinggi menuju arah bawah atau ke area air.\n7. Pemain menjaga keseimbangan tubuh selama berayun.\n8. Setelah selesai berayun, pemain berikutnya mendapat giliran.\n9. Permainan dilakukan secara bergantian hingga seluruh pemain mendapat kesempatan bermain.\n10. Permainan dapat dihentikan sesuai kesepakatan bersama.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://scontent.fcgk6-3.fna.fbcdn.net/v/t39.30808-6/485078412_1072887348217562_6960634827878096882_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-c7HiLB6T4wQ7kNvwH7ftMu&_nc_oc=AdrgJPpj1_AuAhnG9Q5dTP92RQvN9miKZ4dgyCX0iNeHWY2EFXkoXczh2sRogLuX4JWN_aC0aZeF6Q_BB-XKZ2KW&_nc_zt=23&_nc_ht=scontent.fcgk6-3.fna&_nc_gid=Hz0GAA-6i3UXPYR23nZOyg&_nc_ss=7b289&oh=00_Af4Cf8_WT_DRCTpiqNr209HAXSoCzGqCBi6gVmiSrD9mKg&oe=6A1061CA",
+                        "source_page": "https://www.facebook.com/photo.php?fbid=797672875739012&id=100064889192080",
+                        "caption": "Ilustrasi permianan Korkouria"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "92",
+        "games": [
+            {
+                "title": "Yesecha Asya",
+                "subtitle": "Permainan ketepatan dan ketangkasan asal Papua",
+                "slug": "yesecha-asya",
+                "description": "Yesecha Asya atau sering disebut Tok Asya merupakan permainan beradu cepat, ketangkasan, kekuatan, dan ketepatan asal papua. Permainan serupa cukup terkenal juga di papua pegunungan dengan sebutan puradan. Permainan memerlukan alat berupa tombak atau sege dan rotan yand dililit membentuk cincin atau lingkaran yang sebut asya.",
+                "how_to_play": "1. Siapkan asya berbentuk lingkaran rotan dan beberapa batang sege untuk permainan.\n2. Tentukan area permainan yang cukup luas dan aman.\n3. Tentukan jumlah pemain dan urutan bermain.\n4. Salah satu pemain melempar dan menggulingkan asya ke arah depan.\n5. Pemain lain bersiap melempar sege ke arah asya yang sedang menggelinding.\n6. Pemain melempar sege secara bergiliran atau bersamaan sesuai aturan permainan yang disepakati.\n7. Perhatikan hasil lemparan setiap pemain.\n8. Pemain yang berhasil melempar sege paling jauh disebut sebagai jagoan.\n9. Pemain yang berhasil menikam atau mengenai bagian tengah asya dinyatakan sebagai pemenang.\n10. Permainan dapat diulangi kembali sesuai kesepakatan bersama.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/Yesecha-Asya.jpg",
+                        "source_page": "https://www.anakbisa.com/kb/yesecha-asya/"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://youtu.be/1a3p4SsooVw",
+                        "caption": "Ilustrasi permainan yesecha asya"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "97",
+        "games": [
+            {
+                "title": "Permainan lempar sege",
+                "subtitle": "Permainan melempar tombak atau kayu runcing asal Papua",
+                "slug": "permainan-lempar-sege",
+                "description": "Lempar sege adalah permainan tradisional dari Papua yang melibatkan melempar tombak atau sege. Sege merupakan kayu atau bambu yang ujungnya diruncingkan menyerupai tombak kecil atau anak panah. Sege didapat dimainkan dengan beradu jarak lemparan sege seperti yang dilakukan pada olahraga lempar lembing.",
+                "how_to_play": "1. Siapkan beberapa batang sege yang terbuat dari kayu ringan dengan ujung yang diruncingkan.\n2. Tentukan jumlah pemain yang akan mengikuti permainan.\n3. Tentukan area permainan serta garis batas tempat melempar.\n4. Pemain berdiri di belakang garis lempar secara bergiliran.\n5. Pemain melempar sege ke arah depan sesuai aturan permainan yang disepakati.\n6. Perhatikan arah, jarak, dan ketepatan lemparan setiap pemain.\n7. Pemain lain melakukan lemparan secara bergantian hingga seluruh pemain mendapat giliran.\n8. Hitung hasil lemparan seluruh pemain setelah permainan selesai.\n9. Pemain dengan hasil lemparan terjauh dinyatakan sebagai pemenang.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "image",
+                        "url": "https://asset.kompas.com/crops/rQLbFVAQ2bJguFbDEbqp42zlVxI=/175x193:1375x993/1200x800/data/photo/2022/08/02/62e8ab5531bbd.jpg",
+                        "source_page": "https://www.kompas.com/sports/read/2023/03/01/16000058/lempar-lembing--sejarah-aturan-dan-gerakan-spesifik?page=all",
+                        "caption": "Ilustrasi lempar lembing yang menggunakan mekanik serupa dengan permainan lempar sege"
+                    },
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=SFmz4hEpIck",
+                        "caption": "Cara membuat lembing dari kayu secara umum, yang memiliki kemiripan dengan pembuatan sege"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "95",
+        "games": [
+            {
+                "title": "Kweritop",
+                "subtitle": "Permainan membuat pola dengan tali asal Papua Selatan",
+                "slug": "kweritop",
+                "description": "Kweritop merupakan permainan tradisional asal Papua, khususnya Papua Selatan. Permainan ini melibatkan membuat pola-pola kreatif pada jari tangan menggunakan seutas tali yang biasanya terbuat dari kulit kayu, mengandalkan kreativitas dan ketangkasan tangan dalam proses pembuatan polanya",
+                "how_to_play": "1. Siapkan tali yang terbuat dari serat kulit kayu Genemo.\n2. Tentukan dua orang pemain atau lebih untuk bermain.\n3. Pemain saling berhadapan dengan posisi yang nyaman untuk memainkan tali.\n4. Mulai permainan dengan membentuk anyaman tali menggunakan jari-jari tangan.\n5. Pemain saling bergantian membuat pola atau model anyaman tali.\n6. Pemain lain menebak bentuk atau model anyaman yang dibuat.\n7. Permainan juga dapat dilakukan dengan membuat satu model yang telah disepakati bersama.\n8. Pemain berlomba membentuk model anyaman dengan waktu tercepat.\n9. Pemain dapat bersiul atau bernyanyi sesuai dengan bentuk anyaman yang dibuat.\n10. Permainan dilanjutkan secara bergantian hingga seluruh pemain mendapat giliran.",
+                "min_players": 2,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=8jfiGcgYxCU"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://i.ytimg.com/vi/8jfiGcgYxCU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBXqnGsi0QqvKdUxzragFjBE3qMYg",
+                        "source_page": "https://www.youtube.com/watch?v=8jfiGcgYxCU",
+                        "caption": "Ilustrasi permainan kweritop"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "region_bps_code": "96",
+        "games": [
+            {
+                "title": "Patah Kaleng",
+                "subtitle": "Permainan bola khas Papua",
+                "slug": "patah-kaleng",
+                "description": "Patah Kaleng merupakan permainan tradisional kelompok yang menggunakan susunan kaleng sebagai sasaran utama permainan. Permainan ini dimainkan dengan cara melempar bola atau benda tertentu untuk menjatuhkan tumpukan kaleng, kemudian pemain harus menyusun kembali kaleng tersebut sambil menghindari penjaga. Berbagai permainan dengan mekanik serupa dapat ditemukan di berbagai daerah di Indonesia dengan berbagai sebutan di antarnya ada goncang kaleng dari Riau, butang kaleng dari Jambi, jongleng tendang dari Jawa Barat. Patah Kaleng melatih kerja sama, ketangkasan, kecepatan, dan strategi antarpemain dalam permainan beregu.",
+                "how_to_play": "1. Siapkan beberapa kaleng bekas untuk digunakan dalam permainan.\n2. Susun kaleng hingga membentuk tumpukan di tengah area permainan.\n3. Tentukan batas area bermain dan garis lempar.\n4. Tentukan satu pemain sebagai penjaga melalui undian atau hompimpa.\n5. Pemain lain berdiri di belakang garis lempar.\n6. Pemain secara bergiliran melempar bola, sandal, atau benda lain ke arah tumpukan kaleng.\n7. Pemain yang berhasil menjatuhkan tumpukan kaleng segera berlari menghindari penjaga.\n8. Penjaga mengambil bola atau benda lempar lalu berusaha menyentuh pemain lain.\n9. Pemain yang belum terkena berusaha menyusun kembali tumpukan kaleng.\n10. Jika pemain berhasil menyusun kembali kaleng sebelum seluruh pemain terkena, permainan dilanjutkan.\n11. Jika penjaga berhasil menyentuh pemain sebelum kaleng tersusun kembali, pemain yang terkena berganti peran menjadi penjaga.\n12. Permainan dilakukan secara bergantian sesuai aturan yang telah disepakati bersama.",
+                "min_players": 4,
+                "max_players": null,
+                "duration": null,
+                "media": [
+                    {
+                        "type": "video",
+                        "url": "https://www.youtube.com/watch?v=DB0GPUyabM0",
+                        "caption": "Permainan patah kaleng"
+                    },
+                    {
+                        "type": "image",
+                        "url": "https://id.pinterest.com/pin/615374736566345421/",
+                        "caption": "Ilustrasi patah kaleng, permainan tradisional yang juga dikenal dengan nama jongleng tendang atau lempar kaleng."
                     }
                 ]
             }

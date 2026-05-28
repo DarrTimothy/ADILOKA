@@ -41,7 +41,7 @@ return new class extends Migration {
 
                 $table->enum('type', ['image', 'video']); // image / video
                 $table->boolean('is_cover')->default(false);
-                $table->string('url');
+                $table->text('url');
                 $table->text('caption')->nullable();
                 $table->text('source_page')->nullable();
 

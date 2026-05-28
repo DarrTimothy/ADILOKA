@@ -37,6 +37,11 @@ class TraditionalGameSeeder extends Seeder
                 )->first();
 
                 if (!$region) {
+
+                    $this->command->warn(
+                        "Region dengan BPS '{$regionData['region_bps_code']}' tidak ditemukan"
+                    );
+
                     continue;
                 }
 
@@ -65,6 +70,10 @@ class TraditionalGameSeeder extends Seeder
                                 'game' => $game['title'] ?? '(tanpa judul)',
                             ]);
 
+                            $this->command->warn(
+                                "Game '{$game['title']}' dilewati karena field '{$field}' kosong"
+                            );
+
                             $skippedGames++;
                             $isInvalid = true;
 
@@ -86,6 +95,10 @@ class TraditionalGameSeeder extends Seeder
                             'game' => $game['title'],
                         ]);
 
+                        $this->command->warn(
+                            "Game '{$game['title']}' dilewati karena min_players tidak valid"
+                        );
+
                         $skippedGames++;
                         continue;
                     }
@@ -104,6 +117,10 @@ class TraditionalGameSeeder extends Seeder
                             Log::warning('max_players tidak valid', [
                                 'game' => $game['title'],
                             ]);
+
+                            $this->command->warn(
+                                "Game '{$game['title']}' dilewati karena max_players tidak valid"
+                            );
 
                             $skippedGames++;
                             continue;
