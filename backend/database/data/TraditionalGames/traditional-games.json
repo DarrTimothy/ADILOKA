@@ -14,12 +14,13 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "games/Aceh/tarek-situek/tarek-situek1.webp",
+                        "url": "games/Aceh/image-tarek-situek1.webp",
                         "source_page": "https://www.anakbisa.com/kb/tarek-situek-permainan-tarik-pelepah-pinang-dari-aceh/"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=msKks6-G1AU",
+                        "url": "games/Aceh/video-tarek-situek.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=msKks6-G1AU",
                         "caption": "video Permainan Tarek Situek"
                     }
                 ]
@@ -41,13 +42,13 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://tobaria.com/wp-content/uploads/2021/05/IMG_20210525_094715_161.jpg",
+                        "url": "games/Sumatera-Utara/image-margala1.webp",
                         "source_page": "https://tobaria.com/margala-pastap-permainan-tradisional-ala-toba/",
                         "caption": "Bermain margala"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=5v35galQisg",
+                        "url": "games/Sumatera-Utara/video-margala.mp4",
                         "caption": "video Permainan Margala"
                     }
                 ]
@@ -69,12 +70,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://i0.wp.com/langgam.id/wp-content/uploads/2021/04/meriam-bambu-www.goodnewsfromindonesia.org_.jpeg?w=545&ssl=1",
+                        "url": "games/Sumatera-Barat/image-badia-batuang1.webp",
                         "source_page": "https://langgam.id/badia-batuang-permainan-ngabuburit-jaman-dulu-yang-mulai-ditinggalkan/"
                     },
                     {
                         "type": "image",
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Meriam_bambu_%281%29.jpg/960px-Meriam_bambu_%281%29.jpg?utm_source=id.wikibooks.org&utm_campaign=parser&utm_content=thumbnail",
+                        "url": "games/Sumatera-Barat/image-badia-batuang2.webp",
                         "source_page": "https://id.wikibooks.org/wiki/Permainan_Tradisional_Sumatera_Barat/Badia_Batuang"
                     },
                     {
@@ -101,12 +102,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPH59Cqa2zoL3TK6AGPiPn7qL-9TLsCUnkTd_WTyi75rJYIXXxk7pEhvTk3strtlj5TiUF1aAltg282ZDaLRZ5vDT3FfrH0BKHScv5bCBDHzg7oIOrRCJDcqCsg3V18n68-PaLbO3XC6KB/s640/7.jpg",
+                        "url": "games/Riau/image-ligu1.webp",
                         "source_page": "https://surgaresepracikan.blogspot.com/2017/07/ligu-permainan-daerah-riau-yang-hampir_12.html"
                     },
                     {
                         "type": "image",
-                        "url": "https://guruku.kosabudaya.id/wp-content/uploads/2024/05/legu_guruku.kosabudaya.id_.jpg",
+                        "url": "games/Riau/image-ligu2.webp",
                         "source_page": "https://guruku.kosabudaya.id/materipembelajaran/budayamelayuriau/permainan-tradisional-dengan-peralatan/"
                     },
                     {
@@ -133,12 +134,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-lu-lu-cina-buta-permainan-tradisional-yang-berasal-dari-indragiri-hilir-riau-hhsB5FGoUa.jpg?tr=w-730,h-486,fo-center",
+                        "url": "games/Kepulauan-Riau/image-lulu-cina-buta1.webp",
                         "source_page": "https://www.goodnewsfromindonesia.id/2024/09/27/lu-lu-cina-buta-permainan-tradisional-yang-berasal-dari-indragiri-hilir-riau"
                     },
                     {
                         "type": "image",
-                        "url": "https://www.melayupedia.com/foto_berita/2021/08/2021-08-23-lu-lu-cina-buta-permainan-seru-tebak-nama-khas-kepri.jpg",
+                        "url": "games/Kepulauan-Riau/image-lulu-cina-buta2.webp",
                         "source_page": "https://www.melayupedia.com/berita/434/lu-lu-cina-buta-permainan-seru-tebak-nama-khas-kepri"
                     },
                     {
@@ -165,7 +166,7 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZKkdqotiMvdSGALIY-MoRkY_Z_SLG6-ZV4UIa_Xw1rO2u9Vgd5P4l-RS-xzY4WwV1C7SczKJKIQQiAOY__jFSpxNj_0r8l0x-uMbAV0xYpwD74w-VkW4oV1_qZmGiBR6LL29mR_7GyfsH/s16000-rw/permainan+bicau.png",
+                        "url": "games/Bengkulu/image-bicau1.webp",
                         "source_page": "https://aturanpermainan.blogspot.com/2021/05/31-permainan-asli-khas-bengkulu-yang-sudah-jarang-dimainkan.html"
                     },
                     {
@@ -192,7 +193,7 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://outdoorplayground.co.id/wp-content/uploads/2025/01/sejarah-permainan-engklek.jpg",
+                        "url": "games/Jambi/image-tejek-tejekan1.webp",
                         "source_page": "https://outdoorplayground.co.id/permainan-tradisional-engklek/",
                         "caption": "Ilustrasi permainan engklek yang merupakan varian dari permainan tejek-tejekan, dikenal juga sebagai sebutan, beberapa diantarnya seperti dende-dende, kengkeng, dan masih banyak lagi."
                     },
@@ -224,7 +225,7 @@
                     },
                     {
                         "type": "image",
-                        "url": "https://nusakata.com/wp-content/uploads/2025/01/20191710Lompat-tali-duniamainananakdotcom-768x512-1.jpg",
+                        "url": "games/Lampung/image-yeye1.webp",
                         "source_page": "https://www.beritasatu.com/network/nusakata/431827/budaya-indonesia-yang-hampir-punah-permainan-yeye"
                     }
                 ]
@@ -246,8 +247,8 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://tgpbelajarjurnalistik.wordpress.com/wp-content/uploads/2012/12/new-picture-23.png",
-                        "source_page": "https://tgpbelajarjurnalistik.wordpress.com/2012/12/25/zondag-maandag-permainan-tradisional-beragam-nama/"
+                        "url": "games/Lampung/image-zondag-maandag1.webp",
+                        "source_page": "https://1001indonesia.net/sunda-manda-permainan-tradisional-anak-anak-indonesia/"
                     },
                     {
                         "type": "video",
@@ -278,7 +279,7 @@
                     },
                     {
                         "type": "image",
-                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYnvDqZdX04slEqO_MZtL7hspHRG_V6XKCA_JxhB0IXJXmzCJn_XXRl1POrKRwsAFR_nh5VWGjtHCM7wJEdcypH75nZlf6QIQF-XOuPDpNRa7GAsz8BUmBVZWcMiki8n-yPsmXzRMtPNiq/s16000-rw/adu+biji+karet.gif",
+                        "url": "games/Bangka-Belitung/image-pangkak-igik-karet1.webp",
                         "source_page": "https://aturanpermainan.blogspot.com/2021/05/permainan-tradisional-khas-kepulauan-riau.html"
                     }
                 ]
@@ -300,12 +301,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://image.idntimes.com/post/20220324/screen-shot-2022-03-24-at-141425-a8e022d7ceacf86ac7e73d3e75a1a553.png?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75",
+                        "url": "games/Banten/image-gatrik1.webp",
                         "source_page": "https://banten.idntimes.com/news/banten/gatrik-permainan-tradisional-banten-yang-kian-jarang-dimainkan-00-lm183-8tyt2s"
                     },
                     {
                         "type": "image",
-                        "url": "https://aktual.com/wp-content/uploads/2016/03/Permainan-tradisional.jpg",
+                        "url": "games/Banten/image-gatrik2.webp",
                         "source_page": "https://aktual.com/pelestarian-budaya-permainan-tradisional-bangka-perlu-didokumentasikan/"
                     },
                     {
@@ -332,12 +333,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://dinaskebudayaan.jakarta.go.id/content/redaktur_2025/Wak%20wak%20Gung.jpg",
+                        "url": "games/Jakarta/image-wak-wak-gung1.webp",
                         "source_page": "https://dinaskebudayaan.jakarta.go.id/page/512/2400"
                     },
                     {
                         "type": "image",
-                        "url": "https://lahatpos.bacakoran.co/upload/a62fa3de40b5997a635e3fb0b4c63724.jpg",
+                        "url": "games/Jakarta/image-wak-wak-gung2.webp",
                         "source_page": "https://lahatpos.bacakoran.co/read/7217/permainan-ular-naga-panjang-sudah-ada-sejak-zaman-penjajahan-belanda"
                     },
                     {
@@ -364,12 +365,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.bbpmpjabar.id/wp-content/uploads/2023/03/Permainan-Tradisional-Jabar-Cingciripit-700x394-1.jpg",
+                        "url": "games/Jawa-Barat/image-cingciripit1.webp",
                         "source_page": "https://www.bbpmpjabar.id/cingciripit/"
                     },
                     {
                         "type": "image",
-                        "url": "https://image.popmama.com/post/20221116/permainan-tradisional-sunda-jawa-barat-cing-ciripit-2ee91f9b1ed0d8d5279fd2f937b7ba12.png?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75",
+                        "url": "games/Jawa-Barat/image-cingciripit1.webp",
                         "source_page": "https://www.popmama.com/big-kid/6-9-years-old/fakta-permainan-tradisional-cing-ciripit-anak-wajib-tahu-00-tpmt6-94tjck"
                     },
                     {
@@ -396,12 +397,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://cdn.antaranews.com/cache/1200x800/2022/04/08/61.jpg.webp",
+                        "url": "games/Jawa-Tengah/image-cublak-cublak-suweng1.webp",
                         "source_page": "https://www.antaranews.com/berita/4311763/lirik-lagu-cublak-cublak-suweng-dan-penjelasannya"
                     },
                     {
                         "type": "image",
-                        "url": "https://assets.promediateknologi.id/crop/0x0:0x0/1200x0/webp/photo/2023/07/24/Suweng-1902051734.jpg",
+                        "url": "games/Jawa-Tengah/image-cublak-cublak-suweng2.webp",
                         "source_page": "https://depok.urbanjabar.com/lifestyle/2559574488/mengenal-cublak-cublak-suweng-permainan-tradisional-yang-asyik-ini-cara-mainnya"
                     },
                     {
@@ -428,12 +429,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://tgrcampaign.com/media_library/posts/large/3f96e05c68518b27bc985f134bbf6c80.jpg",
+                        "url": "games/Yogyakarta/image-jamuran1.webp",
                         "source_page": "https://tgrcampaign.com/read/306/yuk-kenalan-dengan-jamuran-permainan-tradisional-khas-yogyakarta"
                     },
                     {
                         "type": "image",
-                        "url": "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Kendari/o/1765461548641-jamuran/z8hnm9l3ebw18d3.jpeg",
+                        "url": "games/Yogyakarta/image-jamuran2.webp",
                         "source_page": "http://rri.co.id/kendari/regional/2036071/permainan-tradisional-jamuran-dan-nilai-kebersamaan-masyarakat-jawa"
                     },
                     {
