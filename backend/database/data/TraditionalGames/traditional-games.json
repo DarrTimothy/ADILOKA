@@ -584,17 +584,17 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://infopublik.id/assets/upload/headline//WhatsApp_Image_2023-05-24_at_12_36_59.jpeg",
+                        "url": "games/Kalimantan Barat/image-sepak-sawut1.webp",
                         "source_page": "https://infopublik.id/kategori/nusantara/743676/sepak-sawut-kearifan-lokal-yang-harus-dilestarikan"
                     },
                     {
                         "type": "image",
-                        "url": "https://palangkaraya.go.id/wp-content/uploads/2023/05/WhatsApp-Image-2023-05-24-at-12.36.59-1.jpeg",
+                        "url": "games/Kalimantan Barat/image-sepak-sawut2.webp",
                         "source_page": "https://palangkaraya.go.id/sepak-sawut-kearifan-lokal-yang-harus-dilestarikan/"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=YrKjaPB3on4",
+                        "url": "games/Kalimantan Barat/video-sepak-sawut1.mp4",
                         "caption": "Permainan Sepak Sawut"
                     }
                 ]
@@ -616,18 +616,18 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://mmc.kalteng.go.id/files/berita/04072019022527_0.jpg",
+                        "url": "games/Kalimantan Tengah/image-habayang1.webp",
                         "source_page": "https://mmc.kalteng.go.id/berita/read/6918/bagasing-habayang-permainan-tradisional-yang-terlupakan",
                         "caption": "nostalgia bermain habayang/bagasing"
                     },
                     {
                         "type": "image",
-                        "url": "https://palangkaraya.go.id/wp-content/uploads/2025/04/Lomba-Habayang_3.3.jpg",
+                        "url": "games/Kalimantan Tengah/image-habayang2.webp",
                         "source_page": "https://palangkaraya.go.id/ikat-tali-gasing/"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=uIlEKT2Ay-Y",
+                        "url": "games/Kalimantan Tengah/video-habayang1.mp4",
                         "caption": "Permainan habayang"
                     }
                 ]
@@ -649,17 +649,17 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://banuakita.com/wp-content/uploads/2025/10/IMG_20251011_162057.jpg",
+                        "url": "games/Kalimantan Selatan/image-balogo1.webp",
                         "source_page": "https://banuakita.com/budaya/balogo-permainan-tradisional-yang-masih-jadi-kebanggaan-warga-kalimantan-selatan/"
                     },
                     {
                         "type": "image",
-                        "url": "https://img.antaranews.com/cache/1200x800/2023/10/22/IMG-20231016-WA00012.jpg.webp",
+                        "url": "games/Kalimantan Selatan/image-balogo2.webp",
                         "source_page": "https://kalsel.antaranews.com/berita/391659/ratusan-peserta-ikuti-lomba-balogo-se-kalsel-di-hsu"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=V2ukmULEIAU",
+                        "url": "games/Kalimantan Selatan/video-balogo1.mp4",
                         "caption": "Permainan Balogo"
                     }
                 ]
@@ -681,17 +681,17 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/PJOK-KELAS-3-permainan-tradisional-pindah-bintang-1-50-screenshot.png",
+                        "url": "games/Kalimantan Timur/image-pindah-bintang2.webp",
                         "source_page": "https://www.anakbisa.com/kb/pindah-bintang/"
                     },
                     {
                         "type": "image",
-                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQH7-R2CFj1fDF6Phnc26MnQrngnXaJjtxb5_nbUa7KBL5jy7AZkBZBBGkuCuZnTUnjJxDCUmOUHB4DHTtvTQc8ygYmaoyA4pGam2YET-G-FjtCW0rHeGyr7fA41sGefxxEkCTEpFR5i8/s1600/pindah+rumah.jpg",
+                        "url": "games/Kalimantan Timur/image-pindah-bintang1.webp",
                         "source_page": "https://rushartono.blogspot.com/2017/03/permainan-tempo-dulu.html"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=2clwvarh5rQ",
+                        "url": "games/Kalimantan Timur/video-pindah-bintang1.mp4",
                         "caption": "permainan pindah bintang"
                     }
                 ]
@@ -713,12 +713,12 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://youtu.be/hJa7Ky97Tx4",
+                        "url": "games/Kalimantan Utara/video-cekang1.webp",
                         "caption": "cara membuat cekang atau ketapel"
                     },
                     {
                         "type": "image",
-                        "url": "https://blogger.googleusercontent.com/img/a/AVvXsEg8jYyndlhmHTZGk53Tt-1xZOzonxYT32GejPcK9VWuDZhvhIqJCk-Yw-GrkasUz1qUIamuzatkvhoBLLpVrxyPx5RCH_IhnWjEyNYzo-GeofLi8zgKpOyKimPaKrxjiJWricnQQxtTuQAAEqP1uoYnMh9anLF19Aoe0wpT0LxWx4ycyZfPiYyI77KBqg=s16000-rw",
+                        "url": "games/Kalimantan Utara/image-cekang1.webp",
                         "source_page": "https://aturanpermainan.blogspot.com/2021/11/daftar-permainan-tradisional-provinsi-kaltara.html",
                         "caption": "Ilustrasi permainan cekang atau ketapel"
                     }
@@ -741,12 +741,14 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://youtu.be/QY9LuuL2HWY",
+                        "url": "games/Gorontalo/video-awuta1.mp4",
                         "caption": "Cara bermain awuta"
                     },
                     {
                         "type": "image",
-                        "url": "ambil dari youtube saja"
+                        "url": "games/Gorontalo/image-awuta1.webp",
+                        "source_page": "https://youtu.be/QY9LuuL2HWY",
+                        "caption": "Gambar awuta"
                     }
                 ]
             }
@@ -767,12 +769,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZen9ydgftgkfi65oraJlZg_rpS4bil9WBU40PHrzWoGPXVhaavqqqqdGNIIu7DMl0DjSDkoueXAvZc1AZvlllMRgAFl0k9IGPzDEhhUJ-Fpl1IurLIPY00hpnkNxviPn2tD_lB6cN4wSp/s16000-rw/bebeletokan.jpg",
+                        "url": "games/Sulawesi Barat/image-dodorobe1.webp",
                         "source_page": "https://aturanpermainan.blogspot.com/2021/12/permainan-tradisional-sulawesi-barat.html"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=uuOcpIFdhoI",
+                        "url": "games/Sulawesi Barat/video-dodorobe1.mp4",
                         "caption": "Cara membuat pletokan dari betawi, alat yang serupa yang digunakan dalam permianan dodorobe"
                     }
                 ]
@@ -794,12 +796,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Gorontalo/o/1716097399297-PERMAINAN_TUMBU_TUMBU_BALANGA_-_Copy/plzn3l3k8b7lffy.jpeg",
+                        "url": "games/sulawesi-utara/image-tumbu-tumbu-blanga1.webp",
                         "source_page": "http://rri.co.id/gorontalo/hobi/699668/tumbu-tumbu-balanga-permaian-tradisional-ala-gorontalo"
                     },
                     {
                         "type": "video",
-                        "url": "https://youtu.be/luJA7wDZUwI",
+                        "url": "games/sulawesi-utara/video-tumbu-tumbu-blanga1.mp4",
                         "caption": "Permaianan tumbu-tumbu blanga dari Sulawesi Utara"
                     }
                 ]
@@ -821,12 +823,13 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://blogger.googleusercontent.com/img/a/AVvXsEhjOko0_sNrLGgrUXXHPCpHLSG9o3ehaHlEXP6Oh_kaUudOyDwdjtF9alirsc04wxaOPCImvHEqSphW8B8MgvcY21bHMVH1yx1zEpyacpaTYUoJXz0l7d1nYx2XSw1XYbOvw1W_YrBI6qg-R5sBAxOLoOKydtqBEZsbLtf-kcH6M2CTEPcCjMmV2mZaIg=s16000-rw",
+                        "url": "games/Sulawesi Tengah/image-nobangan1.webp",
                         "source_page": "https://aturanpermainan.blogspot.com/2021/12/permainan-tradisional-provinsi-sulteng.html"
                     },
                     {
                         "type": "video",
-                        "url": "https://youtu.be/Cz3_XqTYHzI?t=109"
+                        "url": "games/Sulawesi Tengah/video-nobangan1.mp4",
+                        "caption": "permainan nobangan dari Sulawesi Tengah"
                     }
                 ]
             }
@@ -847,12 +850,12 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
+                        "url": "games/Sulawesi Tenggara/video-kengkeng1.mp4",
                         "caption": "Permainan engklek dengan mekanik serupa atau varian dari kengkeng"
                     },
                     {
                         "type": "image",
-                        "url": "https://outdoorplayground.co.id/wp-content/uploads/2025/01/sejarah-permainan-engklek.jpg",
+                        "url": "games/Sulawesi Tenggara/image-kengkeng1.webp",
                         "source_page": "https://outdoorplayground.co.id/permainan-tradisional-engklek/",
                         "caption": "Ilustrasi permainan engklek yang merupakan varian dari permainan kengkeng, dikenal juga sebagai sebutan, beberapa diantarnya seperti dampu bulan, dende-dende, tejek-tejekan, dan masih banyak lagi."
                     }
@@ -875,12 +878,13 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
+                        "url": "games/Sulawesi Selatan/video-dende1.mp4",
                         "caption": "permainan engklek dengan mekanik serupa atau varian dari Dende"
                     },
                     {
                         "type": "image",
-                        "url": "https://basasulselwiki.org/w/images/basasulselwiki.org!w/thumb/4/41/20220810T015656097Z028550.jpg/525px-20220810T015656097Z028550.jpg",
+                        "url": "games/Sulawesi Selatan/image-dende1.webp",
+                        "source_page": "https://basasulselwiki.org/Literature_Permainan_Tradisional_Anak_(Engklek/Dende-Dende)",
                         "caption": "Ilustrasi permainan dende, yang dikenal juga sebagai engklek, dampu bulan, dan berbagai sebutan lainnya di berbagai daerah"
                     }
                 ]
@@ -902,18 +906,23 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://akcdn.detik.net.id/visual/2024/12/19/tradisi-badendang-rotan-di-maluku-foto-tabaosid_169.png?w=700&q=90",
+                        "url": "games/Maluku/image-hela-rotan2.webp",
                         "source_page": "https://www.beautynesia.id/life/mengenal-badendang-rotan-tradisi-menyambut-tahun-baru-di-maluku/b-299201"
                     },
                     {
                         "type": "video",
-                        "url": "https://youtube.com/shorts/Fd9Q46uG70U?si=yGVkEtUCkPsQ-zkQ"
+                        "url": "games/Maluku/video-hela-rotan1.mp4"
+                    },
+                    {
+                        "type": "video",
+                        "url": "games/Maluku/video-hela-rotan2.mp4"
                     },
                     {
                         "type": "image",
-                        "url": "https://akcdn.detik.net.id/visual/2024/12/19/ajarkan-kebersamaan-dan-solidaritas-foto-radarbanyumasdiswayid.png?w=700&q=90",
+                        "url": "games/Maluku/image-hela-rotan1.webp",
                         "source_page": "https://www.beautynesia.id/life/mengenal-badendang-rotan-tradisi-menyambut-tahun-baru-di-maluku/b-299201"
                     }
+                    
                 ]
             }
         ]
@@ -933,12 +942,12 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://youtu.be/uMGrD-EKZvc?t=757",
+                        "url": "games/Maluku/video-boi-tampurung1.mp4",
                         "caption": "PERMAINAN TRADISIONAL BOI TAMPURUNG by BP PAUD dan Dikmas Maluku Utara"
                     },
                     {
                         "type": "image",
-                        "url": "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Ternate/o/1729373638137-50697448_2884869334888913_6267031710693588992_n/0nr2ymfmiyibgw4.jpeg",
+                        "url": "games/Maluku/image-boi-tampurung1.webp",
                         "source_page": "https://rri.co.id/ternate/hiburan/1057723/mengenal-boi-tampurung-permainan-khas-anak-maluku-utara"
                     }
                 ]
@@ -960,17 +969,17 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/Screenshot-2023-02-23-101744.png",
+                        "url": "games/Papua/image-kayu-malele1.webp",
                         "source_page": "https://www.anakbisa.com/kb/kayu-malele/"
                     },
                     {
                         "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/patoklele.jpg",
+                        "url": "games/Papua/image-kayu-malele2.webp",
                         "source_page": "https://www.anakbisa.com/kb/kayu-malele/"
                     },
                     {
                         "type": "video",
-                        "url": "https://youtu.be/itzqcb07oqE",
+                        "url": "games/Papua/video-kayu-malele.mp4",
                         "caption": "Permainan Tradisional Kayu Malele"
                     }
                 ]
@@ -992,9 +1001,14 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://scontent.fcgk6-3.fna.fbcdn.net/v/t39.30808-6/485078412_1072887348217562_6960634827878096882_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-c7HiLB6T4wQ7kNvwH7ftMu&_nc_oc=AdrgJPpj1_AuAhnG9Q5dTP92RQvN9miKZ4dgyCX0iNeHWY2EFXkoXczh2sRogLuX4JWN_aC0aZeF6Q_BB-XKZ2KW&_nc_zt=23&_nc_ht=scontent.fcgk6-3.fna&_nc_gid=Hz0GAA-6i3UXPYR23nZOyg&_nc_ss=7b289&oh=00_Af4Cf8_WT_DRCTpiqNr209HAXSoCzGqCBi6gVmiSrD9mKg&oe=6A1061CA",
+                        "url": "games/Papua Barat/image-korkouria.webp",
                         "source_page": "https://www.facebook.com/photo.php?fbid=797672875739012&id=100064889192080",
                         "caption": "Ilustrasi permianan Korkouria"
+                    },
+                    {
+                        "type": "video",
+                        "url": "games/Papua Barat/video-korkouria1.mp4",
+                        "caption": "Permainan Korkouria dari Papua Barat"
                     }
                 ]
             }
@@ -1015,12 +1029,12 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/Yesecha-Asya.jpg",
+                        "url": "games/Papua Barat Daya/image-yesecha-asya1.webp",
                         "source_page": "https://www.anakbisa.com/kb/yesecha-asya/"
                     },
                     {
                         "type": "video",
-                        "url": "https://youtu.be/1a3p4SsooVw",
+                        "url": "games/Papua Barat Daya/video-yesecha-asya1.mp4",
                         "caption": "Ilustrasi permainan yesecha asya"
                     }
                 ]
@@ -1042,13 +1056,13 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://asset.kompas.com/crops/rQLbFVAQ2bJguFbDEbqp42zlVxI=/175x193:1375x993/1200x800/data/photo/2022/08/02/62e8ab5531bbd.jpg",
+                        "url": "games/Papua Pegunungan/image-permainan-lempar-sege1.webp",
                         "source_page": "https://www.kompas.com/sports/read/2023/03/01/16000058/lempar-lembing--sejarah-aturan-dan-gerakan-spesifik?page=all",
                         "caption": "Ilustrasi lempar lembing yang menggunakan mekanik serupa dengan permainan lempar sege"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=SFmz4hEpIck",
+                        "url": "games/Papua Pegunungan/video-permainan-lempar-sege1.mp4",
                         "caption": "Cara membuat lembing dari kayu secara umum, yang memiliki kemiripan dengan pembuatan sege"
                     }
                 ]
@@ -1070,11 +1084,11 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=8jfiGcgYxCU"
+                        "url": "games/Papua Selatan/video-kweritop1.mp4"
                     },
                     {
                         "type": "image",
-                        "url": "https://i.ytimg.com/vi/8jfiGcgYxCU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBXqnGsi0QqvKdUxzragFjBE3qMYg",
+                        "url": "games/Papua Selatan/image-kweritop1.webpa",
                         "source_page": "https://www.youtube.com/watch?v=8jfiGcgYxCU",
                         "caption": "Ilustrasi permainan kweritop"
                     }
@@ -1097,12 +1111,12 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=DB0GPUyabM0",
+                        "url": "games/Papua Tengah/video-patah-kaleng1.mp4",
                         "caption": "Permainan patah kaleng"
                     },
                     {
                         "type": "image",
-                        "url": "https://id.pinterest.com/pin/615374736566345421/",
+                        "url": "games/Papua Tengah/image-patah-kaleng1.webp",
                         "caption": "Ilustrasi patah kaleng, permainan tradisional yang juga dikenal dengan nama jongleng tendang atau lempar kaleng."
                     }
                 ]
