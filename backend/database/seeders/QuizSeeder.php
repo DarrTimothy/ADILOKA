@@ -44,6 +44,13 @@ class QuizSeeder extends Seeder
                     $quizData['questions']
                 )
             ) {
+
+                $title = $quizData['title'] ?? '(tanpa judul)';
+
+                $this->command->warn(
+                    "Quiz '{$title}' dilewati karena struktur quiz tidak lengkap"
+                );
+
                 $skipped++;
                 continue;
             }
@@ -55,6 +62,11 @@ class QuizSeeder extends Seeder
             )->first();
 
             if (!$game) {
+
+                $this->command->warn(
+                    "Quiz '{$quizData['title']}' dilewati karena game '{$quizData['traditional_game_slug']}' tidak ditemukan"
+                );
+
                 $skipped++;
                 continue;
             }
@@ -63,6 +75,11 @@ class QuizSeeder extends Seeder
             if (
                 Quiz::where('traditional_game_id', $game->id)->exists()
             ) {
+
+                $this->command->warn(
+                    "Quiz '{$quizData['title']}' dilewati karena quiz sudah ada"
+                );
+
                 $skipped++;
                 continue;
             }
@@ -72,6 +89,11 @@ class QuizSeeder extends Seeder
                 count($quizData['questions']) !==
                 (int) $quizData['total_questions']
             ) {
+
+                $this->command->warn(
+                    "Quiz '{$quizData['title']}' dilewati karena total_questions tidak sesuai"
+                );
+
                 $skipped++;
                 continue;
             }
@@ -86,12 +108,22 @@ class QuizSeeder extends Seeder
                     !isset($questionData['question']) ||
                     !isset($questionData['options'])
                 ) {
+
+                    $this->command->warn(
+                        "Quiz '{$quizData['title']}' memiliki soal dengan struktur tidak valid"
+                    );
+
                     $isInvalid = true;
                     break;
                 }
 
-                // HARUS 4 OPTIONS
-                if (count($questionData['options']) !== 4) {
+                // Minimal 2 OPTIONS
+                if (count($questionData['options']) < 2) {
+
+                    $this->command->warn(
+                        "Quiz '{$quizData['title']}' memiliki hanya memiliki 1 pilihan jawaban"
+                    );
+
                     $isInvalid = true;
                     break;
                 }
@@ -105,6 +137,11 @@ class QuizSeeder extends Seeder
                         !isset($option['text']) ||
                         !isset($option['is_correct'])
                     ) {
+
+                        $this->command->warn(
+                            "Quiz '{$quizData['title']}' memiliki option yang tidak valid"
+                        );
+
                         $isInvalid = true;
                         break 2;
                     }
@@ -117,6 +154,11 @@ class QuizSeeder extends Seeder
 
                 // MINIMAL 1 JAWABAN BENAR
                 if ($correctCount < 1) {
+
+                    $this->command->warn(
+                        "Quiz '{$quizData['title']}' memiliki soal tanpa jawaban benar"
+                    );
+
                     $isInvalid = true;
                     break;
                 }

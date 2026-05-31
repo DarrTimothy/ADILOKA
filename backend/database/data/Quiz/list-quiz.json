@@ -1,92 +1,31 @@
 [
     {
-        "traditional_game_slug": "margala",
-        "title": "Quiz Permainan Margala",
-        "total_questions": 3,
-        "min_score": 60,
-        "time_limit": 5,
-        "is_active": true,
-        "questions": [
-            {
-                "question": "Bagaimana cara memenangkan permainan Margala?",
-                "options": [
-                    {
-                        "text": "Berhasil melewati semua garis pertahanan tanpa tersentuh",
-                        "is_correct": true
-                    },
-                    {
-                        "text": "Mengumpulkan poin terbanyak",
-                        "is_correct": false
-                    },
-                    {
-                        "text": "Menjatuhkan lawan ke tanah",
-                        "is_correct": false
-                    },
-                    {
-                        "text": "Menghafal pola permainan",
-                        "is_correct": false
-                    }
-                ]
-            },
-            {
-                "question": "Peran utama tim penjaga dalam permainan Margala adalah?",
-                "options": [
-                    {
-                        "text": "Menjaga garis dan menyentuh lawan",
-                        "is_correct": true
-                    },
-                    {
-                        "text": "Menyerang lawan dengan bola",
-                        "is_correct": false
-                    },
-                    {
-                        "text": "Menghindari semua pemain",
-                        "is_correct": false
-                    },
-                    {
-                        "text": "Mengumpulkan benda di arena",
-                        "is_correct": false
-                    }
-                ]
-            },
-            {
-                "question": "Arena permainan Margala biasanya berbentuk?",
-                "options": [
-                    {
-                        "text": "Lapangan dengan beberapa kotak berbaris",
-                        "is_correct": true
-                    },
-                    {
-                        "text": "Lingkaran besar",
-                        "is_correct": false
-                    },
-                    {
-                        "text": "Segitiga",
-                        "is_correct": false
-                    },
-                    {
-                        "text": "Lapangan tanpa garis",
-                        "is_correct": false
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "traditional_game_slug": "tarek-situek",
         "title": "Quiz Permainan Tarek Situek",
         "total_questions": 3,
-        "min_score": 60,
-        "time_limit": 5,
+        "min_score": 50,
+        "time_limit": 7,
         "is_active": true,
         "questions": [
             {
                 "question": "Alat utama yang digunakan dalam permainan Tarek Situek adalah?",
                 "options": [
-                    { "text": "Pelepah pinang atau tali", "is_correct": true },
-                    { "text": "Kayu panjang", "is_correct": false },
-                    { "text": "Bola karet", "is_correct": false },
-                    { "text": "Tongkat bambu", "is_correct": false }
+                    {
+                        "text": "Pelepah pinang atau tali",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kayu panjang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bola karet",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tongkat bambu",
+                        "is_correct": false
+                    }
                 ]
             },
             {
@@ -113,10 +52,2534 @@
             {
                 "question": "Permainan Tarek Situek berasal dari daerah?",
                 "options": [
-                    { "text": "Aceh", "is_correct": true },
-                    { "text": "Jawa Tengah", "is_correct": false },
-                    { "text": "Sulawesi Selatan", "is_correct": false },
-                    { "text": "Kalimantan Timur", "is_correct": false }
+                    {
+                        "text": "Aceh",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Jawa Tengah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sulawesi Selatan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kalimantan Timur",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "margala",
+        "title": "Quiz Permainan Margala",
+        "total_questions": 3,
+        "min_score": 50,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan Margala dimainkan secara?",
+                "options": [
+                    {
+                        "text": "Berkelompok dengan dua tim",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Sendiri-sendiri",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Berpasangan menggunakan bola",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bergiliran menggunakan alat musik",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa tugas utama tim penjaga dalam permainan Margala?",
+                "options": [
+                    {
+                        "text": "Menggambar lapangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyentuh lawan agar tidak melewati garis",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Mengumpulkan benda di arena",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menendang bola ke gawang",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Nilai yang dilatih dalam permainan Margala adalah?",
+                "options": [
+                    {
+                        "text": "Bermain alat musik tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kerja sama dan strategi tim",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menghafal lagu daerah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membuat kerajinan tangan",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "badia-batuang",
+        "title": "Quiz Permainan Badia batuang",
+        "total_questions": 4,
+        "min_score": 60,
+        "time_limit": 10,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Apa arti nama “Badia Batuang” dalam permainan tradisional Minangkabau?",
+                "options": [
+                    {
+                        "text": "Rumah bambu tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bola dari bambu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Alat musik bambu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Meriam yang terbuat dari bambu",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question": "Badia Batuang biasanya dimainkan pada waktu?",
+                "options": [
+                    {
+                        "text": "Musim panen",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bulan Ramadhan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Upacara pernikahan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Festival tari daerah",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Bahan utama untuk membuat Badia Batuang adalah?",
+                "options": [
+                    {
+                        "text": "Kayu jati",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tempurung kelapa",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bambu besar",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Daun pisang",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa tujuan utama anak-anak memainkan Badia Batuang?",
+                "options": [
+                    {
+                        "text": "Mengumpulkan poin terbanyak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menangkap lawan di arena",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menghasilkan bunyi dentuman keras untuk hiburan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menyusun bambu menjadi menara",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "ligu",
+        "title": "Quiz Permainan Ligu",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat utama yang digunakan dalam permainan Ligu adalah?",
+                "options": [
+                    {
+                        "text": "Bola karet dan bambu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tempurung kelapa dan stik bambu",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Batu dan tali",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kayu panjang dan bola rotan",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Bagaimana cara mendapatkan poin dalam permainan Ligu?",
+                "options": [
+                    {
+                        "text": "Menangkap lawan di arena",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menjatuhkan semua pemain lawan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Mengenai target ligu lawan menggunakan pukulan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Mengumpulkan benda terbanyak",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "lulu-cina-buta",
+        "title": "Quiz Permainan Lulu Cina Buta",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat yang digunakan dalam permainan Lulu Cina Buta adalah?",
+                "options": [
+                    {
+                        "text": "Bola kecil",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tali karet",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "ongkat bambu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sapu tangan atau kain penutup mata",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question": "Apa tugas pemain yang menjadi “buta” dalam permainan Lulu Cina Buta?",
+                "options": [
+                    {
+                        "text": "Menangkap dan menebak teman yang disentuh",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menjaga garis lapangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyusun batu menjadi menara",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menggambar lingkaran di tanah",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "bicau",
+        "title": "Quiz Permainan Bicau",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan Bicau berasal dari daerah?",
+                "options": [
+                    {
+                        "text": "Bengkulu",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Lampung",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sumatera Barat",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Jambi",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan Bicau biasanya dimainkan oleh?",
+                "options": [
+                    {
+                        "text": "Orang dewasa di sawah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Anak-anak secara berkelompok",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Pedagang di pasar",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Nelayan di pantai",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Nilai yang dapat dilatih dalam permainan Bicau adalah?",
+                "options": [
+                    {
+                        "text": "Kerja sama dan sportivitas",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Memasak tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membuat kerajinan bambu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menjahit pakaian adat",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "tejek-tejekan",
+        "title": "Quiz Permainan Tejek-tejekan",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Tejek-tejekan dimainkan dengan cara?",
+                "options": [
+                    {
+                        "text": "Melompat",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Memasak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menulis",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memancing",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan tejek-tejekan melatih?",
+                "options": [
+                    {
+                        "text": "Keseimbagan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Membaca",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menghafal",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menjahit",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Tejek-tejekan dimainkan oleh?",
+                "options": [
+                    {
+                        "text": "Anak-anak",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Pedagang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Nelayan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Petani",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "yeye",
+        "title": "Quiz Permainan Yeye",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Dalam permainan yeye pemain harus?",
+                "options": [
+                    {
+                        "text": "Menangkap ikat",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membaca puisi",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Melompati tali karet",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menggambar",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan Yeye menggunakan alat berupa",
+                "options": [
+                    {
+                        "text": "Batu bata",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tali karet",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Air",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kertas",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Pemainan yeye melatih?",
+                "options": [
+                    {
+                        "text": "Ketangkasan dan kelincahan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menjahit",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memasak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menulis",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "zondag-maandag",
+        "title": "Quiz Permainan Zondag-maandag",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Nama zondag maandag berasal dari bahasa?",
+                "options": [
+                    {
+                        "text": "Jepang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Belanda",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Arab",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Inggris",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan ini dimainkan dengan cara?",
+                "options": [
+                    {
+                        "text": "Melompat kotak-katak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menembak bola",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyusun kartu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memancing",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Zondag Maandag mirip dengan permainan?",
+                "options": [
+                    {
+                        "text": "Congklak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bekel",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Gasing",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Engklek",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "pangkak-igik-karet",
+        "title": "Quiz Permainan Pangkak Igik Karet",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan pangkak igik karet ini mengunakan alat berupa?",
+                "options": [
+                    {
+                        "text": "Biji Karet",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Batu Bata",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Pecahan genteng",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kaleng",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Pemain dinyatakan kalah bila biji karet mereka?",
+                "options": [
+                    {
+                        "text": "Matang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Berkecambah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Jatuh paling jauh",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Pecah",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "gatrik",
+        "title": "Quiz Permainan Gatrik",
+        "total_questions": 4,
+        "min_score": 60,
+        "time_limit": 10,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat utama yang digunakan dalam permainan Gatrik adalah?",
+                "options": [
+                    {
+                        "text": "Bola dan tali",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Dua potong kayu dengan ukuran berbeda",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Batu dan bambu panjang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kelereng dan papan kayu",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa tugas tim penangkap dalam permainan Gatrik?",
+                "options": [
+                    {
+                        "text": "Menjaga garis lapangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menggambar arena permainan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menangkap kayu kecil yang dipukul lawan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menyusun batu menjadi target",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Nilai yang dapat dilatih dari permainan Gatrik adalah?",
+                "options": [
+                    {
+                        "text": "Kerja sama dan ketangkasan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Membaca cepat",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain musik tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membuat kerajinan bambu",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Bagaimana cara memulai permainan Gatrik?",
+                "options": [
+                    {
+                        "text": "Bola ditendang ke gawang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kayu kecil dilempar ke udara lalu dipukul",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Pemain menggambar lingkaran di tanah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Batu disusun membentuk menara",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "wak-wak-gung",
+        "title": "Quiz Permainan Wak Wak Gung",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Bagaimana posisi pemain dalam permainan Wak Wak Gung?",
+                "options": [
+                    {
+                        "text": "Berdiri membentuk lingkaran",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Berlari secara terpisah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Duduk membentuk persegi",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Berbaris sambil saling berpegangan",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question": "Apa tugas pemain yang berada di depan barisan dalam permainan Wak Wak Gung?",
+                "options": [
+                    {
+                        "text": "Menjaga bola",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menghitung skor permainan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memimpin barisan dan melindungi anggota di belakangnya",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menentukan pemenang permainan",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Nilai yang dapat dilatih dalam permainan Wak Wak Gung adalah?",
+                "options": [
+                    {
+                        "text": "Kerja sama dan kekompakan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kemampuan melukis",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain alat musik",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membaca cepat",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "cingciripit",
+        "title": "Quiz Permainan Cingciripit",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Bagaimana posisi tangan pemain dalam permainan Cingciripit?",
+                "options": [
+                    {
+                        "text": "Saling berpegangan tangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memegang bola kecil",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Jari telunjuk diletakkan di telapak tangan pemain lain",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menutup mata dengan kain",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Kapan pemain harus menarik jarinya dalam permainan Cingciripit?",
+                "options": [
+                    {
+                        "text": "Saat lagu selesai dan telapak tangan ditutup",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Saat pemain mulai berlari",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Ketika bola dilempar",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Setelah semua pemain duduk",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Nilai yang dilatih dalam permainan Cingciripit adalah?",
+                "options": [
+                    {
+                        "text": "Konsentrasi dan kecepatan refleks",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kemampuan menggambar",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain alat musik",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyusun balok kayu",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "cublak-cublak-suweng",
+        "title": "Quiz Permainan Cublak Cublak Suwerng",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan cublak cublak suweng dimainkan bersamaan dengan?",
+                "options": [
+                    {
+                        "text": "Memasak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menari",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyanyikan lagu daerah",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menganyam",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan cublak cublak suweng mengajarkan?",
+                "options": [
+                    {
+                        "text": "keserakahan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Konsentrasi",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kesabaran",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Keseimbangan",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan cublak cublak suweng, jika penebak berhasil menebak yang menyimpan benda maka?",
+                "options": [
+                    {
+                        "text": "Penyimpan menari",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Penyimpan semabah sujut",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Penyimpan berganti posisi menjadi penebak",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Penyimpan mentraktir makan",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "jamuran",
+        "title": "Quiz Permainan Jamuran",
+        "total_questions": 2,
+        "min_score": 60,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan Jamuran dimainkan oleh?",
+                "options": [
+                    {
+                        "text": "Anak-anak secara berkelompok",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Petani",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Penari",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Nelayan",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan Jamuran melatih?",
+                "options": [
+                    {
+                        "text": "Konsentrasi dan kreativitas",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kesabaran",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Keseimbangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kedermawanan",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "pesapean",
+        "title": "Quiz Permainan Pesapean",
+        "total_questions": 4,
+        "min_score": 50,
+        "time_limit": 10,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Pesapean merupakan permainan tradisional yang terinspirasi dari?",
+                "options": [
+                    {
+                        "text": "Adu layang-layang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Karapan sapi",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Permainan gasing",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Balap perahu",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Alat utama yang digunakan dalam permainan Pesapean adalah?",
+                "options": [
+                    {
+                        "text": "Kuda kayu kecil",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bola rotan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Miniatur sapi dari kayu atau bambu",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Tempurung kelapa",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa tujuan pemain dalam permainan Pesapean?",
+                "options": [
+                    {
+                        "text": "Mengumpulkan batu terbanyak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyusun bambu paling tinggi",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menangkap pemain lawan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membawa miniatur sapi mencapai garis akhir lebih cepat",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question": "Nilai yang dapat dilatih dari permainan Pesapean adalah?",
+                "options": [
+                    {
+                        "text": "Kerja sama dan sportivitas",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Membatik kain tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain alat musik daerah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membuat anyaman bambu",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "deduplak",
+        "title": "Quiz Permainan Deduplak",
+        "total_questions": 4,
+        "min_score": 50,
+        "time_limit": 10,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan Deduplak biasanya dimainkan menggunakan?",
+                "options": [
+                    {
+                        "text": "Tempurung kelapa",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Tongkat bambu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Batu kecil",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bola rotan",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Bagaimana cara memainkan Deduplak?",
+                "options": [
+                    {
+                        "text": "Bola dilempar ke arah lawan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Pemain berlari membawa bambu panjang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": " berjalan dengan alas tempurung kelapa sambil menjaga keseimbangan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Batu disusun menjadi menara",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa kemampuan yang dilatih dalam permainan Deduplak?",
+                "options": [
+                    {
+                        "text": "Keseimbangan dan koordinasi tubuh",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menghafal lagu daerah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membatik kain tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain alat musik",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Deduplak termasuk permainan tradisional yang dimainkan secara?",
+                "options": [
+                    {
+                        "text": "Menggunakan dua regu penjaga",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Individu maupun perlombaan kelompok",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Duduk melingkar di lantai",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain di dalam air",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "belompongan",
+        "title": "Quiz Permainan Belompongan",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Apa arti nama “Belompongan” dalam permainan tradisional NTB?",
+                "options": [
+                    {
+                        "text": "Melompat bersama",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menggelindingkan bola ke arah patok",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menendang bola ke gawang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memukul bambu panjang",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Berapa jenis pukulan yang terdapat dalam permainan Belompongan?",
+                "options": [
+                    {
+                        "text": "Tiga jenis pukulan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Empat jenis pukulan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Lima jenis pukulan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Enam jenis pukulan",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "rangku-alu",
+        "title": "Quiz Permainan Rangku Alu",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat utama yang digunakan dalam permainan Rangku Alu adalah?",
+                "options": [
+                    {
+                        "text": "Pecahan genting",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tongkat pendek",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Empat batang bambu",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Tempurung kelapa",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa tujuan pemain dalam permainan Rangku Alu?",
+                "options": [
+                    {
+                        "text": "Menyusun bambu menjadi menara",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menangkap pemain lawan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Melompat di sela bambu tanpa terjepit",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Mengumpulkan batu terbanyak",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Kemampuan yang dilatih dalam permainan Rangku Alu adalah?",
+                "options": [
+                    {
+                        "text": "Konsentrasi dan ketangkasan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menghafal lagu daerah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Membatik kain tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain alat musik",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "sepak-sawut",
+        "title": "Quiz Permainan Sepak Sawut",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Bola yang digunakan dalam permainan Sepak Sawut terbuat dari?",
+                "options": [
+                    {
+                        "text": "Rotan yang dibakar",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bambu yang dililit kain",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sabut kelapa yang dibakar",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kayu ringan yang dibungkus daun",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Sepak Sawut merupakan permainan tradisional masyarakat?",
+                "options": [
+                    {
+                        "text": "Dayak",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Banjar",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Betawi",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Minangkabau",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "habayang",
+        "title": "Quiz Permainan Habayang",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Bagasing/Habayang merupakan permainan tradisional menggunakan?",
+                "options": [
+                    {
+                        "text": "Bambu panjang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Gasing kayu",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Batu pipih",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Batu krikil",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa tujuan utama pemain dalam permainan Bagasing Habayang?",
+                "options": [
+                    {
+                        "text": "Menangkap lawan di arena",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memutar gasing selama mungkin",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menendang bola ke gawang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Mengumpulkan bambu terbanyak",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Nilai yang dapat dilatih dari permainan Bagasing Habayang adalah?",
+                "options": [
+                    {
+                        "text": "Membatik kain tradisional",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bermain alat musik daerah",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyusun balok kayu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Ketelitian dan ketangkasan",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "balogo",
+        "title": "Quiz Permainan Balogo",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat utama yang digunakan dalam permainan Balogo adalah?",
+                "options": [
+                    {
+                        "text": "Logo dari tempurung kelapa",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Pecahan genting",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bambu panjang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Batu krikil",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa tujuan pemain dalam permainan Balogo?",
+                "options": [
+                    {
+                        "text": "Menangkap semua pemain lawan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menendang bola ke gawang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menjatuhkan atau mengenai logo lawan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Mengumpulkan bambu terbanyak",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "pindah-bintang",
+        "title": "Quiz Permainan Pindah Bintang",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Apa tujuan pemain dalam permainan Pindah Bintang?",
+                "options": [
+                    {
+                        "text": "Menangkap bola lawan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Berpindah tempat dan merebut posisi kosong",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menyusun bambu menjadi lingkaran",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menendang bola ke gawang",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Mengapa jumlah tonggak atau lingkaran dalam permainan Pindah Bintang dibuat lebih sedikit dari jumlah pemain?",
+                "options": [
+                    {
+                        "text": "Agar permainan lebih cepat selesai",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Supaya pemain dapat duduk bergantian",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Untuk menentukan ketua permainan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Agar ada satu pemain yang berjaga dan berebut tempat",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "cekang",
+        "title": "Quiz Permainan Cekang",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat utama yang digunakan dalam permainan Cekang adalah?",
+                "options": [
+                    {
+                        "text": "Gasing kayu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bola rotan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Ketapel dari ranting pohon",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Bambu panjang",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Apa yang biasanya digunakan sebagai peluru dalam permainan Cekang?",
+                "options": [
+                    {
+                        "text": "Batu kecil",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Buah pisangan atau buah bakau kecil",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Bola kain",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kelereng kaca",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "awuta",
+        "title": "Quiz Permainan Awuta",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan awuta, memiliki konsep dan cara bermain yang mirip dengan?",
+                "options": [
+                    {
+                        "text": "Petak Umpet",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Gasing",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Congklak",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Engklek",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Jika congklak biasanya menggunakan papan kayu berlubang, media yang digunakan dalam permainan awuta berupa?",
+                "options": [
+                    {
+                        "text": "Batok kelapa yang disusun",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Lubang-lubang kecil yang digali langsung di atas tanah",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Gelas plastik bekas ",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Garis kapur di lantai semen",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Benda yang didistrikan atau dipindah-pindahkan ke dalam lubang-lubang tanah tersebut saat giliran pemain berjalan adalah?",
+                "options": [
+                    {
+                        "text": "Karet gelang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Daun kering",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Batu-batu kecil atau biji-bijian",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kelereng berukuran besar",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "dodorobe",
+        "title": "Quiz Permainan Dodorobe",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Dalam permainan dodorobe, senapan mainan yang digunakan terbuat dari",
+                "options": [
+                    {
+                        "text": "Batu bata",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Pecahan genteng",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bambu kecil",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kapur",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan dodorobe, biasanya peluru yang digunakan terbuat dari",
+                "options": [
+                    {
+                        "text": "Kertas basah dan biji buah kecil",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kelereng",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tanah liat yang dikeringkan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kerikil tajam",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "tumbu-tumbu-blanga",
+        "title": "Quiz Permainan Tumbu-tumbu Blanga",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Dalam permainan tumbu-tumbu blanga, posisi tangan saat permainan dimulai adalah?",
+                "options": [
+                    {
+                        "text": "Terbuka lebar dan saling berpegangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Mengepalkan tangan dan menyusunnya secara bertingkat ke atas",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Menyilangkan lengan di depan dada",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menepuk lantai secara bergantian",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan tumbu-tumbu blanga, selain menggerakan tangan pemain juga harus?",
+                "options": [
+                    {
+                        "text": "Berlari mengelilingi lingkaran",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menutup mata",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Melompat dengan satu kaki",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menyanyikan lagu tradisional",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "nobangan",
+        "title": "Quiz Permainan Nobangan",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat yang digunakan dalam permainan nobangan berupa?",
+                "options": [
+                    {
+                        "text": "Cengkeh",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Biji kemiri",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Biji Jagung",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kacang kenari",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan nobangan, pemain dinyatakan menang bila?",
+                "options": [
+                    {
+                        "text": "Memperoleh kemiri paling banyak",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Memperoleh kemiri paling sedikit",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memasukan bola ke dalam keranjang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Mencegah pemain lawan sebelum kembali ke garis",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan nobangan, keterampilan yang dibutuhkan oleh pemain adalah?",
+                "options": [
+                    {
+                        "text": "Ketepatan dalam melempar",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Keseimbangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kebijaksanan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kedermawanan",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "kengkeng",
+        "title": "Quiz Permainan Kengkeng",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan kengkeng mirip dengan permainan?",
+                "options": [
+                    {
+                        "text": "Baskte",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Engklek",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Bulu tangkis",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Lompat tinggi",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan kengkeng, Pemain biasanya bergerak dengan",
+                "options": [
+                    {
+                        "text": "Melempar batu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memanjat pohon",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Melompat dengan satu kaki",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Berlari membawa bola",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Kengkeng melatih kemampuan?",
+                "options": [
+                    {
+                        "text": "Keseimbangan tubuh",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Memanjat pohon",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Rahasia",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menulis",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "dende",
+        "title": "Quiz Permainan Dende",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Dende dimainkan secara?",
+                "options": [
+                    {
+                        "text": "Beramai-ramai",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Sendirian",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Rahasia",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Online",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan Dende melatih?",
+                "options": [
+                    {
+                        "text": "Menulis",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menjahit",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Keseimbangan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Memasak",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Kata dende dari nama permainan dende memiliki arti",
+                "options": [
+                    {
+                        "text": "Senin",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Gulir atau guling",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Minggu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kotak",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "hela-rotan",
+        "title": "Quiz Permainan Hela Rotan",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat utama yang digunakan dalam permainan hela rotan adalah?",
+                "options": [
+                    {
+                        "text": "Tali Rotan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Temupurung",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Pecahan genteng",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Pasir",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Hela rotan memiliki prinsip permainan yang mirip dengan?",
+                "options": [
+                    {
+                        "text": "Sepak bola",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tarik tambang",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Engklek",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Congklak",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan hela rotan melatih?",
+                "options": [
+                    {
+                        "text": "Menulis",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memasak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menjahit",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kekuatan dan kerjasama",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "boi-tampurung",
+        "title": "Quiz Permainan Boi Tampurung",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan boi tampurung menggunakan alat berupa?",
+                "options": [
+                    {
+                        "text": "Rotan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Air",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tempurung Kelapa",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Batu bata",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan boi tampurung umumnya dimainkan oleh?",
+                "options": [
+                    {
+                        "text": "Anak-anak",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Pedagang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Dokter",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sopir",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan boi tampurung melatih?",
+                "options": [
+                    {
+                        "text": "Kedermawanan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kebaikan hati",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Ketepatan dan kerjasama",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kebijaksanan",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "kayu-malele",
+        "title": "Quiz Permainan Kayu Malele",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Alat utama dalam permainan kayu melele adalah?",
+                "options": [
+                    {
+                        "text": "Bola tenis",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Air",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Batu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kayu",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question": "Permainai kayu melele melatih?",
+                "options": [
+                    {
+                        "text": "Kebijaksanan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kebaikan hati",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kedermawanan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Ketangkasan",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "korkouria",
+        "title": "Quiz Permainan Korkouria",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Dalam permainan korkouria, pemain sangat membutuhkan?",
+                "options": [
+                    {
+                        "text": "Kesombongan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kepintaran",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Keberanian dan ketangkasan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kemandirian",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan korkouria biasa dimakan di tempat seperti?",
+                "options": [
+                    {
+                        "text": "Bawah laut",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tebing di pinggir sungai atau tepi laut",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Lapangan terbuka",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Didalam ruangan",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan korkouria dimainkan dengan cara?",
+                "options": [
+                    {
+                        "text": "Berayun-ayun pada akar pohon atau tali",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Melempar batu",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menari",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Menghitung",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "yesecha-asya",
+        "title": "Quiz Permainan Yesecha Asya",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Dalam permianan yesecha asya, alat yang digunakan berupa?",
+                "options": [
+                    {
+                        "text": "Batu bata",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Akar pohon",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sege dan asya",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Karet gelang",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan yesecha asya, pemain disebut jagoan bila?",
+                "options": [
+                    {
+                        "text": "Memiliki asya paling banyak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memiliki sege paling keren",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memiliki sege paling banyak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Melempar paling jauh",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan yesecha asya, syarat pemian dikatakan pemenang bila?",
+                "options": [
+                    {
+                        "text": "Tumpukan kaleng tumbang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sege atau tombak mengenai bagian tengah asya",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "bola masuk ke gawang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memiliki sege paling banyak",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "permainan-lempar-sege",
+        "title": "Quiz Permainan Lempar Sege",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Permainan lempar sege menggunakan alat berupa?",
+                "options": [
+                    {
+                        "text": "Karet gelang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tempurung kelapa",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Pecahan genteng",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tombak dari kayu",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question": "Permainan lempar merupakan permainan yang mirip dengan?",
+                "options": [
+                    {
+                        "text": "Sepak bola",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Olahraga lempar lembing",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Engklek",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Golf",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Dalam permainan lempar sege, pemain dinyatakan menang bila?",
+                "options": [
+                    {
+                        "text": "nan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "nan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memiliki sege paling banyak",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Memiliki lemparan paling jauh",
+                        "is_correct": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "kweritop",
+        "title": "Quiz Permainan Kweritop",
+        "total_questions": 2,
+        "min_score": 50,
+        "time_limit": 5,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Media yang digunakan dalam permainan kweritop adalah?",
+                "options": [
+                    {
+                        "text": "Tali",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Tempurung kelapa",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Parang",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Bola kasti",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan Kweritop ini melatih?",
+                "options": [
+                    {
+                        "text": "Kerativitas dan ketangkasan tangan",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Keseimbangan",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Keberanian",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kemandirian",
+                        "is_correct": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "traditional_game_slug": "patah-kaleng",
+        "title": "Quiz Permainan Patah Kaleng",
+        "total_questions": 3,
+        "min_score": 60,
+        "time_limit": 7,
+        "is_active": true,
+        "questions": [
+            {
+                "question": "Dalam permianan patah kaleng, media yang digunakan adalah?",
+                "options": [
+                    {
+                        "text": "Kaleng dan bola",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Pecahan genteng",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Tempurung kelapa",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Batang kayu",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan patah kaleng dimainkan secara?",
+                "options": [
+                    {
+                        "text": "Mandiri",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Berkelompok",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Masing-masing",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Sendiri-sendiri",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question": "Permainan patah kaleng melatih?",
+                "options": [
+                    {
+                        "text": "ketangkasas, kecepatan, dan kerjasama",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "Kesabaran",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Kemandirian",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "Keseimbangan",
+                        "is_correct": false
+                    }
                 ]
             }
         ]

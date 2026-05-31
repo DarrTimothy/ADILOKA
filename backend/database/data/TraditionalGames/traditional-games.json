@@ -49,6 +49,7 @@
                     {
                         "type": "video",
                         "url": "games/Sumatera-Utara/video-margala.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=5v35galQisg",
                         "caption": "video Permainan Margala"
                     }
                 ]
@@ -80,7 +81,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=zrZqznBv6Lk",
+                        "url": "games/Sumatera-Barat/video-badia-batuang.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=zrZqznBv6Lk",
                         "caption": "video permainan badia batuang"
                     }
                 ]
@@ -112,7 +114,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=jarnbk4Y8mw",
+                        "url": "games/Riau/video-ligu.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=jarnbk4Y8mw",
                         "caption": "Video pembuatan dan permainan ligu"
                     }
                 ]
@@ -144,7 +147,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=zC4Lftj_m-g",
+                        "url": "games/Kepulaua-Riaw/video-lulu-cina-buta.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=zC4Lftj_m-g",
                         "caption": "Permainan lulu cinta buta"
                     }
                 ]
@@ -171,7 +175,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=j4ViZYUuPxQ",
+                        "url": "games/Bengkulu/video-bicau.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=j4ViZYUuPxQ",
                         "caption": "permainan bicau"
                     }
                 ]
@@ -199,7 +204,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
+                        "url": "games/Jambi/video-tejek-tejekan.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
                         "caption": "permainan engklek dengan mekanik serupa atau varian dari tejek-tejekan"
                     }
                 ]
@@ -221,7 +227,8 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://youtu.be/11JheHyi9Vo"
+                        "url": "games/Lampung/video-yeye.mp4",
+                        "source_page": "https://youtu.be/11JheHyi9Vo"
                     },
                     {
                         "type": "image",
@@ -252,7 +259,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://youtu.be/XTbgGPZtk5k",
+                        "url": "games/Lampung/video-zondag-maandag.mp4",
+                        "source_page": "https://youtu.be/XTbgGPZtk5k",
                         "caption": "Cara bermain zondag maandag atau yang lebih dikenal dengan sebutan engklek"
                     }
                 ]
@@ -274,7 +282,8 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=iF37mPXCHIA",
+                        "url": "games/Bangka-Belitung/video-pangkak-igik-karet.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=iF37mPXCHIA",
                         "caption": "PANGKAK IGIK KARET, Permainan Tradisional Bangka yang Sudah Punah? by Begagit TV"
                     },
                     {
@@ -311,7 +320,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=4o8HcLSgh8Q",
+                        "url": "games/Banten/video-gatrik.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=4o8HcLSgh8Q",
                         "caption": "bermain gatrik"
                     }
                 ]
@@ -343,7 +353,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=bA6LGXb0c3Y",
+                        "url": "games/Jakarta/video-wak-wak-gung.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=bA6LGXb0c3Y",
                         "caption": "bermain wak wak gung"
                     }
                 ]
@@ -375,7 +386,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=rAwWO-St_LA",
+                        "url": "games/Jawa-Barat/video-cingciripit.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=rAwWO-St_LA",
                         "caption": "Permainan cing ciripit"
                     }
                 ]
@@ -407,7 +419,8 @@
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=uHTnviRGiwc",
+                        "url": "games/Jawa-Tengah/video-cublak-cublak-suweng.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=uHTnviRGiwc",
                         "caption": "permainan cublak cublak suweng"
                     }
                 ]
@@ -435,11 +448,12 @@
                     {
                         "type": "image",
                         "url": "games/Yogyakarta/image-jamuran2.webp",
-                        "source_page": "http://rri.co.id/kendari/regional/2036071/permainan-tradisional-jamuran-dan-nilai-kebersamaan-masyarakat-jawa"
+                        "source_page": "https://tgrcampaign.com/read/794/permainan-tradisional-jamuran-khas-yogyakarta"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=NWeNArDJ_tc&list=RDNWeNArDJ_tc&start_radio=1",
+                        "url": "games/Yogyakarta/video-jamuran.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=NWeNArDJ_tc",
                         "caption": "permainan jamuran"
                     }
                 ]
@@ -461,17 +475,18 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.lontarmadura.com/wp-content/uploads/2025/02/PESAPEAN.jpg",
+                        "url": "games/Jawa-Timur/image-pesapean1.webp",
                         "source_page": "https://www.lontarmadura.com/permainan-anak-madura-dan-nilai-kehidupan-yang-terkandung-di-dalamnya/"
                     },
                     {
                         "type": "image",
-                        "url": "https://i0.wp.com/maduraindepth.com/wp-content/uploads/2023/01/images-13.jpeg",
+                        "url": "games/Jawa-Timur/image-pesapean2.webp",
                         "source_page": "https://maduraindepth.com/permainan-unik-kerapan-pesapean-dari-desa-arok"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=4_Pd_0uSSAM",
+                        "url": "games/Jawa-Timur/video-pesapean.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=4_Pd_0uSSAM",
                         "caption": "Permainan Karapan Pesapean"
                     }
                 ]
@@ -493,17 +508,18 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://img.antaranews.com/cache/1200x800/2019/02/10/antarafoto-pelestarian-permainan-tradisional-denpasar-100219-nhw-5.jpg.webp",
+                        "url": "games/Bali/image-deduplak1.webp",
                         "source_page": "https://www.antaranews.com/foto/796610/pelestarian-permainan-tradisional-bali"
                     },
                     {
                         "type": "image",
-                        "url": "https://pramukaku.com/wp-content/uploads/2023/09/permainan-tradisional-bali-deduplak.webp",
+                        "url": "games/Bali/image-deduplak2.webp",
                         "source_page": "https://pramukaku.com/permainan-tradisional-bali/"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=nK6Yq5y2_zg",
+                        "url": "games/Bali/video-deduplak.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=nK6Yq5y2_zg",
                         "caption": "Permainan deduplak"
                     }
                 ]
@@ -525,11 +541,13 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "*image ambil dari video youtubenya saja "
+                        "url": "games/NTB/image-belompongan1.webp",
+                        "source_page": "https://www.youtube.com/watch?v=T3gVyP48NMY"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=T3gVyP48NMY",
+                        "url": "games/NTB/video-belompongan.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=T3gVyP48NMY",
                         "caption": "permainan belompongan"
                     }
                 ]
@@ -551,18 +569,19 @@
                 "media": [
                     {
                         "type": "image",
-                        "url": "https://www.anakbisa.com/wp-content/uploads/2023/02/rangku-alu.jpg",
+                        "url": "games/NTT/image-rangku-alu1.webp",
                         "source_page": "https://www.anakbisa.com/kb/rangku-alu/",
                         "caption": "anak-anak yang sedang bermain rangka alu"
                     },
                     {
                         "type": "image",
-                        "url": "https://klasika.kompas.id/wp-content/uploads/2024/04/shutterstock_2284227099.webp",
+                        "url": "games/NTT/image-rangku-alu2.webp",
                         "source_page": "https://klasika.kompas.id/baca/kenalan-dengan-tari-rangkuk-alu/"
                     },
                     {
                         "type": "video",
-                        "url": "https://www.youtube.com/watch?v=SxxN1JFsy5g",
+                        "url": "games/NTT/video-rangku-alu.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=SxxN1JFsy5g",
                         "caption": "Permainan rangka alu"
                     }
                 ]
@@ -922,7 +941,6 @@
                         "url": "games/Maluku/image-hela-rotan1.webp",
                         "source_page": "https://www.beautynesia.id/life/mengenal-badendang-rotan-tradisi-menyambut-tahun-baru-di-maluku/b-299201"
                     }
-                    
                 ]
             }
         ]
