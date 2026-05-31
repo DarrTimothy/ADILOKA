@@ -595,8 +595,8 @@
                 "question": "Permainan ini dimainkan dengan cara?",
                 "options": [
                     {
-                        "text": "Melompat kotak-katak",
-                        "is_correct": false
+                        "text": "Melompat kotak-kotak",
+                        "is_correct": true
                     },
                     {
                         "text": "Menembak bola",
@@ -2028,7 +2028,7 @@
                     },
                     {
                         "text": "Gulir atau guling",
-                        "is_correct": false
+                        "is_correct": true
                     },
                     {
                         "text": "Minggu",
