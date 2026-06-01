@@ -614,6 +614,7 @@
                     {
                         "type": "video",
                         "url": "games/Kalimantan Barat/video-sepak-sawut1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=YrKjaPB3on4",
                         "caption": "Permainan Sepak Sawut"
                     }
                 ]
@@ -647,6 +648,7 @@
                     {
                         "type": "video",
                         "url": "games/Kalimantan Tengah/video-habayang1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=uIlEKT2Ay-Y",
                         "caption": "Permainan habayang"
                     }
                 ]
@@ -679,6 +681,7 @@
                     {
                         "type": "video",
                         "url": "games/Kalimantan Selatan/video-balogo1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=V2ukmULEIAU",
                         "caption": "Permainan Balogo"
                     }
                 ]
@@ -711,6 +714,7 @@
                     {
                         "type": "video",
                         "url": "games/Kalimantan Timur/video-pindah-bintang1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=2clwvarh5rQ",
                         "caption": "permainan pindah bintang"
                     }
                 ]
@@ -733,6 +737,7 @@
                     {
                         "type": "video",
                         "url": "games/Kalimantan Utara/video-cekang1.webp",
+                        "source_page": "https://youtu.be/hJa7Ky97Tx4",
                         "caption": "cara membuat cekang atau ketapel"
                     },
                     {
@@ -761,6 +766,7 @@
                     {
                         "type": "video",
                         "url": "games/Gorontalo/video-awuta1.mp4",
+                        "source_page": "https://youtu.be/QY9LuuL2HWY",
                         "caption": "Cara bermain awuta"
                     },
                     {
@@ -794,6 +800,7 @@
                     {
                         "type": "video",
                         "url": "games/Sulawesi Barat/video-dodorobe1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=uuOcpIFdhoI",
                         "caption": "Cara membuat pletokan dari betawi, alat yang serupa yang digunakan dalam permianan dodorobe"
                     }
                 ]
@@ -821,6 +828,7 @@
                     {
                         "type": "video",
                         "url": "games/sulawesi-utara/video-tumbu-tumbu-blanga1.mp4",
+                        "source_page": "https://youtu.be/luJA7wDZUwI",
                         "caption": "Permaianan tumbu-tumbu blanga dari Sulawesi Utara"
                     }
                 ]
@@ -848,6 +856,7 @@
                     {
                         "type": "video",
                         "url": "games/Sulawesi Tengah/video-nobangan1.mp4",
+                        "source_page": "https://youtu.be/Cz3_XqTYHzI?t=109",
                         "caption": "permainan nobangan dari Sulawesi Tengah"
                     }
                 ]
@@ -870,6 +879,7 @@
                     {
                         "type": "video",
                         "url": "games/Sulawesi Tenggara/video-kengkeng1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
                         "caption": "Permainan engklek dengan mekanik serupa atau varian dari kengkeng"
                     },
                     {
@@ -898,6 +908,7 @@
                     {
                         "type": "video",
                         "url": "games/Sulawesi Selatan/video-dende1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=sKNtRLf7JR4",
                         "caption": "permainan engklek dengan mekanik serupa atau varian dari Dende"
                     },
                     {
@@ -930,11 +941,9 @@
                     },
                     {
                         "type": "video",
-                        "url": "games/Maluku/video-hela-rotan1.mp4"
-                    },
-                    {
-                        "type": "video",
-                        "url": "games/Maluku/video-hela-rotan2.mp4"
+                        "url": "games/Maluku/video-hela-rotan1.mp4",
+                        "source_page": "https://youtu.be/1OjPbHZiPO0",
+                        "caption": "TRADISI HELA ROTAN DI ABORU, SATU KAMPUNG HARUS IKUT JIKA MAU MEMAINKAN PERMAINAN INI! by jejakakibeta"
                     },
                     {
                         "type": "image",
@@ -961,6 +970,7 @@
                     {
                         "type": "video",
                         "url": "games/Maluku/video-boi-tampurung1.mp4",
+                        "source_page": "https://youtu.be/uMGrD-EKZvc?t=757",
                         "caption": "PERMAINAN TRADISIONAL BOI TAMPURUNG by BP PAUD dan Dikmas Maluku Utara"
                     },
                     {
@@ -998,6 +1008,7 @@
                     {
                         "type": "video",
                         "url": "games/Papua/video-kayu-malele.mp4",
+                        "source_page":"https://youtu.be/itzqcb07oqE",
                         "caption": "Permainan Tradisional Kayu Malele"
                     }
                 ]
@@ -1026,6 +1037,7 @@
                     {
                         "type": "video",
                         "url": "games/Papua Barat/video-korkouria1.mp4",
+                        "source_page": "https://youtu.be/CJeAFksZspk",
                         "caption": "Permainan Korkouria dari Papua Barat"
                     }
                 ]
@@ -1053,6 +1065,7 @@
                     {
                         "type": "video",
                         "url": "games/Papua Barat Daya/video-yesecha-asya1.mp4",
+                        "source_page": "https://youtu.be/1a3p4SsooVw",
                         "caption": "Ilustrasi permainan yesecha asya"
                     }
                 ]
@@ -1081,6 +1094,7 @@
                     {
                         "type": "video",
                         "url": "games/Papua Pegunungan/video-permainan-lempar-sege1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=SFmz4hEpIck",
                         "caption": "Cara membuat lembing dari kayu secara umum, yang memiliki kemiripan dengan pembuatan sege"
                     }
                 ]
@@ -1102,7 +1116,8 @@
                 "media": [
                     {
                         "type": "video",
-                        "url": "games/Papua Selatan/video-kweritop1.mp4"
+                        "url": "games/Papua Selatan/video-kweritop1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=8jfiGcgYxCU"
                     },
                     {
                         "type": "image",
@@ -1130,6 +1145,7 @@
                     {
                         "type": "video",
                         "url": "games/Papua Tengah/video-patah-kaleng1.mp4",
+                        "source_page": "https://www.youtube.com/watch?v=DB0GPUyabM0",
                         "caption": "Permainan patah kaleng"
                     },
                     {
