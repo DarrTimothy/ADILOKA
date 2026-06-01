@@ -25,7 +25,6 @@ class TraditionalGamesController extends Controller
             ->pluck('traditional_games.id')
             ->toArray();
 
-
         $query = $this->baseGameQuery();
 
         if ($request->filled('region')) {
@@ -105,13 +104,21 @@ class TraditionalGamesController extends Controller
 
     public function popularThisWeek()
     {
-
         $games = $this->baseGameQuery()
             ->select('traditional_games.*')
-            ->join('traditional_game_user', 'traditional_games.id', '=', 'traditional_game_user.traditional_game_id')
+            ->join(
+                'traditional_game_user',
+                'traditional_games.id',
+                '=',
+                'traditional_game_user.traditional_game_id'
+            )
             ->where('traditional_game_user.is_completed', true)
             ->whereNotNull('traditional_game_user.completed_at')
-            ->where('traditional_game_user.completed_at', '>=', now()->subDays(7))
+            ->where(
+                'traditional_game_user.completed_at',
+                '>=',
+                now()->subDays(7)
+            )
             ->groupBy('traditional_games.id')
             ->orderByRaw('COUNT(traditional_game_user.user_id) DESC')
             ->limit(5)
@@ -148,12 +155,11 @@ class TraditionalGamesController extends Controller
             'is_completed' => $isCompleted,
 
             'cover_img' => $cover
-                ? asset('storage/' . ltrim($cover->url, '/'))
+                ? $this->mediaUrl($cover->url)
                 : null,
         ];
 
         if ($withDetail) {
-
             $data = array_merge($data, [
 
                 'description' => $game->description,
@@ -165,14 +171,9 @@ class TraditionalGamesController extends Controller
                 'max_players' => $game->max_players,
 
                 'media' => $game->media->map(function ($m) {
-
-                    $url = $m->type === 'image'
-                        ? asset('storage/' . ltrim($m->url, '/'))
-                        : $m->url;
-
                     return [
                         'type' => $m->type,
-                        'url' => $url,
+                        'url' => $this->mediaUrl($m->url),
                         'source_page' => $m->source_page,
                         'caption' => $m->caption,
                     ];
@@ -183,13 +184,20 @@ class TraditionalGamesController extends Controller
         return $data;
     }
 
+
+    private function mediaUrl(string $path): string
+    {
+        return asset('storage/' . ltrim($path, '/'));
+    }
+
     private function baseGameQuery()
     {
         return TraditionalGame::with([
             'region',
             'media' => function ($q) {
-                $q->orderByRaw("CASE WHEN type = 'image' THEN 0 ELSE 1 END")
-                    ->orderBy('id');
+                $q->orderByRaw(
+                    "CASE WHEN type = 'image' THEN 0 ELSE 1 END"
+                )->orderBy('id');
             }
         ]);
     }
@@ -198,10 +206,9 @@ class TraditionalGamesController extends Controller
         User $user,
         TraditionalGame $game
     ): void {
-
         $region = $game->region;
 
-        if (! $region) {
+        if (!$region) {
             return;
         }
 
