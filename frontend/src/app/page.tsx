@@ -8,7 +8,7 @@ import PopulerSidebar from "@/components/sidebar/PopulerSidebar";
 import { useSidebar } from "@/context/SidebarContext";
 
 export default function Home() {
-  const { showPopularWeek } = useSidebar();
+  const { showPopularWeek, selectedPopularGame } = useSidebar();
   const [selectedProvince, setSelectedProvince] = useState<any>(null);
   const [selectedGameId, setSelectedGameId] = useState<number | null>(null);
   const [refreshRegions, setRefreshRegions] = useState(0);
@@ -34,8 +34,8 @@ export default function Home() {
         <div
           className={`h-full bg-white transition-all duration-300 ease-in-out overflow-hidden
     ${
-      selectedProvince && !showPopularWeek
-        ? "w-[420px] opacity-100"
+      (selectedProvince || selectedPopularGame) && !showPopularWeek
+        ? "w-105 opacity-100"
         : "w-0 opacity-0"
     }`}
         >

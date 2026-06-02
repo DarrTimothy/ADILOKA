@@ -20,9 +20,10 @@ export default function ChoroplethMap({
   setSelectedProvince,
   refreshRegions,
 }: Props) {
-  const { setShowPopularWeek } = useSidebar();
+  const { setShowPopularWeek, selectedPopularGame } = useSidebar();
   const [geoData, setGeoData] = useState<any>(null);
   const mapRef = useRef<any>(null);
+  const provinceLayersRef = useRef<any[]>([]);
   const indonesiaBounds: [[number, number], [number, number]] = [
     [-25.0, 90.0],
     [20.0, 155.0],
@@ -50,6 +51,8 @@ export default function ChoroplethMap({
 
     function onEachProvince(feature: any, layer: any) {
       (layer as any)._isActive = false;
+
+      provinceLayersRef.current.push(layer);
       const props = feature.properties;
       const provinceStyle = getProvinceStyle(props.is_completed);
 
@@ -201,6 +204,42 @@ export default function ChoroplethMap({
 
     loadAllRegions();
   }, [refreshRegions]);
+
+  useEffect(() => {
+    if (!selectedPopularGame) return;
+
+    const provinceLayer = provinceLayersRef.current.find(
+      (layer) =>
+        layer.feature?.properties?.bps_code ===
+        selectedPopularGame.region?.bps_code,
+    );
+
+    if (!provinceLayer) return;
+
+    const props = provinceLayer.feature.properties;
+
+    setSelectedProvince(props);
+
+    provinceLayersRef.current.forEach((layer) => {
+      layer._isActive = false;
+
+      layer.setStyle(getProvinceStyle(layer.feature?.properties?.is_completed));
+    });
+
+    provinceLayer._isActive = true;
+
+    provinceLayer.setStyle(getHoverStyle(props.is_completed));
+
+    provinceLayer.bringToFront();
+
+    const bounds = provinceLayer.getBounds();
+
+    mapRef.current?.flyToBounds(bounds, {
+      paddingTopLeft: [120, 80],
+      paddingBottomRight: [80, 80],
+      duration: 0.9,
+    });
+  }, [selectedPopularGame]);
 
   return (
     <div className="h-full w-full">

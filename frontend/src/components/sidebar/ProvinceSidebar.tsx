@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import type { Game } from "@/type";
 import Link from "next/link";
 import { fetchWithAuth } from "@/lib/fetchWithAuth";
-import { ArrowRight } from "lucide-react";
+import { useSidebar } from "@/context/SidebarContext";
 
 type Props = {
   selectedProvince: any;
@@ -16,19 +16,14 @@ export default function ProvinceSidebar({
   setRefreshRegions,
 }: Props) {
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
-
   const [loadingGames, setLoadingGames] = useState(false);
-
   const [loadingDetail, setLoadingDetail] = useState(false);
-
   const [games, setGames] = useState<Game[]>([]);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
-
   const [isCompleted, setIsCompleted] = useState(false);
-
   const [completing, setCompleting] = useState(false);
-
   const [previewVideo, setPreviewVideo] = useState<string | null>(null);
+  const { selectedPopularGame } = useSidebar();
 
   async function fetchGames(regionCode: string) {
     try {
@@ -70,6 +65,12 @@ export default function ProvinceSidebar({
 
     fetchGames(selectedProvince.bps_code);
   }, [selectedProvince?.bps_code]);
+
+  useEffect(() => {
+    if (!selectedPopularGame) return;
+
+    handleGameClick(selectedPopularGame);
+  }, [selectedPopularGame]);
 
   async function handleGameClick(game: Game | undefined) {
     if (!game) {
@@ -328,7 +329,7 @@ export default function ProvinceSidebar({
                     src={item.url}
                     alt={`Foto ${index + 1}`}
                     onClick={() => setPreviewImage(item.url)}
-                    className="w-20 h-20 flex-shrink-0 rounded-xl object-cover border border-gray-200 hover:border-[#7B0000] cursor-pointer transition-all duration-300"
+                    className="w-20 h-20 shrink-0 rounded-xl object-cover border border-gray-200 hover:border-[#7B0000] cursor-pointer transition-all duration-300"
                   />
                 ))}
             </div>

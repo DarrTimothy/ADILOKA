@@ -21,7 +21,7 @@ export default function MapWrapper({
   return (
     <div className="relative flex-1 h-full">
       {/* Toolbar Overlay */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[9999] w-full pointer-events-none">
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-9999 w-full pointer-events-none">
         <div className="flex justify-center pointer-events-auto">
           <MapToolbar />
         </div>
