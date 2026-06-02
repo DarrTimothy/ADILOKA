@@ -4,12 +4,17 @@ import { useEffect, useState } from "react";
 import type { Game } from "@/type";
 import Link from "next/link";
 import { fetchWithAuth } from "@/lib/fetchWithAuth";
+import { ArrowRight } from "lucide-react";
 
 type Props = {
   selectedProvince: any;
+  setRefreshRegions: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export default function ProvinceSidebar({ selectedProvince }: Props) {
+export default function ProvinceSidebar({
+  selectedProvince,
+  setRefreshRegions,
+}: Props) {
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
   const [loadingGames, setLoadingGames] = useState(false);
@@ -106,6 +111,10 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
         (item: any) => item.type === "video",
       );
 
+      const imageMedia = result.media?.filter(
+        (item: any) => item.type === "image",
+      );
+
       setIsCompleted(result.is_completed || false);
 
       setSelectedGame({
@@ -115,12 +124,13 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
         category: "Permainan Tradisional",
         description: result.description,
         howToPlay: result.how_to_play,
-        image: result.cover_img,
-        videoUrl: videoMedia?.url?.replace("watch?v=", "embed/") || "",
-        videoThumbnail: videoMedia?.url?.replace(
-          "https://www.youtube.com/watch?v=",
-          "",
-        ),
+        minPlayers: result.min_players,
+        maxPlayers: result.max_players,
+        duration: result.duration,
+        image: imageMedia?.[0]?.url || "",
+        videoUrl: videoMedia?.url || "",
+        media: result.media || [],
+        is_completed: result.is_completed,
       });
     } catch (error) {
       console.error("HANDLE GAME CLICK ERROR:", error);
@@ -139,6 +149,12 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
         `${process.env.NEXT_PUBLIC_API_URL}/traditional-games/${selectedGame.id}/complete`,
         {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            is_completed: true,
+          }),
         },
       );
 
@@ -151,6 +167,7 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
       console.log("COMPLETE RESPONSE:", json);
 
       setIsCompleted(json.result?.is_completed || false);
+      setRefreshRegions((prev) => prev + 1);
     } catch (error) {
       console.error("COMPLETE GAME ERROR:", error);
     } finally {
@@ -192,10 +209,11 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
           )}
 
           {previewVideo && (
-            <iframe
+            <video
               src={previewVideo}
-              className="w-full aspect-video rounded-xl"
-              allowFullScreen
+              controls
+              autoPlay
+              className="w-full max-h-[85vh] rounded-xl"
             />
           )}
         </div>
@@ -248,16 +266,12 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
       <>
         {renderPreviewModal()}
 
-        <aside className="w-[420px] bg-[#FCFCFC] border-r border-gray-100 overflow-y-auto">
+        <aside className="w-full h-full bg-[#FCFCFC] border-r border-gray-100 overflow-y-auto">
           <div className="px-5 pt-5">
             <button
               onClick={() => setSelectedGame(null)}
-              className="
-        flex items-center gap-1.5
-        text-sm font-medium text-[#7B0000]
-        hover:opacity-70 transition
-        cursor-pointer
-      "
+              className="inline-flex items-center gap-2 bg-white border border-[#7B0000]/20 px-4 py-2.5 rounded-xl text-sm font-semibold text-[#7B0000] 
+              hover:bg-[#7B0000] hover:text-white hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 cursor-pointer"
             >
               <span>←</span>
 
@@ -280,40 +294,21 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
                   </p>
                 </div>
               </div>
-
-              <button
-                onClick={handleCompleteGame}
-                disabled={completing || isCompleted}
-                className={`
-          mt-5 w-full rounded-2xl py-4
-          text-sm font-semibold text-white
-          transition-all duration-300
-
-          ${isCompleted ? "bg-[#8B0000]" : "bg-[#7B0000] hover:bg-[#5E0000]"}
-
-          ${completing ? "opacity-70" : ""}
-        `}
-              >
-                {completing
-                  ? "Menyimpan..."
-                  : isCompleted
-                    ? "✔ Sudah Dijelajahi"
-                    : "Tandai Sudah Dijelajahi"}
-              </button>
             </div>
           </div>
           <div className="px-5 mt-7">
             <div className="relative rounded-3xl overflow-hidden">
-              <img
-                src={`https://img.youtube.com/vi/${selectedGame.videoThumbnail}/hqdefault.jpg`}
-                alt={selectedGame.title}
+              <video
+                src={selectedGame.videoUrl}
+                controls
+                preload="metadata"
                 className="w-full h-64 object-cover"
               />
 
               {selectedGame.videoUrl && (
                 <button
                   onClick={() => setPreviewVideo(selectedGame.videoUrl || null)}
-                  className="absolute inset-0 flex items-center justify-center"
+                  className="cursor-pointer absolute inset-0 flex items-center justify-center"
                 >
                   <div className="w-20 h-20 rounded-full bg-[#8B0000]/90 flex items-center justify-center">
                     <span className="text-white text-3xl ml-1">▶</span>
@@ -323,30 +318,65 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
             </div>
           </div>
           {/* THUMBNAIL SECTION */}
-          <div className="px-5 mt-4 flex gap-3 overflow-x-auto pb-1">
-            {/* Thumbnail foto */}
-            <img
-              src={selectedGame.image}
-              alt="Thumbnail"
-              onClick={() => setPreviewImage(selectedGame.image || null)}
-              className="w-20 h-20 rounded-xl object-cover border-2 border-[#7B0000] cursor-pointer"
-            />
-
-            {/* Thumbnail foto kedua dummy */}
-            <img
-              src={selectedGame.image}
-              alt="Thumbnail"
-              onClick={() => setPreviewImage(selectedGame.image || null)}
-              className="w-20 h-20 rounded-xl object-cover cursor-pointer"
-            />
-
-            {/* More photos */}
-            <div className="w-20 h-20 rounded-xl bg-gray-200 flex flex-col items-center justify-center text-sm text-gray-500">
-              <span className="font-semibold">+5</span>
-              <span>Foto</span>
+          <div className="px-5 mt-4">
+            <div className="flex gap-3 overflow-x-auto pb-2">
+              {selectedGame.media
+                ?.filter((item) => item.type === "image")
+                .map((item, index) => (
+                  <img
+                    key={index}
+                    src={item.url}
+                    alt={`Foto ${index + 1}`}
+                    onClick={() => setPreviewImage(item.url)}
+                    className="w-20 h-20 flex-shrink-0 rounded-xl object-cover border border-gray-200 hover:border-[#7B0000] cursor-pointer transition-all duration-300"
+                  />
+                ))}
             </div>
           </div>
 
+          {/* INFO PERMAINAN */}
+          <div className="px-5 mt-5">
+            <div className="bg-white rounded-[28px] p-5 shadow-sm border border-gray-100">
+              <h2 className="text-lg font-bold text-[#2B0A0A] flex items-center gap-2 mb-4">
+                <span className="w-1.5 h-6 bg-[#7B0000] rounded-full"></span>
+                Informasi Permainan
+              </h2>
+
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <p className="text-xs text-gray-500 tracking-wide">
+                    Min Pemain
+                  </p>
+
+                  <p className="mt-1 text-2xl font-bold text-[#7B0000]">
+                    {selectedGame.minPlayers ?? "-"}
+                  </p>
+                </div>
+
+                <div className="text-center border-x border-gray-100">
+                  <p className="text-xs text-gray-500 tracking-wide">
+                    Max Pemain
+                  </p>
+
+                  <p className="mt-1 text-2xl font-bold text-[#7B0000]">
+                    {selectedGame.maxPlayers ?? "-"}
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <p className="text-xs text-gray-500 tracking-wide">Durasi</p>
+
+                  <p className="mt-1 text-2xl font-bold text-[#7B0000]">
+                    {selectedGame.duration ?? "-"}
+                  </p>
+
+                  <p className="text-xs text-gray-400">Menit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tentang Permainan */}
           <div className="px-5 mt-6">
             <div className="bg-white rounded-[28px] p-6 shadow-sm border border-gray-100">
               <h2 className="text-lg font-bold text-[#2B0A0A] flex items-center gap-2">
@@ -360,37 +390,50 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
             </div>
           </div>
 
-          <div className="px-5 mt-8">
+          <div className="px-5 mt-8 pb-15">
             <div className="bg-white rounded-[28px] p-6 shadow-sm border border-gray-100">
               <h2 className="text-lg font-bold text-[#2B0A0A] flex items-center gap-2">
                 <span className="w-1.5 h-6 bg-[#7B0000] rounded-full"></span>
                 Cara Bermain
               </h2>
 
-              <p className="mt-4 text-[15px] leading-8 text-gray-700">
-                {selectedGame.howToPlay}
-              </p>
+              <ol className="mt-4 space-y-1 text-[15px] leading-8 text-gray-700 list-decimal pl-5">
+                {selectedGame.howToPlay
+                  ?.split(/\d+\.\s/)
+                  .filter(Boolean)
+                  .map((step, index) => (
+                    <li key={index}>{step.trim()}</li>
+                  ))}
+              </ol>
             </div>
 
             <Link
               href={`/quiz/${selectedGame.id}`}
               onClick={() => console.log(`/quiz/${selectedGame.id}`)}
-              className="
-      mt-8 flex items-center justify-center gap-3
-      bg-[#7B0000] hover:bg-[#5E0000]
-      active:scale-[0.98]
-      transition-all duration-300
-
-      text-white font-semibold text-lg
-
-      py-4 rounded-2xl
-      shadow-lg shadow-[#7B0000]/20
-    "
+              className="mt-8 w-full flex items-center justify-center gap-3 bg-[#7B0000] hover:bg-[#5E0000] text-white font-semibold text-base py-4 
+              rounded-2xl shadow-md shadow-[#7B0000]/20 hover:shadow-xl hover:-translate-y-1 active:scale-[0.98] transition-all duration-300"
             >
               <span>Mulai Quiz</span>
 
               <span className="text-xl">→</span>
             </Link>
+            <button
+              onClick={handleCompleteGame}
+              disabled={completing || isCompleted}
+              className={`mt-5 w-full flex items-center justify-center gap-3 py-4 rounded-2xl text-base font-semibold shadow-md transition-all duration-300 active:scale-[0.98]
+                 ${
+                   isCompleted
+                     ? `bg-green-600 hover:bg-green-700 text-white shadow-green-600/20 hover:shadow-xl hover:-translate-y-1 `
+                     : `bg-white border border-[#7B0000] text-[#7B0000] hover:bg-[#7B0000] hover:text-white hover:shadow-xl hover:-translate-y-1`
+                 }
+                ${completing ? "opacity-70 cursor-not-allowed" : ""} cursor-pointer`}
+            >
+              {completing
+                ? "Menyimpan..."
+                : isCompleted
+                  ? "✓ Permainan Selesai"
+                  : "Tandai Wilayah Selesai"}
+            </button>
           </div>
         </aside>
       </>
@@ -398,7 +441,7 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
   }
 
   return (
-    <aside className="w-105 bg-white border-r p-5">
+    <aside className="w-full bg-white border-r p-5">
       <h2 className="text-lg font-semibold text-[#7B0000]">
         {selectedProvince?.province_name || "Pilih Provinsi"}
       </h2>
@@ -420,18 +463,40 @@ export default function ProvinceSidebar({ selectedProvince }: Props) {
           {games.map((game) => (
             <div
               key={game.id}
-              className="border rounded-lg p-4 hover:shadow transition"
+              className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-[#7B0000]/30 
+              transition-all duration-300"
             >
-              <h3 className="font-semibold">{game.title}</h3>
+              <div className="relative">
+                <img
+                  src={game.cover_img || game.image}
+                  alt={game.title}
+                  className="w-full h-36 object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                />
 
-              <p className="text-xs text-gray-500">{game.subtitle}</p>
+                <div className="absolute top-3 left-3">
+                  <span className=" bg-white/90 backdrop-blur-sm text-[#7B0000] text-[11px] font-semibold px-3 py-1 rounded-full">
+                    Permainan Tradisional
+                  </span>
+                </div>
+              </div>
 
-              <button
-                onClick={() => handleGameClick(game)}
-                className="cursor-pointer mt-3 text-sm text-[#7B0000] font-medium"
-              >
-                Lihat Detail →
-              </button>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-[#2B0A0A] line-clamp-1">
+                  {game.title}
+                </h3>
+
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed line-clamp-2">
+                  {game.subtitle}
+                </p>
+
+                <button
+                  onClick={() => handleGameClick(game)}
+                  className="mt-5 w-full flex items-center justify-center gap-2 bg-[#7B0000] hover:bg-[#5E0000] text-white font-semibold text-sm py-3 rounded-xl shadow-md 
+                  shadow-[#7B0000]/20 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+                >
+                  <span>Mulai Jelajahi</span>
+                </button>
+              </div>
             </div>
           ))}
         </div>

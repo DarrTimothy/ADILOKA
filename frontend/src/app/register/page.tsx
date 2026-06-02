@@ -62,7 +62,7 @@ export default function RegisterPage() {
         password,
       });
 
-      router.push("/");
+      router.push("/login");
     } catch (err: any) {
       setError(err.message || "Terjadi kesalahan. Silakan coba lagi.");
     } finally {

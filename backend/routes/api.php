@@ -8,20 +8,28 @@ use Illuminate\Support\Facades\Route;
 /**
  * PUBLIC
  */
+
+// regions
 Route::get('/regions', [RegionController::class, 'index']);
+
+// traditional games
+Route::prefix('/traditional-games')->group(function () {
+    Route::get('/popular-week', [TraditionalGamesController::class, 'popularThisWeek']);
+    Route::get('/', [TraditionalGamesController::class, 'index']);
+    Route::get('/{id}', [TraditionalGamesController::class, 'show']);
+});
 
 /**
  * PROTECTED
  */
+
 Route::middleware(['auth:sanctum'])->group(function () {
 
-    // traditional games
-    Route::prefix('/traditional-games')->group(function () {
-        Route::get('/popular-week', [TraditionalGamesController::class, 'popularThisWeek']);
-        Route::get('/', [TraditionalGamesController::class, 'index']);
-        Route::get('/{id}', [TraditionalGamesController::class, 'show']);
-        Route::post('/{id}/complete', [TraditionalGamesController::class, 'markCompleted']);
-    });
+    // mark complete
+    Route::post(
+        '/traditional-games/{id}/complete',
+        [TraditionalGamesController::class, 'markCompleted']
+    );
 
     // quiz
     Route::prefix('/quiz')->group(function () {
@@ -34,6 +42,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 /**
  * FALLBACK
  */
+
 Route::fallback(function () {
     return response()->json([
         'success' => false,

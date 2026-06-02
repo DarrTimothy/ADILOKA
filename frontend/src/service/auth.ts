@@ -50,12 +50,15 @@ export async function getCsrfCookie() {
 export async function register(payload: RegisterPayload): Promise<AuthRoot> {
   await getCsrfCookie();
 
+  const xsrfToken = getCookie("XSRF-TOKEN") || "";
+
   const res = await fetch(`${AUTH_URL}/register`, {
     method: "POST",
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
+      "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
     },
     body: JSON.stringify(payload),
   });

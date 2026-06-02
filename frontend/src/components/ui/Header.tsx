@@ -2,8 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Flame } from "lucide-react";
+import { Star } from "lucide-react";
+import { useSidebar } from "@/context/SidebarContext";
 
 export default function Header() {
+  const { setShowPopularWeek } = useSidebar();
+
   return (
     <header className="flex items-center justify-between px-15 py-4 bg-white shadow">
       <div className="flex items-center gap-15">
@@ -34,6 +39,14 @@ export default function Header() {
           >
             Tentang Kami
           </Link>
+
+          <button
+            onClick={() => setShowPopularWeek(true)}
+            className="flex items-center gap-2 text-gray-700 font-semibold hover:text-[#7B0000] transition cursor-pointer"
+          >
+            <Star size={18} />
+            Popular Week
+          </button>
         </nav>
       </div>
     </header>
