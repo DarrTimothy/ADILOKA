@@ -18,3 +18,12 @@ Route::get('/debug-storage', function () {
         'realpath' => realpath(storage_path('app/public')),
     ];
 });
+
+Route::get('/debug-session', function () {
+    return [
+        'session_driver' => config('session.driver'),
+        'session_domain' => config('session.domain'),
+        'same_site' => config('session.same_site'),
+        'secure' => config('session.secure'),
+    ];
+});
