@@ -33,7 +33,7 @@ return [
         'http://localhost:3000',
         'http://127.0.0.1:3000',
         'https://adiloka.up.railway.app',
-        'https://backend-adiloka.up.railway.app',
+        'https://backend-adiloka-production.up.railway.app',
     ],
 
     /*
