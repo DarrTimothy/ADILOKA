@@ -4,6 +4,7 @@ import "./globals.css";
 import "leaflet/dist/leaflet.css";
 import { SidebarProvider } from "@/context/SidebarContext";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
+import { AuthProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

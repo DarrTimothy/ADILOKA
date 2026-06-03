@@ -52,6 +52,9 @@ export async function register(payload: RegisterPayload): Promise<AuthRoot> {
 
   const xsrfToken = getCookie("XSRF-TOKEN") || "";
 
+  console.log("XSRF TOKEN:", xsrfToken);
+  console.log("ALL COOKIE:", document.cookie);
+
   const res = await fetch(`${AUTH_URL}/register`, {
     method: "POST",
     credentials: "include",
