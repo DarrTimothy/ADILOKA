@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
 import { login } from "@/service/auth";
+import { useAuth } from "@/context/AuthContext";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
-
+  const { refreshUser } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -26,6 +27,8 @@ export default function LoginPage() {
         username,
         password,
       });
+
+      await refreshUser();
 
       router.push("/");
     } catch (err: any) {

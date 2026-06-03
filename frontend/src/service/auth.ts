@@ -19,9 +19,6 @@ interface LoginPayload {
   password: string;
 }
 
-/**
- * Ambil CSRF Cookie Sanctum
- */
 function getCookie(name: string) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -44,16 +41,11 @@ export async function getCsrfCookie() {
   }
 }
 
-/**
- * Register
- */
 export async function register(payload: RegisterPayload): Promise<AuthRoot> {
   await getCsrfCookie();
 
   const xsrfToken = getCookie("XSRF-TOKEN") || "";
 
-  console.log("XSRF TOKEN:", xsrfToken);
-  console.log("ALL COOKIE:", document.cookie);
 
   const res = await fetch(`${AUTH_URL}/register`, {
     method: "POST",
@@ -61,6 +53,7 @@ export async function register(payload: RegisterPayload): Promise<AuthRoot> {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
+      "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
     },
     body: JSON.stringify(payload),
   });
@@ -74,9 +67,6 @@ export async function register(payload: RegisterPayload): Promise<AuthRoot> {
   return data;
 }
 
-/**
- * Login
- */
 export async function login(payload: LoginPayload) {
   await getCsrfCookie();
 
@@ -88,6 +78,7 @@ export async function login(payload: LoginPayload) {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
+      "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
     },
     body: JSON.stringify(payload),
   });
@@ -101,9 +92,6 @@ export async function login(payload: LoginPayload) {
   return data;
 }
 
-/**
- * Logout
- */
 export async function logout() {
   const res = await fetch(`${AUTH_URL}/logout`, {
     method: "POST",
@@ -118,9 +106,6 @@ export async function logout() {
   }
 }
 
-/**
- * Ambil user login
- */
 export async function getUser() {
   const res = await fetch(`${AUTH_URL}/me`, {
     method: "GET",
