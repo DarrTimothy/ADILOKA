@@ -61,7 +61,6 @@ export async function register(payload: RegisterPayload): Promise<AuthRoot> {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
     },
     body: JSON.stringify(payload),
   });
@@ -89,7 +88,6 @@ export async function login(payload: LoginPayload) {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
     },
     body: JSON.stringify(payload),
   });
@@ -124,7 +122,7 @@ export async function logout() {
  * Ambil user login
  */
 export async function getUser() {
-  const res = await fetch(`${AUTH_URL}/api/user`, {
+  const res = await fetch(`${AUTH_URL}/me`, {
     method: "GET",
     credentials: "include",
     headers: {
