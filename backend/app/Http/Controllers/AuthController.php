@@ -8,7 +8,6 @@ use App\Http\Requests\RegisterRequest;
 use App\Models\Region;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -22,40 +21,44 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // login otomatis setelah register
-        Auth::guard('web')->login($user);
-
-        // regenerate session untuk keamanan
-        $request->session()->regenerate();
+        $token = $user->createToken('adiloka')->plainTextToken;
 
         return ApiResponse::success([
             'id'       => $user->id,
             'username' => $user->username,
             'email'    => $user->email,
+            'token' => $token,
         ], 'Selamat datang, ' . $user->username);
     }
 
 
     public function login(LoginRequest $request)
     {
-        $credentials = $request->only('username', 'password');
 
-        if (! Auth::guard('web')->attempt($credentials)) {
+        $user = User::where('username', $request->username)->first();
+
+        if (! $user || ! Hash::check($request->password, $user->password)) {
             return ApiResponse::unauthorized(
                 'Username atau password salah'
             );
         }
 
-        // regenerate session untuk mencegah session fixation
-        $request->session()->regenerate();
+        if ($user->tokens()->count() >= 3) {
+            $user->tokens()
+                ->orderBy('id')
+                ->first()
+                ?->delete();
+        }
 
-        /** @var User $user */
-        $user = Auth::guard('web')->user();
+        $token = $user->createToken('adiloka')->plainTextToken;
+
+
 
         return ApiResponse::success([
             'id'       => $user->id,
             'username' => $user->username,
             'email'    => $user->email,
+            'token' => $token,
         ], 'Selamat datang kembali, ' . $user->username);
     }
 
@@ -102,13 +105,7 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-        Auth::guard('web')->logout();
-
-        // hapus session lama
-        $request->session()->invalidate();
-
-        // regenerate csrf token baru
-        $request->session()->regenerateToken();
+        $request->user()->currentAccessToken()->delete();
 
         return ApiResponse::success(
             null,

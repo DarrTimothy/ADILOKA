@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
-use App\Http\Requests\StoreRegionRequest;
-use App\Http\Requests\UpdateRegionRequest;
 use App\Models\Region;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class RegionController extends Controller
 {
@@ -16,9 +13,8 @@ class RegionController extends Controller
      */
     public function index(Request $request)
     {
-        // /** @var User|null $user */
-        $user = $request->user();
-
+        $user = auth('sanctum')->user();
+        
         $query = Region::query()
             ->select([
                 'id',

@@ -12,18 +12,15 @@ class TraditionalGamesController extends Controller
 {
     public function index(Request $request)
     {
-        /** @var User $user */
+        /** @var User|null $user */
+        $user = auth('sanctum')->user();
 
-        $user = Auth::user();
-
-        if (!$user) {
-            return ApiResponse::unauthorized();
-        }
-
-        $completedGameIds = $user->traditionalGames()
+        $completedGameIds = $user
+            ? $user->traditionalGames()
             ->wherePivot('is_completed', true)
             ->pluck('traditional_games.id')
-            ->toArray();
+            ->toArray()
+            : [];
 
         $query = $this->baseGameQuery();
 
@@ -36,22 +33,20 @@ class TraditionalGamesController extends Controller
         }
 
         if ($request->filled('q')) {
-            $query->whereRaw('LOWER(title) LIKE ?', [
-                '%' . strtolower($request->q) . '%'
-            ]);
+            $query->where('title', 'ILIKE', '%' . $request->q . '%');
         }
 
         $games = $query->orderBy('title')->paginate(10);
 
-        $data = $games->map(
-            fn($game) =>
-            $this->transformGame(
+        $games->getCollection()->transform(function ($game) use ($completedGameIds) {
+            return $this->transformGame(
                 $game,
                 in_array($game->id, $completedGameIds)
-            )
-        );
+            );
+        });
 
-        return ApiResponse::success($data);
+
+        return ApiResponse::success($games);
     }
 
     public function show(int $id)
@@ -120,7 +115,7 @@ class TraditionalGamesController extends Controller
                 now()->subDays(7)
             )
             ->groupBy('traditional_games.id')
-            ->orderByRaw('COUNT(traditional_game_user.user_id) DESC')
+            ->orderByDesc('total_users')
             ->limit(5)
             ->get();
 
