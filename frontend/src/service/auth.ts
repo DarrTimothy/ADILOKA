@@ -41,24 +41,63 @@ export async function getCsrfCookie() {
   }
 }
 
+// export async function register(payload: RegisterPayload): Promise<AuthRoot> {
+//   await getCsrfCookie();
+//   const xsrfToken = getCookie("XSRF-TOKEN") || "";
+
+
+//   const res = await fetch(`${AUTH_URL}/register`, {
+//     method: "POST",
+//     credentials: "include",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Accept: "application/json",
+//       "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
+//     },
+//     body: JSON.stringify(payload),
+//   });
+
+//   const data: AuthRoot = await res.json();
+
+//   if (!res.ok) {
+//     throw new Error(data.message || "Register gagal");
+//   }
+
+//   return data;
+// }
+
 export async function register(payload: RegisterPayload): Promise<AuthRoot> {
+  console.log("=== START REGISTER ===");
+
   await getCsrfCookie();
+
+  console.log("document.cookie:", document.cookie);
 
   const xsrfToken = getCookie("XSRF-TOKEN") || "";
 
+  console.log("xsrfToken raw:", xsrfToken);
+  console.log("xsrfToken decoded:", decodeURIComponent(xsrfToken));
+
+  const headers = {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+    "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
+  };
+
+  console.log("headers:", headers);
 
   const res = await fetch(`${AUTH_URL}/register`, {
     method: "POST",
     credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
-    },
+    headers,
     body: JSON.stringify(payload),
   });
 
-  const data: AuthRoot = await res.json();
+  console.log("status:", res.status);
+
+  const data = await res.json();
+
+  console.log("response:", data);
 
   if (!res.ok) {
     throw new Error(data.message || "Register gagal");
