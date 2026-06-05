@@ -2,11 +2,11 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { getUser, logout } from "@/service/auth";
-
-type User = any;
+import { useRouter } from "next/navigation";
+import type { MeResult } from "@/type";
 
 type AuthContextType = {
-  user: User | null;
+  user: MeResult | null;
   loading: boolean;
   isAuthenticated: boolean;
   logoutUser: () => Promise<void>;
@@ -16,14 +16,25 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<MeResult | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const router = useRouter();
+
   const loadUser = async () => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      setUser(null);
+      setLoading(false);
+      return;
+    }
+
     try {
       const data = await getUser();
+
       setUser(data);
-    } catch {
+    } catch (error) {
       setUser(null);
     } finally {
       setLoading(false);
@@ -35,8 +46,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const logoutUser = async () => {
-    await logout();
-    setUser(null);
+    try {
+      await logout();
+
+      setUser(null);
+
+      router.push("/login");
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
   };
 
   return (
@@ -56,6 +74,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
 export function useAuth() {
   const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error("useAuth must be used within AuthProvider");
+
+  if (!ctx) {
+    throw new Error("useAuth must be used within AuthProvider");
+  }
+
   return ctx;
 }

@@ -5,7 +5,11 @@ import { TrendingUp } from "lucide-react";
 import { fetchWithAuth } from "@/lib/fetchWithAuth";
 import { useSidebar } from "@/context/SidebarContext";
 
-export default function PopulerSidebar() {
+type Props = {
+  refreshRegions: number;
+};
+
+export default function PopulerSidebar({ refreshRegions }: Props) {
   const [games, setGames] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [completedRegions, setCompletedRegions] = useState(0);
@@ -67,7 +71,7 @@ export default function PopulerSidebar() {
 
     loadPopularGames();
     loadRegionProgress();
-  }, []);
+  }, [refreshRegions]);
 
   return (
     <aside className="w-full bg-white border-r border-gray-200 p-5 overflow-y-auto">

@@ -12,20 +12,26 @@ export default function LayoutWrapper({
 }) {
   const pathname = usePathname();
 
-  const hideLayout =
+  const hideHeader =
     pathname === "/login" ||
     pathname === "/register" ||
     pathname.startsWith("/quiz");
 
+  const hideFooter =
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname.startsWith("/quiz") ||
+    pathname === "/profile";
+
   return (
     <div className="flex flex-col min-h-screen">
-      {!hideLayout && <Header />}
+      {!hideHeader && <Header />}
 
       <main className="flex-1 overflow-hidden">
         {children}
       </main>
 
-      {!hideLayout && <Footer />}
+      {!hideFooter && <Footer />}
     </div>
   );
 }

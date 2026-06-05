@@ -1,103 +1,23 @@
-import { AuthRoot } from "@/type";
+import { fetchWithAuth } from "@/lib/fetchWithAuth";
+import { AuthRoot, RegisterPayload, LoginPayload, MeRoot } from "@/type";
 
-const AUTH_URL = process.env.NEXT_PUBLIC_AUTH_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-console.log("AUTH URL:", AUTH_URL);
-
-if (!AUTH_URL) {
-  throw new Error("AUTH URL is not defined");
+if (!API_URL) {
+  throw new Error("API URL is not defined");
 }
-
-interface RegisterPayload {
-  username: string;
-  email: string;
-  password: string;
-}
-
-interface LoginPayload {
-  username: string;
-  password: string;
-}
-
-function getCookie(name: string) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-
-  if (parts.length === 2) {
-    return parts.pop()?.split(";").shift();
-  }
-
-  return "";
-}
-
-export async function getCsrfCookie() {
-  const response = await fetch(`${AUTH_URL}/sanctum/csrf-cookie`, {
-    method: "GET",
-    credentials: "include",
-  });
-
-  if (!response.ok) {
-    throw new Error("Gagal mengambil CSRF cookie");
-  }
-}
-
-// export async function register(payload: RegisterPayload): Promise<AuthRoot> {
-//   await getCsrfCookie();
-//   const xsrfToken = getCookie("XSRF-TOKEN") || "";
-
-
-//   const res = await fetch(`${AUTH_URL}/register`, {
-//     method: "POST",
-//     credentials: "include",
-//     headers: {
-//       "Content-Type": "application/json",
-//       Accept: "application/json",
-//       "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
-//     },
-//     body: JSON.stringify(payload),
-//   });
-
-//   const data: AuthRoot = await res.json();
-
-//   if (!res.ok) {
-//     throw new Error(data.message || "Register gagal");
-//   }
-
-//   return data;
-// }
 
 export async function register(payload: RegisterPayload): Promise<AuthRoot> {
-  console.log("=== START REGISTER ===");
-
-  await getCsrfCookie();
-
-  console.log("document.cookie:", document.cookie);
-
-  const xsrfToken = getCookie("XSRF-TOKEN") || "";
-
-  console.log("xsrfToken raw:", xsrfToken);
-  console.log("xsrfToken decoded:", decodeURIComponent(xsrfToken));
-
-  const headers = {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-    "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
-  };
-
-  console.log("headers:", headers);
-
-  const res = await fetch(`${AUTH_URL}/register`, {
+  const res = await fetch(`${API_URL}/register`, {
     method: "POST",
-    credentials: "include",
-    headers,
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
     body: JSON.stringify(payload),
   });
 
-  console.log("status:", res.status);
-
-  const data = await res.json();
-
-  console.log("response:", data);
+  const data: AuthRoot = await res.json();
 
   if (!res.ok) {
     throw new Error(data.message || "Register gagal");
@@ -106,57 +26,49 @@ export async function register(payload: RegisterPayload): Promise<AuthRoot> {
   return data;
 }
 
-export async function login(payload: LoginPayload) {
-  await getCsrfCookie();
-
-  const xsrfToken = getCookie("XSRF-TOKEN") || "";
-
-  const res = await fetch(`${AUTH_URL}/login`, {
+export async function login(payload: LoginPayload): Promise<AuthRoot> {
+  const res = await fetch(`${API_URL}/login`, {
     method: "POST",
-    credentials: "include",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      "X-XSRF-TOKEN": decodeURIComponent(xsrfToken),
     },
     body: JSON.stringify(payload),
   });
 
-  const data = await res.json();
+  const data: AuthRoot = await res.json();
 
   if (!res.ok) {
     throw new Error(data.message || "Login gagal");
   }
 
+  localStorage.setItem("token", data.result.token);
+
   return data;
 }
 
 export async function logout() {
-  const res = await fetch(`${AUTH_URL}/logout`, {
+  const res = await fetchWithAuth(`${API_URL}/logout`, {
     method: "POST",
-    credentials: "include",
-    headers: {
-      Accept: "application/json",
-    },
   });
 
+  localStorage.removeItem("token");
+
   if (!res.ok) {
-    throw new Error("Logout gagal");
+    throw new Error(`Logout gagal (${res.status})`);
   }
 }
 
 export async function getUser() {
-  const res = await fetch(`${AUTH_URL}/me`, {
+  const res = await fetchWithAuth(`${API_URL}/me`, {
     method: "GET",
-    credentials: "include",
-    headers: {
-      Accept: "application/json",
-    },
   });
 
+  const data: MeRoot = await res.json();
+
   if (!res.ok) {
-    return null;
+    throw new Error(data.message || "Gagal mengambil data user");
   }
 
-  return res.json();
+  return data.result;
 }

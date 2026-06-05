@@ -14,6 +14,7 @@ return [
         'login',
         'logout',
         'register',
+        'me',
     ],
 
     /*

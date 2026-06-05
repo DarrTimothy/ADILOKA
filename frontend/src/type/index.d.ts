@@ -8,9 +8,18 @@ export interface AuthResult {
   id: number;
   username: string;
   email: string;
-  role: string;
-  access_token: string;
-  expires_in: number;
+  token: string;
+}
+
+interface RegisterPayload {
+  username: string;
+  email: string;
+  password: string;
+}
+
+interface LoginPayload {
+  username: string;
+  password: string;
 }
 
 export interface Media {
@@ -67,4 +76,27 @@ export interface Quiz {
   time_limit: number;
   is_active: boolean;
   questions: QuizQuestion[];
+}
+
+export interface User {
+  id: number;
+  username: string;
+  email: string;
+}
+
+export interface UserProgress {
+  completed_regions: number;
+  total_regions: number;
+  percentage: number;
+}
+
+export interface MeResult {
+  user: User;
+  progress: UserProgress;
+}
+
+export interface MeRoot {
+  success: boolean;
+  message: string;
+  result: MeResult;
 }

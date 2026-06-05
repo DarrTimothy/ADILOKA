@@ -13,12 +13,16 @@ type Props = {
   selectedProvince: any;
   setSelectedProvince: (province: any) => void;
   refreshRegions: number;
+  searchProvince: string;
+  searchTrigger: number;
 };
 
 export default function ChoroplethMap({
   selectedProvince,
   setSelectedProvince,
   refreshRegions,
+  searchProvince,
+  searchTrigger,
 }: Props) {
   const { setShowPopularWeek, selectedPopularGame } = useSidebar();
   const [geoData, setGeoData] = useState<any>(null);
@@ -240,6 +244,41 @@ export default function ChoroplethMap({
       duration: 0.9,
     });
   }, [selectedPopularGame]);
+
+  useEffect(() => {
+    if (!searchProvince) return;
+
+    const provinceLayer = provinceLayersRef.current.find((layer) =>
+      layer.feature?.properties?.province_name
+        ?.toLowerCase()
+        .includes(searchProvince.toLowerCase()),
+    );
+
+    if (!provinceLayer) {
+      alert("Provinsi tidak ditemukan");
+      return;
+    }
+
+    const props = provinceLayer.feature.properties;
+
+    setSelectedProvince(props);
+
+    provinceLayersRef.current.forEach((layer) => {
+      layer._isActive = false;
+
+      layer.setStyle(getProvinceStyle(layer.feature?.properties?.is_completed));
+    });
+    provinceLayer._isActive = true;
+    provinceLayer.setStyle(getHoverStyle(props.is_completed));
+    provinceLayer.bringToFront();
+    const bounds = provinceLayer.getBounds();
+
+    mapRef.current?.flyToBounds(bounds, {
+      paddingTopLeft: [120, 80],
+      paddingBottomRight: [80, 80],
+      duration: 0.9,
+    });
+  }, [searchTrigger]);
 
   return (
     <div className="h-full w-full">

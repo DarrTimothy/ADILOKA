@@ -10,8 +10,9 @@ import { useSidebar } from "@/context/SidebarContext";
 export default function Home() {
   const { showPopularWeek, selectedPopularGame } = useSidebar();
   const [selectedProvince, setSelectedProvince] = useState<any>(null);
-  const [selectedGameId, setSelectedGameId] = useState<number | null>(null);
   const [refreshRegions, setRefreshRegions] = useState(0);
+  const [searchProvince, setSearchProvince] = useState("");
+  const [searchTrigger, setSearchTrigger] = useState(0);
 
   return (
     <div className="flex flex-col h-screen">
@@ -20,7 +21,7 @@ export default function Home() {
           className={`h-full bg-white transition-all duration-300 ease-in-out overflow-hidden
     ${showPopularWeek ? "w-96 opacity-100" : "w-0 opacity-0"}`}
         >
-          <PopulerSidebar />
+          <PopulerSidebar refreshRegions={refreshRegions} />
         </div>
 
         <div className="flex-1 flex relative">
@@ -28,6 +29,10 @@ export default function Home() {
             selectedProvince={selectedProvince}
             setSelectedProvince={setSelectedProvince}
             refreshRegions={refreshRegions}
+            searchProvince={searchProvince}
+            setSearchProvince={setSearchProvince}
+            searchTrigger={searchTrigger}
+            setSearchTrigger={setSearchTrigger}
           />
         </div>
 
