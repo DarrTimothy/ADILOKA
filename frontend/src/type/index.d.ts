@@ -45,6 +45,10 @@ export interface Game {
   videoThumbnail?: string;
   is_completed?: boolean;
   media?: GameMedia[];
+  region?: {
+    province_name: string;
+    bps_code: string;
+  };
 }
 
 export interface Region {

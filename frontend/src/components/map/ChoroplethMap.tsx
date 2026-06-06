@@ -25,6 +25,7 @@ export default function ChoroplethMap({
   searchTrigger,
 }: Props) {
   const { setShowPopularWeek, selectedPopularGame } = useSidebar();
+  const [isMobile, setIsMobile] = useState(false);
   const [geoData, setGeoData] = useState<any>(null);
   const mapRef = useRef<any>(null);
   const provinceLayersRef = useRef<any[]>([]);
@@ -116,8 +117,8 @@ export default function ChoroplethMap({
 
           const bounds = layer.getBounds();
           map.flyToBounds(bounds, {
-            paddingTopLeft: [120, 80],
-            paddingBottomRight: [80, 80],
+            paddingTopLeft: isMobile ? [20, 20] : [120, 80],
+            paddingBottomRight: isMobile ? [20, 20] : [80, 80],
             duration: 0.9,
           });
         },
@@ -239,8 +240,8 @@ export default function ChoroplethMap({
     const bounds = provinceLayer.getBounds();
 
     mapRef.current?.flyToBounds(bounds, {
-      paddingTopLeft: [120, 80],
-      paddingBottomRight: [80, 80],
+      paddingTopLeft: isMobile ? [20, 20] : [120, 80],
+      paddingBottomRight: isMobile ? [20, 20] : [80, 80],
       duration: 0.9,
     });
   }, [selectedPopularGame]);
@@ -274,25 +275,49 @@ export default function ChoroplethMap({
     const bounds = provinceLayer.getBounds();
 
     mapRef.current?.flyToBounds(bounds, {
-      paddingTopLeft: [120, 80],
-      paddingBottomRight: [80, 80],
+      paddingTopLeft: isMobile ? [20, 20] : [120, 80],
+      paddingBottomRight: isMobile ? [20, 20] : [80, 80],
       duration: 0.9,
     });
   }, [searchTrigger]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  function ResizeMap() {
+    const map = useMap();
+
+    useEffect(() => {
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 300);
+    });
+
+    return null;
+  }
 
   return (
     <div className="h-full w-full">
       <MapContainer
         ref={mapRef}
-        className="z-0"
+        className="z-0 h-full w-full"
         center={center}
-        zoom={5}
-        minZoom={5}
+        zoom={isMobile ? 4 : 5}
+        minZoom={isMobile ? 4 : 5}
         maxZoom={9}
         maxBounds={indonesiaBounds}
         maxBoundsViscosity={1.0}
-        style={{ height: "100%", width: "100%" }}
       >
+        <ResizeMap />
         <TileLayer
           attribution="&copy; OpenStreetMap contributors &copy; CARTO"
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"

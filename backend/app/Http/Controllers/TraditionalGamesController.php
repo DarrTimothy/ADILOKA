@@ -115,7 +115,7 @@ class TraditionalGamesController extends Controller
                 now()->subDays(7)
             )
             ->groupBy('traditional_games.id')
-            ->orderByDesc('total_users')
+            ->orderByRaw('COUNT(traditional_game_user.user_id) DESC')
             ->limit(5)
             ->get();
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import MapWrapper from "@/components/map/MapWrapper";
-import ProvinceSidebar from "@/components/sidebar/ProvinceSidebar";
+import ProvinceSidebar from "@/components/province-sidebar/ProvinceSidebar";
 import PopulerSidebar from "@/components/sidebar/PopulerSidebar";
 import { useSidebar } from "@/context/SidebarContext";
 
@@ -13,18 +13,20 @@ export default function Home() {
   const [refreshRegions, setRefreshRegions] = useState(0);
   const [searchProvince, setSearchProvince] = useState("");
   const [searchTrigger, setSearchTrigger] = useState(0);
+  const isSidebarLeftOpen = showPopularWeek;
+  const isSidebarRightOpen = (selectedProvince || selectedPopularGame) && !showPopularWeek;
+  const isSidebarOpen = isSidebarLeftOpen || isSidebarRightOpen;
 
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden relative"> 
         <div
-          className={`h-full bg-white transition-all duration-300 ease-in-out overflow-hidden
-    ${showPopularWeek ? "w-96 opacity-100" : "w-0 opacity-0"}`}
+          className={`h-full bg-white transition-all duration-300 ease-in-out overflow-hidden z-20
+            ${showPopularWeek ? "w-full md:w-80 lg:w-96 opacity-100" : "w-0 opacity-0"}`}
         >
           <PopulerSidebar refreshRegions={refreshRegions} />
         </div>
-
-        <div className="flex-1 flex relative">
+        <div className="flex-1 relative h-full w-full">
           <MapWrapper
             selectedProvince={selectedProvince}
             setSelectedProvince={setSelectedProvince}
@@ -33,22 +35,21 @@ export default function Home() {
             setSearchProvince={setSearchProvince}
             searchTrigger={searchTrigger}
             setSearchTrigger={setSearchTrigger}
+            isSidebarOpen={isSidebarOpen} // 
           />
         </div>
-
         <div
-          className={`h-full bg-white transition-all duration-300 ease-in-out overflow-hidden
-    ${
-      (selectedProvince || selectedPopularGame) && !showPopularWeek
-        ? "w-105 opacity-100"
-        : "w-0 opacity-0"
-    }`}
+          className={`h-full bg-white transition-all duration-300 ease-in-out overflow-hidden z-20
+            ${(selectedProvince || selectedPopularGame) && !showPopularWeek
+              ? "w-full md:w-105 opacity-100"
+              : "w-0 opacity-0"}`}
         >
           <ProvinceSidebar
             selectedProvince={selectedProvince}
             setRefreshRegions={setRefreshRegions}
           />
         </div>
+
       </div>
     </div>
   );

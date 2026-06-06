@@ -7,12 +7,14 @@ type Props = {
   searchProvince: string;
   setSearchProvince: React.Dispatch<React.SetStateAction<string>>;
   setSearchTrigger: React.Dispatch<React.SetStateAction<number>>;
+  isSidebarOpen: boolean;
 };
 
 export default function MapToolbar({
   searchProvince,
   setSearchProvince,
   setSearchTrigger,
+  isSidebarOpen,
 }: Props) {
   const [history, setHistory] = useState<string[]>([]);
 
@@ -44,9 +46,13 @@ export default function MapToolbar({
   }
 
   return (
-    <div className="flex items-center gap-6 px-5 py-3">
-      {/* Quick Search */}
-      <div className="flex items-center gap-2 flex-wrap">
+    <div
+      className={`
+      ${isSidebarOpen ? "hidden md:flex" : "flex"} 
+      flex-col-reverse md:flex-row md:items-center justify-between gap-4 md:gap-6 px-4 md:px-5 py-3 w-full max-w-full overflow-hidden
+    `}
+    >
+      <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 md:flex-wrap max-w-full no-scrollbar">
         {history.map((province) => (
           <button
             key={province}
@@ -54,7 +60,7 @@ export default function MapToolbar({
               setSearchProvince(province);
               setSearchTrigger((prev) => prev + 1);
             }}
-            className="px-5 py-2.5 rounded-full bg-white/95 backdrop-blur-md text-sm font-semibold text-gray-700 border border-gray-200 
+            className="whitespace-nowrap px-3 py-1.5 md:px-5 md:py-2.5 rounded-full bg-white/95 backdrop-blur-md text-xs md:text-sm font-semibold text-gray-700 border border-gray-200 
             shadow-md hover:bg-[#7B0000] hover:text-white transition-all duration-300 cursor-pointer"
           >
             {province}
@@ -62,10 +68,9 @@ export default function MapToolbar({
         ))}
       </div>
 
-      {/* Search */}
-      <div className="flex items-center gap-3 bg-[#F8F8F8] px-4 py-2 rounded-xl border border-gray-200 w-72 shadow-xl">
+      {/* Search Input */}
+      <div className="flex items-center gap-3 bg-[#F8F8F8] px-4 py-2.5 md:py-2 rounded-xl border border-gray-200 w-full md:w-72 shadow-lg md:shadow-xl shrink-0">
         <Search size={18} className="text-gray-400" />
-
         <input
           type="text"
           value={searchProvince}

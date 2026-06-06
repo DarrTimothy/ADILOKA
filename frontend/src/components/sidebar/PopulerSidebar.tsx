@@ -77,9 +77,9 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
     <aside className="w-full bg-white border-r border-gray-200 p-5 overflow-y-auto">
       <div className="mb-6">
         <div className="flex items-center gap-2">
-          <TrendingUp size={22} className="text-green-600" />
+          <TrendingUp size={22} className="text-green-600 shrink-0" />
 
-          <h2 className="text-xl font-bold text-[#7B0000]">
+          <h2 className="text-lg lg:text-xl font-bold text-[#7B0000]">
             Populer Minggu Ini
           </h2>
         </div>
@@ -87,7 +87,7 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
         {/* Progress */}
         <div className="mt-4">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-gray-700">
+            <span className="text-xs sm:text-sm font-medium text-gray-700">
               Progress Jelajah Nusantara
             </span>
 
@@ -135,17 +135,19 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
               <img
                 src={game.cover_img}
                 alt={game.title}
-                className="w-full h-40 object-cover"
+                className="w-full h-32 sm:h-36 lg:h-40 object-cover"
               />
 
-              <div className="p-4">
-                <h3 className="font-bold text-[#2B0A0A]">{game.title}</h3>
+              <div className="p-3 lg:p-4">
+                <h3 className="font-bold text-sm lg:text-base text-[#2B0A0A] line-clamp-2">
+                  {game.title}
+                </h3>
 
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-xs lg:text-sm text-gray-500 mt-1">
                   {game.region?.province_name}
                 </p>
 
-                <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                <p className="text-xs lg:text-sm text-gray-600 mt-2 line-clamp-2">
                   {game.subtitle}
                 </p>
               </div>
