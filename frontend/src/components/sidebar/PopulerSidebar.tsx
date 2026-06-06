@@ -7,9 +7,13 @@ import { useSidebar } from "@/context/SidebarContext";
 
 type Props = {
   refreshRegions: number;
+  onCloseSidebar?: () => void;
 };
 
-export default function PopulerSidebar({ refreshRegions }: Props) {
+export default function PopulerSidebar({
+  refreshRegions,
+  onCloseSidebar,
+}: Props) {
   const [games, setGames] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [completedRegions, setCompletedRegions] = useState(0);
@@ -27,7 +31,6 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
         );
 
         const json = await res.json();
-
         setGames(json.result || []);
       } catch (error) {
         console.error(error);
@@ -40,7 +43,6 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
       try {
         let page = 1;
         let hasMore = true;
-
         let allRegions: any[] = [];
 
         while (hasMore) {
@@ -55,7 +57,6 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
             break;
           }
           allRegions.push(...regions);
-
           page++;
         }
         setTotalRegions(allRegions.length);
@@ -75,22 +76,30 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
 
   return (
     <aside className="w-full bg-white border-r border-gray-200 p-5 overflow-y-auto">
+      {onCloseSidebar && (
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={onCloseSidebar}
+            className="block lg:hidden w-fit py-2 px-5 bg-[#7B0000] hover:bg-[#5E0000]  text-white font-bold text-xs tracking-wide rounded-full shadow-md 
+            shadow-[#7B0000]/10 active:scale-[0.96] transition-all duration-300 cursor-pointer text-center">
+            ✕ Tutup
+          </button>
+        </div>
+      )}
+
       <div className="mb-6">
         <div className="flex items-center gap-2">
           <TrendingUp size={22} className="text-green-600 shrink-0" />
-
           <h2 className="text-lg lg:text-xl font-bold text-[#7B0000]">
             Populer Minggu Ini
           </h2>
         </div>
 
-        {/* Progress */}
         <div className="mt-4">
           <div className="flex justify-between items-center mb-2">
             <span className="text-xs sm:text-sm font-medium text-gray-700">
               Progress Jelajah Nusantara
             </span>
-
             <span className="text-sm font-bold text-[#7B0000]">
               {completedRegions}/{totalRegions}
             </span>
@@ -110,9 +119,7 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
 
           <p className="text-xs text-gray-500 mt-2">
             {totalRegions > 0
-              ? `${Math.round(
-                  (completedRegions / totalRegions) * 100,
-                )}% provinsi selesai`
+              ? `${Math.round((completedRegions / totalRegions) * 100)}% provinsi selesai`
               : "Belum ada data"}
           </p>
         </div>
@@ -142,11 +149,9 @@ export default function PopulerSidebar({ refreshRegions }: Props) {
                 <h3 className="font-bold text-sm lg:text-base text-[#2B0A0A] line-clamp-2">
                   {game.title}
                 </h3>
-
                 <p className="text-xs lg:text-sm text-gray-500 mt-1">
                   {game.region?.province_name}
                 </p>
-
                 <p className="text-xs lg:text-sm text-gray-600 mt-2 line-clamp-2">
                   {game.subtitle}
                 </p>

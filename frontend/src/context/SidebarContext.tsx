@@ -8,15 +8,19 @@ type SidebarContextType = {
   setShowPopularWeek: React.Dispatch<React.SetStateAction<boolean>>;
   selectedPopularGame: Game | null;
   setSelectedPopularGame: React.Dispatch<React.SetStateAction<Game | null>>;
+  previewImage: string | null;
+  setPreviewImage: React.Dispatch<React.SetStateAction<string | null>>;
+  previewVideo: string | null;
+  setPreviewVideo: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
 const SidebarContext = createContext<SidebarContextType | null>(null);
 
 export function SidebarProvider({ children }: { children: React.ReactNode }) {
   const [showPopularWeek, setShowPopularWeek] = useState(false);
-  const [selectedPopularGame, setSelectedPopularGame] = useState<Game | null>(
-    null,
-  );
+  const [selectedPopularGame, setSelectedPopularGame] = useState<Game | null>(null);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [previewVideo, setPreviewVideo] = useState<string | null>(null);
 
   return (
     <SidebarContext.Provider
@@ -25,6 +29,10 @@ export function SidebarProvider({ children }: { children: React.ReactNode }) {
         setShowPopularWeek,
         selectedPopularGame,
         setSelectedPopularGame,
+        previewImage,
+        setPreviewImage,
+        previewVideo,
+        setPreviewVideo,
       }}
     >
       {children}

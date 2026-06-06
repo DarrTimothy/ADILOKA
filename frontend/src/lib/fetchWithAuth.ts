@@ -1,7 +1,7 @@
 export async function fetchWithAuth(
   url: string,
   options: RequestInit = {}
-) {
+): Promise<Response> {
   const token = localStorage.getItem("token");
 
   const response = await fetch(url, {
@@ -18,10 +18,9 @@ export async function fetchWithAuth(
 
   if (response.status === 401) {
     console.error("401 Unauthorized:", url);
-
     localStorage.removeItem("token");
-
-    throw new Error("Session expired");
+    
+    throw new Error("UNAUTHORIZED");
   }
 
   return response;
