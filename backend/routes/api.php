@@ -23,6 +23,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 
+Route::get('/stream-video/{media}', [TraditionalGamesController::class, 'streamVideo']);
+
 // regions
 Route::get('/regions', [RegionController::class, 'index']);
 
@@ -40,6 +42,9 @@ Route::middleware([
     'auth:sanctum',
     'throttle:api'
 ])->group(function () {
+
+    //video player
+    // Route::get('/stream-video/{media}', [TraditionalGamesController::class, 'streamVideo']);
 
     // detail games
     Route::get('/traditional-games/{id}', [TraditionalGamesController::class, 'show']);

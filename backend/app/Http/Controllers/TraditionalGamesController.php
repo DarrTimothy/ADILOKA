@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
 use App\Models\TraditionalGame;
+use App\Models\TraditionalGameMedia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class TraditionalGamesController extends Controller
 {
@@ -127,6 +130,24 @@ class TraditionalGamesController extends Controller
         return ApiResponse::success($data);
     }
 
+
+    public function streamVideo(TraditionalGameMedia $media)
+    {
+        abort_if($media->type !== 'video', 404, 'Media bukan bertipe video');
+
+        abort_unless(
+            Storage::disk('public')->exists($media->url),
+            404,
+            'File fisik video tidak ditemukan'
+        );
+
+        $filePath = Storage::disk('public')->path($media->url);
+
+        BinaryFileResponse::trustXSendfileTypeHeader();
+
+        return new BinaryFileResponse($filePath);
+    }
+
     private function transformGame(
         TraditionalGame $game,
         bool $isCompleted = false,
@@ -150,7 +171,7 @@ class TraditionalGamesController extends Controller
             'is_completed' => $isCompleted,
 
             'cover_img' => $cover
-                ? $this->mediaUrl($cover->url)
+                ? $this->mediaUrl($cover)
                 : null,
         ];
 
@@ -168,7 +189,7 @@ class TraditionalGamesController extends Controller
                 'media' => $game->media->map(function ($m) {
                     return [
                         'type' => $m->type,
-                        'url' => $this->mediaUrl($m->url),
+                        'url' => $this->mediaUrl($m),
                         'source_page' => $m->source_page,
                         'caption' => $m->caption,
                     ];
@@ -180,9 +201,12 @@ class TraditionalGamesController extends Controller
     }
 
 
-    private function mediaUrl(string $path): string
+    private function mediaUrl(TraditionalGameMedia $media): string
     {
-        return asset('storage/' . ltrim($path, '/'));
+        return match ($media->type) {
+            'video' => url('/api/stream-video/' . $media->id),
+            default => asset('storage/' . ltrim($media->url, '/')),
+        };
     }
 
     private function baseGameQuery()
