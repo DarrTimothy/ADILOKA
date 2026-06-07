@@ -143,6 +143,10 @@ class TraditionalGamesController extends Controller
 
         $filePath = Storage::disk('public')->path($media->url);
 
+        if (ob_get_level()) {
+            ob_end_clean();
+        }
+
         BinaryFileResponse::trustXSendfileTypeHeader();
 
         return new BinaryFileResponse($filePath);
