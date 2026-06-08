@@ -4,6 +4,7 @@ import "./globals.css";
 import "leaflet/dist/leaflet.css";
 import { SidebarProvider } from "@/context/SidebarContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { NotifProvider } from "@/context/NotifContext"; // <--- 1. IMPORT NOTIFPROVIDER BARU ANDA
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 const geistSans = Geist({
@@ -32,9 +33,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
-          <SidebarProvider>
-            <LayoutWrapper>{children}</LayoutWrapper>
-          </SidebarProvider>
+          <NotifProvider>
+            <SidebarProvider>
+              <LayoutWrapper>{children}</LayoutWrapper>
+            </SidebarProvider>
+          </NotifProvider>
         </AuthProvider>
       </body>
     </html>

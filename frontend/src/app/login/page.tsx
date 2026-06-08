@@ -5,20 +5,20 @@ import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
 import { login } from "@/service/auth";
 import { useAuth } from "@/context/AuthContext";
+import { useNotif } from "@/context/NotifContext"; // 1. IMPORT HOOK NOTIFIKASI
 
 export default function LoginPage() {
   const router = useRouter();
   const { refreshUser } = useAuth();
+  const { showNotif } = useNotif(); // 2. INISIALISASI HOOK
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    setError(null);
     setLoading(true);
 
     try {
@@ -29,9 +29,16 @@ export default function LoginPage() {
 
       await refreshUser();
 
+      // NOTIFIKASI SUKSES LOGIN
+      showNotif("Login berhasil! Selamat melanjutkan petualangan Anda 🧭", "success");
+
       router.push("/");
     } catch (err: any) {
-      setError(err.message || "Terjadi kesalahan");
+      // NOTIFIKASI ERROR JIKA KREDENSIAL SALAH ATAU SERVER ERROR
+      showNotif(
+        err.message || "Username atau password salah. Silakan coba lagi!",
+        "error"
+      );
     } finally {
       setLoading(false);
     }
@@ -60,7 +67,7 @@ export default function LoginPage() {
             Masuk untuk melanjutkan perjalanan Anda
           </p>
 
-          {error && <p className="text-sm text-red-600">{error}</p>}
+          {/* Baris error teks lama sudah dihapus karena digantikan oleh Notif global */}
 
           <div>
             <label className="text-sm font-medium text-black">Username</label>

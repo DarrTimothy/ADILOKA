@@ -21,6 +21,16 @@ export default function PopulerSidebar({
   const { setSelectedPopularGame, setShowPopularWeek } = useSidebar();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      setGames([]);
+      setTotalRegions(0);
+      setCompletedRegions(0);
+      setLoading(false);
+      return;
+    }
+
     async function loadPopularGames() {
       try {
         const res = await fetchWithAuth(
@@ -75,7 +85,7 @@ export default function PopulerSidebar({
   }, [refreshRegions]);
 
   return (
-    <aside className="w-full bg-white border-r border-gray-200 p-5 overflow-y-auto">
+    <aside className="w-full h-screen max-h-screen bg-white border-r border-gray-200 p-5 overflow-y-auto sticky top-0">
       {onCloseSidebar && (
         <div className="flex justify-end mb-4">
           <button
@@ -128,7 +138,7 @@ export default function PopulerSidebar({
       {loading ? (
         <p className="text-gray-500 text-sm">Memuat data...</p>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4 pb-10">
           {games.map((game) => (
             <div
               key={game.id}
@@ -136,7 +146,7 @@ export default function PopulerSidebar({
                 setSelectedPopularGame(game);
                 setShowPopularWeek(false);
               }}
-              className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
             >
               <img
                 src={game.cover_img}

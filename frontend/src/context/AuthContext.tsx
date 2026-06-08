@@ -32,7 +32,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     try {
       const data = await getUser();
-
       setUser(data);
     } catch (error) {
       setUser(null);
@@ -48,12 +47,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const logoutUser = async () => {
     try {
       await logout();
-
+      localStorage.removeItem("token");
       setUser(null);
-
-      router.push("/login");
     } catch (error) {
       console.error("Logout error:", error);
+      localStorage.removeItem("token");
+      setUser(null);
     }
   };
 

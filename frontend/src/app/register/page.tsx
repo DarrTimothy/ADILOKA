@@ -5,9 +5,12 @@ import { useRouter } from "next/navigation";
 import { register } from "@/service/auth";
 import { Eye, EyeOff } from "lucide-react";
 import { isValidEmail, validatePassword } from "@/utils/validation";
+import { useNotif } from "@/context/NotifContext";
+import TermsModal from "@/components/ui/TermModal"; 
 
 export default function RegisterPage() {
   const router = useRouter();
+  const { showNotif } = useNotif();
 
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,18 +19,18 @@ export default function RegisterPage() {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
   const [isConfirmPasswordHidden, setIsConfirmPasswordHidden] = useState(true);
   const [agree, setAgree] = useState(false);
+  const [isTermsOpen, setIsTermsOpen] = useState(false); 
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
 
     // 1. Email validation
     if (!isValidEmail(email)) {
-      setError(
+      showNotif(
         "Alamat email tidak valid. Silakan masukkan email dengan format yang benar.",
+        "error"
       );
       return;
     }
@@ -35,20 +38,21 @@ export default function RegisterPage() {
     // 2. Password rule validation
     const passwordError = validatePassword(password);
     if (passwordError) {
-      setError(passwordError);
+      showNotif(passwordError, "error");
       return;
     }
 
     // 3. Confirm password
     if (password !== confirmPassword) {
-      setError("Password dan konfirmasi password tidak sama.");
+      showNotif("Password dan konfirmasi password tidak sama.", "error");
       return;
     }
 
     // 4. Agreement
     if (!agree) {
-      setError(
+      showNotif(
         "Anda harus menyetujui syarat dan ketentuan serta kebijakan privasi.",
+        "error"
       );
       return;
     }
@@ -62,9 +66,14 @@ export default function RegisterPage() {
         password,
       });
 
+      showNotif("Pendaftaran berhasil! Selamat bergabung di Adiloka ✨", "success");
+      
       router.push("/login");
     } catch (err: any) {
-      setError(err.message || "Terjadi kesalahan. Silakan coba lagi.");
+      showNotif(
+        err.message || "Terjadi kesalahan pada server. Silakan coba lagi.", 
+        "error"
+      );
     } finally {
       setLoading(false);
     }
@@ -89,10 +98,9 @@ export default function RegisterPage() {
           <h1 className="text-3xl text-center font-bold mb-2 text-black">
             Bergabung dengan Kami
           </h1>
-          <p className="text-gray-500 mb-8 text-center text-bold text-xl">
+          <p className="text-gray-500 mb-8 text-center font-bold text-xl">
             Mulai perjalanan Anda mengenal budaya Indonesia
           </p>
-          {error && <p className="text-sm text-red-600">{error}</p>}
 
           <div>
             <label className="text-sm font-medium text-black">
@@ -136,7 +144,7 @@ export default function RegisterPage() {
               <button
                 type="button"
                 onClick={() => setIsPasswordHidden((prev) => !prev)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
                 aria-label={
                   isPasswordHidden
                     ? "Tampilkan password"
@@ -147,6 +155,7 @@ export default function RegisterPage() {
               </button>
             </div>
           </div>
+          
           <div>
             <label className="text-sm font-medium text-black">
               Konfirmasi Password
@@ -165,7 +174,7 @@ export default function RegisterPage() {
               <button
                 type="button"
                 onClick={() => setIsConfirmPasswordHidden((prev) => !prev)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
                 aria-label={
                   isConfirmPasswordHidden
                     ? "Tampilkan konfirmasi password"
@@ -190,11 +199,17 @@ export default function RegisterPage() {
             />
             <p className="text-gray-400">
               Saya setuju dengan{" "}
-              <span className="text-red-600 underline cursor-pointer">
+              <span 
+                onClick={() => setIsTermsOpen(true)}
+                className="text-red-600 underline font-medium hover:text-red-800 transition-colors cursor-pointer"
+              >
                 syarat dan ketentuan
               </span>{" "}
               serta{" "}
-              <span className="text-red-600 underline cursor-pointer">
+              <span 
+                onClick={() => setIsTermsOpen(true)}
+                className="text-red-600 underline font-medium hover:text-red-800 transition-colors cursor-pointer"
+              >
                 kebijakan privasi
               </span>
             </p>
@@ -203,12 +218,18 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="cursor-pointer w-full bg-red-800 text-white py-2 rounded-md mt-2 hover:bg-red-900 disabled:opacity-60"
+            className="cursor-pointer w-full bg-red-800 text-white py-2 rounded-md mt-2 hover:bg-red-900 disabled:opacity-60 transition-colors"
           >
             {loading ? "Mendaftarkan..." : "Register"}
           </button>
         </form>
       </div>
+
+      {/* Render TermsModal di luar hierarki form */}
+      <TermsModal 
+        isOpen={isTermsOpen} 
+        onClose={() => setIsTermsOpen(false)} 
+      />
     </div>
   );
 }
