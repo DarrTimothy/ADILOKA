@@ -11,52 +11,22 @@ type Props = {
   isSidebarOpen: boolean;
 };
 
-const INDONESIA_PROVINCES = [
-  "Aceh",
-  "Sumatera Barat",
-  "Sumatera Utara",
-  "Sumatera Barat",
-  "Riau",
-  "Kepulauan Riau",
-  "Jambi",
-  "Sumatera Selatan",
-  "Bangka Belitung",
-  "Kepulauan Bangka Belitung",
-  "Bengkulu",
-  "Lampung",
-  "DKI Jakarta",
-  "Jakarta",
-  "Jawa Barat",
-  "Banten",
-  "Jawa Tengah",
-  "DI Yogyakarta",
-  "Yogyakarta",
-  "Jawa Timur",
-  "Bali",
-  "Nusa Tenggara Barat",
-  "NTB",
-  "Nusa Tenggara Timur",
-  "NTT",
-  "Kalimantan Barat",
-  "Kalimantan Tengah",
-  "Kalimantan Selatan",
-  "Kalimantan Timur",
-  "Kalimantan Utara",
-  "Sulawesi Utara",
-  "Gorontalo",
-  "Sulawesi Tengah",
-  "Sulawesi Barat",
-  "Sulawesi Selatan",
-  "Sulawesi Tenggara",
-  "Maluku",
-  "Maluku Utara",
-  "Papua Barat",
-  "Papua",
-  "Papua Selatan",
-  "Papua Tengah",
-  "Papua Pegunungan",
-  "Papua Barat Daya",
-];
+interface RegionData {
+  province_name: string;
+  bps_code: string;
+  geometry_type: string;
+  is_completed: boolean;
+  coordinates: any[];
+}
+
+interface BackendResponse {
+  success: boolean;
+  message: string;
+  result: {
+    current_page: number;
+    data: RegionData[];
+  };
+}
 
 export default function MapToolbar({
   searchProvince,
@@ -83,10 +53,30 @@ export default function MapToolbar({
       return;
     }
 
-    const filtered = INDONESIA_PROVINCES.filter((province) =>
-      province.toLowerCase().includes(searchProvince.toLowerCase()),
-    );
-    setSuggestions(filtered);
+    const delayDebounceFn = setTimeout(async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/regions?q=${encodeURIComponent(searchProvince.trim())}`,
+        );
+        if (!response.ok) throw new Error("Gagal mengambil data");
+
+        const resData: BackendResponse = await response.json();
+
+        if (resData.success && resData.result?.data) {
+          const provinceNames = resData.result.data.map(
+            (item) => item.province_name,
+          );
+          setSuggestions(provinceNames);
+        } else {
+          setSuggestions([]);
+        }
+      } catch (error) {
+        console.error("Error fetching regions:", error);
+        setSuggestions([]);
+      }
+    }, 300);
+
+    return () => clearTimeout(delayDebounceFn);
   }, [searchProvince]);
 
   useEffect(() => {
@@ -117,29 +107,47 @@ export default function MapToolbar({
     setIsDropdownOpen(false);
   }
 
-  function handleSearch() {
+  async function handleSearch() {
     if (!searchProvince.trim()) return;
 
-    const province = searchProvince.trim();
-    const formattedKeyword = province.toLowerCase();
+    const query = searchProvince.trim();
 
-    const matchedProvince = INDONESIA_PROVINCES.find(
-      (p) =>
-        p.toLowerCase() === formattedKeyword ||
-        p.toLowerCase().includes(formattedKeyword),
-    );
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/regions?q=${encodeURIComponent(query)}`,
+      );
+      if (!response.ok) throw new Error("Gagal mengambil data");
 
-    if (!matchedProvince) {
+      const resData: BackendResponse = await response.json();
+
+      if (resData.success && resData.result?.data) {
+        const provinceNames = resData.result.data.map(
+          (item) => item.province_name,
+        );
+        const exactMatch = provinceNames.find(
+          (name) =>
+            name.toLowerCase() === query.toLowerCase() ||
+            name.toLowerCase().includes(query.toLowerCase()),
+        );
+
+        if (!exactMatch) {
+          showNotif(
+            "Provinsi tidak ditemukan! Silakan pilih dari saran dropdown yang tersedia.",
+            "error",
+          );
+          setSearchProvince("");
+          setIsDropdownOpen(false);
+          return;
+        }
+
+        triggerMapZoom(exactMatch);
+      }
+    } catch (error) {
       showNotif(
-        "Kata kunci harus berupa nama provinsi yang valid di Indonesia!",
+        "Gagal terhubung ke server untuk memvalidasi provinsi.",
         "error",
       );
-      setSearchProvince("");
-      setIsDropdownOpen(false);
-      return;
     }
-
-    triggerMapZoom(matchedProvince);
   }
 
   function handleDeleteHistory(e: React.MouseEvent, provinceToDelete: string) {
@@ -155,9 +163,7 @@ export default function MapToolbar({
       ${isSidebarOpen ? "hidden md:flex" : "flex"} 
       flex-col-reverse md:flex-row md:items-center justify-between gap-4 md:gap-6 px-4 md:px-5 py-3 w-full max-w-full
     `}
-      /* HINT: overflow-hidden di atas telah DIHAPUS agar dropdown tidak terpotong */
     >
-      {/* Kolom Riwayat Pencarian (Quick Search) */}
       <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 md:flex-wrap max-w-full no-scrollbar shrink-0">
         {history.map((province) => (
           <div
@@ -177,13 +183,10 @@ export default function MapToolbar({
         ))}
       </div>
 
-      {/* Kolom Input Search & Dropdown Live Search */}
       <div
         ref={dropdownRef}
         className="relative w-full md:w-72 shrink-0 z-[9999]"
       >
-        {/* HINT: Menambahkan z-[9999] pada pembungkus input agar memprioritaskan lapisan dropdown di atas peta */}
-
         <div className="flex items-center gap-3 bg-[#F8F8F8] px-4 py-2.5 md:py-2 rounded-xl border border-gray-200 shadow-lg md:shadow-xl">
           <Search size={18} className="text-gray-400" />
           <input
@@ -204,7 +207,6 @@ export default function MapToolbar({
           />
         </div>
 
-        {/* Dropdown Menu */}
         {isDropdownOpen && suggestions.length > 0 && (
           <div className="absolute left-0 right-0 mt-2 bg-white/95 backdrop-blur-md border border-gray-200 rounded-xl shadow-2xl overflow-hidden z-[9999] max-h-60 overflow-y-auto no-scrollbar">
             <div className="px-3 py-1.5 bg-gray-50 text-[10px] font-bold text-gray-400 uppercase tracking-wider border-b border-gray-100">
