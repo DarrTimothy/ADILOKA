@@ -33,6 +33,7 @@ export default function ChoroplethMap({
     [-25.0, 90.0],
     [20.0, 155.0],
   ];
+
   function getProvinceStyle(isCompleted: boolean) {
     return {
       weight: 1.5,
@@ -56,7 +57,6 @@ export default function ChoroplethMap({
 
     function onEachProvince(feature: any, layer: any) {
       (layer as any)._isActive = false;
-
       provinceLayersRef.current.push(layer);
       const props = feature.properties;
       const provinceStyle = getProvinceStyle(props.is_completed);
@@ -74,28 +74,20 @@ export default function ChoroplethMap({
             layer.setStyle(getHoverStyle(props.is_completed));
           }
         },
-
         mouseout: () => {
           if (!(layer as any)._isActive) {
             layer.setStyle(provinceStyle);
           }
         },
-
         click: () => {
           setSelectedProvince(props);
-
           setShowPopularWeek(false);
-
           const isActive = (layer as any)._isActive;
 
           if (isActive) {
             (layer as any)._isActive = false;
             layer.setStyle(provinceStyle);
-
-            map.flyToBounds(indonesiaBounds, {
-              duration: 0.8,
-            });
-
+            map.flyToBounds(indonesiaBounds, { duration: 0.8 });
             return;
           }
 
@@ -145,17 +137,8 @@ export default function ChoroplethMap({
 
         while (hasMore) {
           const url = `${process.env.NEXT_PUBLIC_API_URL}/regions?page=${page}`;
-          console.log("Fetching:", url);
-
-          const res = await fetchWithAuth(url, {
-            method: "GET",
-          });
-
-          console.log("STATUS:", res.status);
-
+          const res = await fetchWithAuth(url, { method: "GET" });
           const text = await res.text();
-
-          console.log("RESPONSE:", text);
 
           if (!res.ok) {
             console.error("HTTP ERROR");
@@ -163,36 +146,29 @@ export default function ChoroplethMap({
           }
 
           const json = JSON.parse(text);
-
           if (!json?.result?.data) {
             console.error("Struktur data tidak sesuai:", json);
             break;
           }
 
           const data = json.result.data;
-
           if (data.length === 0) {
             hasMore = false;
             break;
           }
-          console.log("REGIONS DATA:", data);
-          const features = data.map((region: any) => {
-            console.log(region.province_name, region.is_completed);
-
-            return {
-              type: "Feature",
-              properties: {
-                id: region.id,
-                province_name: region.province_name,
-                bps_code: region.bps_code,
-                is_completed: region.is_completed,
-              },
-              geometry: {
-                type: region.geometry_type,
-                coordinates: region.coordinates,
-              },
-            };
-          });
+          const features = data.map((region: any) => ({
+            type: "Feature",
+            properties: {
+              id: region.id,
+              province_name: region.province_name,
+              bps_code: region.bps_code,
+              is_completed: region.is_completed,
+            },
+            geometry: {
+              type: region.geometry_type,
+              coordinates: region.coordinates,
+            },
+          }));
 
           allFeatures.push(...features);
           page++;
@@ -206,39 +182,31 @@ export default function ChoroplethMap({
         console.error("Fetch gagal total:", error);
       }
     }
-
     loadAllRegions();
   }, [refreshRegions]);
 
   useEffect(() => {
     if (!selectedPopularGame) return;
-
     const provinceLayer = provinceLayersRef.current.find(
       (layer) =>
         layer.feature?.properties?.bps_code ===
         selectedPopularGame.region?.bps_code,
     );
-
     if (!provinceLayer) return;
 
     const props = provinceLayer.feature.properties;
-
     setSelectedProvince(props);
 
     provinceLayersRef.current.forEach((layer) => {
       layer._isActive = false;
-
       layer.setStyle(getProvinceStyle(layer.feature?.properties?.is_completed));
     });
 
     provinceLayer._isActive = true;
-
     provinceLayer.setStyle(getHoverStyle(props.is_completed));
-
     provinceLayer.bringToFront();
 
     const bounds = provinceLayer.getBounds();
-
     mapRef.current?.flyToBounds(bounds, {
       paddingTopLeft: isMobile ? [20, 20] : [120, 80],
       paddingBottomRight: isMobile ? [20, 20] : [80, 80],
@@ -248,7 +216,6 @@ export default function ChoroplethMap({
 
   useEffect(() => {
     if (!searchProvince) return;
-
     const provinceLayer = provinceLayersRef.current.find((layer) =>
       layer.feature?.properties?.province_name
         ?.toLowerCase()
@@ -261,12 +228,10 @@ export default function ChoroplethMap({
     }
 
     const props = provinceLayer.feature.properties;
-
     setSelectedProvince(props);
 
     provinceLayersRef.current.forEach((layer) => {
       layer._isActive = false;
-
       layer.setStyle(getProvinceStyle(layer.feature?.properties?.is_completed));
     });
     provinceLayer._isActive = true;
@@ -285,11 +250,8 @@ export default function ChoroplethMap({
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
     handleResize();
-
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -297,10 +259,12 @@ export default function ChoroplethMap({
     const map = useMap();
 
     useEffect(() => {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         map.invalidateSize();
       }, 300);
-    });
+
+      return () => clearTimeout(timer);
+    }, [map]);
 
     return null;
   }
@@ -322,7 +286,6 @@ export default function ChoroplethMap({
           attribution="&copy; OpenStreetMap contributors &copy; CARTO"
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"
         />
-
         {geoData && <InteractiveProvinces data={geoData} />}
       </MapContainer>
     </div>

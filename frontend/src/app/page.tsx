@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-
 import MapWrapper from "@/components/map/MapWrapper";
 import ProvinceSidebar from "@/components/province-sidebar/ProvinceSidebar";
 import PopulerSidebar from "@/components/sidebar/PopulerSidebar";
@@ -29,7 +28,7 @@ export default function Home() {
   const isSidebarOpen = isSidebarLeftOpen || isSidebarRightOpen;
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-[calc(100vh-64px)] overflow-hidden">
       <div className="flex flex-1 overflow-hidden relative"> 
         <div className="flex-1 relative h-full w-full">
           <MapWrapper

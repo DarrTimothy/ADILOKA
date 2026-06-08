@@ -133,7 +133,6 @@ export default function PopulerSidebar({
             <div
               key={game.id}
               onClick={() => {
-                console.log("POPULAR GAME:", game);
                 setSelectedPopularGame(game);
                 setShowPopularWeek(false);
               }}

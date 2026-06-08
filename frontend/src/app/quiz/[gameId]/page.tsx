@@ -35,15 +35,11 @@ export default function QuizPage() {
         },
       );
 
-      console.log("QUIZ STATUS:", res.status);
-
       if (!res.ok) {
         throw new Error(`HTTP Error: ${res.status}`);
       }
 
       const json = await res.json();
-
-      console.log("QUIZ RESPONSE:", json);
 
       setQuiz(json.result);
     } catch (error) {
