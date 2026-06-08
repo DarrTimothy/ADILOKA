@@ -32,6 +32,9 @@ Route::prefix('/traditional-games')->group(function () {
     Route::get('/', [TraditionalGamesController::class, 'index']);
 });
 
+//video player
+Route::get('/stream-video/{media}', [TraditionalGamesController::class, 'streamVideo']);
+
 /**
  * PROTECTED
  */
@@ -41,8 +44,6 @@ Route::middleware([
     'throttle:api'
 ])->group(function () {
 
-    //video player
-    Route::get('/stream-video/{media}', [TraditionalGamesController::class, 'streamVideo']);
 
     // detail games
     Route::get('/traditional-games/{id}', [TraditionalGamesController::class, 'show']);
