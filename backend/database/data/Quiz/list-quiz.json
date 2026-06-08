@@ -32,7 +32,7 @@
                 "question": "Bagaimana cara menentukan pemenang dalam permainan Tarek Situek?",
                 "options": [
                     {
-                        "text": "Tim yang menarik lawan melewati batas tertentu",
+                        "text": "Tim yang menarik teman melewati batas tertentu",
                         "is_correct": true
                     },
                     {
@@ -397,7 +397,7 @@
                 "question": "Nilai yang dapat dilatih dalam permainan Bicau adalah?",
                 "options": [
                     {
-                        "text": "Kerja sama dan sportivitas",
+                        "text": "Adu Strategi",
                         "is_correct": true
                     },
                     {
@@ -449,7 +449,7 @@
                 "question": "Permainan tejek-tejekan melatih?",
                 "options": [
                     {
-                        "text": "Keseimbagan",
+                        "text": "Keseimbangan",
                         "is_correct": true
                     },
                     {
@@ -519,7 +519,7 @@
                 ]
             },
             {
-                "question": "Permainan Yeye menggunakan alat berupa",
+                "question": "Permainan Yeye menggunakan alat berupa?",
                 "options": [
                     {
                         "text": "Batu bata",
@@ -741,7 +741,7 @@
                 "question": "Nilai yang dapat dilatih dari permainan Gatrik adalah?",
                 "options": [
                     {
-                        "text": "Kerja sama dan ketangkasan",
+                        "text": "Kebersamaan dan Sosialisasi",
                         "is_correct": true
                     },
                     {
@@ -1697,7 +1697,7 @@
                 ]
             },
             {
-                "question": "Benda yang didistrikan atau dipindah-pindahkan ke dalam lubang-lubang tanah tersebut saat giliran pemain berjalan adalah?",
+                "question": "Benda yang dipindahkan ke dalam lubang-lubang tanah tersebut saat giliran pemain berjalan adalah?",
                 "options": [
                     {
                         "text": "Karet gelang",
@@ -1908,7 +1908,7 @@
                 "question": "Permainan kengkeng mirip dengan permainan?",
                 "options": [
                     {
-                        "text": "Baskte",
+                        "text": "Basket",
                         "is_correct": false
                     },
                     {
@@ -2270,7 +2270,7 @@
                 ]
             },
             {
-                "question": "Permainan korkouria biasa dimakan di tempat seperti?",
+                "question": "Permainan korkouria biasa dimain di tempat seperti?",
                 "options": [
                     {
                         "text": "Bawah laut",
@@ -2364,7 +2364,7 @@
                 ]
             },
             {
-                "question": "Dalam permainan yesecha asya, syarat pemian dikatakan pemenang bila?",
+                "question": "Dalam permainan yesecha asya, syarat pemain dikatakan pemenang bila?",
                 "options": [
                     {
                         "text": "Tumpukan kaleng tumbang",
@@ -2440,11 +2440,11 @@
                 "question": "Dalam permainan lempar sege, pemain dinyatakan menang bila?",
                 "options": [
                     {
-                        "text": "nan",
+                        "text": "Berhasil mengenai sege lawan",
                         "is_correct": false
                     },
                     {
-                        "text": "nan",
+                        "text": "Melempar sege dengan gaya paling indah",
                         "is_correct": false
                     },
                     {
@@ -2492,7 +2492,7 @@
                 "question": "Permainan Kweritop ini melatih?",
                 "options": [
                     {
-                        "text": "Kerativitas dan ketangkasan tangan",
+                        "text": "Kreativitas dan ketangkasan tangan",
                         "is_correct": true
                     },
                     {
@@ -2520,7 +2520,7 @@
         "is_active": true,
         "questions": [
             {
-                "question": "Dalam permianan patah kaleng, media yang digunakan adalah?",
+                "question": "Dalam permainan patah kaleng, media yang digunakan adalah?",
                 "options": [
                     {
                         "text": "Kaleng dan bola",
@@ -2565,7 +2565,7 @@
                 "question": "Permainan patah kaleng melatih?",
                 "options": [
                     {
-                        "text": "ketangkasas, kecepatan, dan kerjasama",
+                        "text": "ketangkasan, kecepatan, dan kerjasama",
                         "is_correct": true
                     },
                     {

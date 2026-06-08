@@ -6,20 +6,20 @@ import { register } from "@/service/auth";
 import { Eye, EyeOff } from "lucide-react";
 import { isValidEmail, validatePassword } from "@/utils/validation";
 import { useNotif } from "@/context/NotifContext";
-import TermsModal from "@/components/ui/TermModal"; 
+import TermsModal from "@/components/ui/TermModal";
 
 export default function RegisterPage() {
   const router = useRouter();
   const { showNotif } = useNotif();
 
-  const [fullName, setFullName] = useState("");
+  const [userName, setuserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
   const [isConfirmPasswordHidden, setIsConfirmPasswordHidden] = useState(true);
   const [agree, setAgree] = useState(false);
-  const [isTermsOpen, setIsTermsOpen] = useState(false); 
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
 
   const [loading, setLoading] = useState(false);
 
@@ -30,7 +30,7 @@ export default function RegisterPage() {
     if (!isValidEmail(email)) {
       showNotif(
         "Alamat email tidak valid. Silakan masukkan email dengan format yang benar.",
-        "error"
+        "error",
       );
       return;
     }
@@ -52,7 +52,7 @@ export default function RegisterPage() {
     if (!agree) {
       showNotif(
         "Anda harus menyetujui syarat dan ketentuan serta kebijakan privasi.",
-        "error"
+        "error",
       );
       return;
     }
@@ -61,18 +61,21 @@ export default function RegisterPage() {
 
     try {
       await register({
-        username: fullName,
+        username: userName,
         email,
         password,
       });
 
-      showNotif("Pendaftaran berhasil! Selamat bergabung di Adiloka ✨", "success");
-      
+      showNotif(
+        "Pendaftaran berhasil! Selamat bergabung di Adiloka ✨",
+        "success",
+      );
+
       router.push("/login");
     } catch (err: any) {
       showNotif(
-        err.message || "Terjadi kesalahan pada server. Silakan coba lagi.", 
-        "error"
+        err.message || "Terjadi kesalahan pada server. Silakan coba lagi.",
+        "error",
       );
     } finally {
       setLoading(false);
@@ -103,14 +106,12 @@ export default function RegisterPage() {
           </p>
 
           <div>
-            <label className="text-sm font-medium text-black">
-              Nama Lengkap
-            </label>
+            <label className="text-sm font-medium text-black">Username</label>
             <input
               type="text"
-              placeholder="Nama Lengkap"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
+              placeholder="Username"
+              value={userName}
+              onChange={(e) => setuserName(e.target.value)}
               required
               className="input-field"
             />
@@ -155,7 +156,7 @@ export default function RegisterPage() {
               </button>
             </div>
           </div>
-          
+
           <div>
             <label className="text-sm font-medium text-black">
               Konfirmasi Password
@@ -199,14 +200,14 @@ export default function RegisterPage() {
             />
             <p className="text-gray-400">
               Saya setuju dengan{" "}
-              <span 
+              <span
                 onClick={() => setIsTermsOpen(true)}
                 className="text-red-600 underline font-medium hover:text-red-800 transition-colors cursor-pointer"
               >
                 syarat dan ketentuan
               </span>{" "}
               serta{" "}
-              <span 
+              <span
                 onClick={() => setIsTermsOpen(true)}
                 className="text-red-600 underline font-medium hover:text-red-800 transition-colors cursor-pointer"
               >
@@ -226,10 +227,7 @@ export default function RegisterPage() {
       </div>
 
       {/* Render TermsModal di luar hierarki form */}
-      <TermsModal 
-        isOpen={isTermsOpen} 
-        onClose={() => setIsTermsOpen(false)} 
-      />
+      <TermsModal isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
     </div>
   );
 }

@@ -33,10 +33,7 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link
-                href="/tentang"
-                className="transition hover:text-[#980909]"
-              >
+              <Link href="/tentangKami" className="hover:text-red-700">
                 Tentang Kami
               </Link>
             </li>

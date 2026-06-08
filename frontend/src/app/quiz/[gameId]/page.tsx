@@ -192,7 +192,7 @@ export default function QuizPage() {
               <span className="font-semibold text-[#2B0A0A]">
                 Petunjuk Kuis:
               </span>{" "}
-              Every jawaban yang Anda pilih akan{" "}
+              Setiap jawaban yang Anda pilih akan{" "}
               <span className="font-semibold text-[#7B0000]">
                 langsung tersimpan dan dinilai
               </span>
