@@ -1,72 +1,51 @@
 import Link from "next/link";
-import { FaInstagram, FaYoutube, FaGlobe } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t">
-      <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+    <footer className="border-t bg-white">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-4 md:grid-cols-[2fr_1fr]">
         
         {/* Kolom 1 */}
         <div>
-          <h2 className="text-lg font-bold text-gray-800 mb-2">
+          <h2 className="mb-2 text-xl font-bold text-gray-800">
             Adiloka
           </h2>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            Kami adalah inisiatif digital untuk mendokumentasikan dan
-            mempopulerkan kembali permainan tradisional Indonesia
-            agar tetap dikenal oleh generasi muda.
+
+          <p className="max-w-xl text-sm leading-relaxed text-gray-600">
+            Adiloka adalah platform digital yang bertujuan untuk
+            mendokumentasikan, memperkenalkan, dan melestarikan
+            permainan tradisional Indonesia melalui teknologi
+            interaktif agar tetap dikenal oleh generasi muda.
           </p>
         </div>
 
         {/* Kolom 2 */}
         <div>
-          <h3 className="text-md font-semibold text-gray-800 mb-3">
+          <h3 className="mb-3 text-md font-semibold text-gray-800">
             Tautan Cepat
           </h3>
-          <ul className="space-y-2 text-sm text-gray-600">
+
+          <ul className="font-bold space-y-3 text-sm text-gray-500">
             <li>
-              <Link href="/" className="hover:text-red-700">
+              <Link href="/" className="transition hover:text-[#980909]">
                 Peta Interaktif
               </Link>
             </li>
+
             <li>
-              <Link href="/tentang" className="hover:text-red-700">
+              <Link
+                href="/tentang"
+                className="transition hover:text-[#980909]"
+              >
                 Tentang Kami
               </Link>
             </li>
           </ul>
         </div>
-
-        {/* Kolom 3 */}
-        <div>
-          <h3 className="text-md font-semibold text-gray-800 mb-3">
-            Ikuti Kami
-          </h3>
-          <div className="flex gap-3">
-            <a
-              href="#"
-              className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-red-100"
-            >
-              <FaGlobe />
-            </a>
-            <a
-              href="#"
-              className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-red-100"
-            >
-              <FaYoutube />
-            </a>
-            <a
-              href="#"
-              className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:bg-red-100"
-            >
-              <FaInstagram />
-            </a>
-          </div>
-        </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="text-center text-sm text-gray-500 py-4 border-t">
+      <div className="border-t py-2 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Adiloka. All rights reserved.
       </div>
     </footer>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react"; // Tambahkan useEffect
 import { useState } from "react";
 import MapWrapper from "@/components/map/MapWrapper";
 import ProvinceSidebar from "@/components/province-sidebar/ProvinceSidebar";
@@ -23,6 +24,22 @@ export default function Home() {
   const [refreshRegions, setRefreshRegions] = useState(0);
   const [searchProvince, setSearchProvince] = useState("");
   const [searchTrigger, setSearchTrigger] = useState(0);
+
+  // LOGIKA PENGUNCI: Jika provinsi atau game dipilih, tutup popular week
+  useEffect(() => {
+    if (selectedProvince || selectedPopularGame) {
+      setShowPopularWeek(false);
+    }
+  }, [selectedProvince, selectedPopularGame, setShowPopularWeek]);
+
+  // LOGIKA PENGUNCI: Jika popular week dibuka, tutup provinsi & game
+  useEffect(() => {
+    if (showPopularWeek) {
+      setSelectedProvince(null);
+      setSelectedPopularGame(null);
+    }
+  }, [showPopularWeek, setSelectedPopularGame]);
+
   const isSidebarLeftOpen = showPopularWeek;
   const isSidebarRightOpen = (selectedProvince || selectedPopularGame) !== null;
   const isSidebarOpen = isSidebarLeftOpen || isSidebarRightOpen;
@@ -41,6 +58,7 @@ export default function Home() {
             />
           </div>
         </div>
+        
         <div className="flex-1 relative h-full w-full overflow-hidden">
           <MapWrapper
             selectedProvince={selectedProvince}
@@ -53,6 +71,7 @@ export default function Home() {
             isSidebarOpen={isSidebarOpen}
           />
         </div>
+
         <div
           className={`h-full bg-white transition-all duration-300 ease-in-out overflow-y-auto z-20 border-l border-gray-100 shrink-0
             ${(selectedProvince || selectedPopularGame)
@@ -70,10 +89,8 @@ export default function Home() {
             />
           </div>
         </div>
-
       </div>
 
-      {/* MODAL PREVIEW MEDIA */}
       <ProvinceModal
         previewImage={previewImage}
         previewVideo={previewVideo}

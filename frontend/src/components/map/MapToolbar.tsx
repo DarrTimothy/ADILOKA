@@ -185,7 +185,7 @@ export default function MapToolbar({
 
       <div
         ref={dropdownRef}
-        className="relative w-full md:w-72 shrink-0 z-[9999]"
+        className="relative w-full md:w-72 shrink-0 z-9999"
       >
         <div className="flex items-center gap-3 bg-[#F8F8F8] px-4 py-2.5 md:py-2 rounded-xl border border-gray-200 shadow-lg md:shadow-xl">
           <Search size={18} className="text-gray-400" />
@@ -208,7 +208,7 @@ export default function MapToolbar({
         </div>
 
         {isDropdownOpen && suggestions.length > 0 && (
-          <div className="absolute left-0 right-0 mt-2 bg-white/95 backdrop-blur-md border border-gray-200 rounded-xl shadow-2xl overflow-hidden z-[9999] max-h-60 overflow-y-auto no-scrollbar">
+          <div className="absolute left-0 right-0 mt-2 bg-white/95 backdrop-blur-md border border-gray-200 rounded-xl shadow-2xl overflow-hidden z-9999 max-h-60 overflow-y-auto no-scrollbar">
             <div className="px-3 py-1.5 bg-gray-50 text-[10px] font-bold text-gray-400 uppercase tracking-wider border-b border-gray-100">
               Hasil Pencarian Provinsi
             </div>

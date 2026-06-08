@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 
@@ -99,6 +99,7 @@ export default function TentangKamiPage() {
                 src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1974&auto=format&fit=crop"
                 alt="nilai sosial"
                 className="h-56 w-full object-cover"
+                loading="lazy"
               />
 
               <div className="p-6">
@@ -113,9 +114,10 @@ export default function TentangKamiPage() {
             {/* Card 2 */}
             <div className="overflow-hidden rounded-3xl bg-[#f8f5f1] shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1526481280695-3c4691f241ac?q=80&w=1974&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1974&auto=format&fit=crop"
                 alt="kelangsungan fisik"
                 className="h-56 w-full object-cover"
+                loading="lazy"
               />
 
               <div className="p-6">
@@ -134,6 +136,7 @@ export default function TentangKamiPage() {
                 src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1974&auto=format&fit=crop"
                 alt="identitas bangsa"
                 className="h-56 w-full object-cover"
+                loading="lazy"
               />
 
               <div className="p-6">
@@ -166,46 +169,6 @@ export default function TentangKamiPage() {
           </Link>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-neutral-200 bg-[#f5f3ef]">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-12 md:grid-cols-3">
-          <div>
-            <h3 className="text-xl font-bold">Adiloka</h3>
-            <p className="mt-4 leading-7 text-neutral-600">
-              Kanal edukasi interaktif untuk melestarikan budaya Indonesia
-              melalui media digital.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold">Tentang Cepat</h4>
-            <ul className="mt-4 space-y-3 text-neutral-600">
-              <li>• Peta Interaktif</li>
-              <li>• Tentang Kami</li>
-              <li>• Blog Budaya</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold">Ikuti Kami</h4>
-
-            <div className="mt-4 flex items-center gap-4 text-2xl">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm transition hover:-translate-y-1">
-                📷
-              </div>
-
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm transition hover:-translate-y-1">
-                🎵
-              </div>
-
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm transition hover:-translate-y-1">
-                ▶️
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
