@@ -31,15 +31,9 @@ export default function Header() {
     <header className="relative bg-white shadow z-2000">
       <div className="flex items-center justify-between px-4 md:px-15 py-4">
         <div className="flex items-center gap-6 md:gap-15">
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/asset/Logo-Adiloka.svg"
-              alt="Logo Adiloka"
-              width={60}
-              height={60}
-              priority
-            />
-          </Link>
+          <h1 className="text-xl font-bold text-gray-900">
+            Adi<span className="text-red-600">Loka</span>
+          </h1>
 
           <nav className="hidden md:flex text-md items-center gap-10">
             <Link

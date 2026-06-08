@@ -199,26 +199,6 @@ export default function ProvinceGameDetail({
           <span>Mulai Quiz</span>
           <span className="text-xl">→</span>
         </Link>
-
-        <button
-          onClick={onComplete}
-          disabled={completing || isCompleted}
-          className={`cursor-pointer mt-5 w-full flex items-center justify-center gap-3 py-4 rounded-2xl text-base font-semibold shadow-md 
-            transition-all duration-300 active:scale-[0.98]
-            ${
-              isCompleted
-                ? "bg-green-600 hover:bg-green-700 text-white shadow-green-600/20 hover:shadow-xl hover:-translate-y-1"
-                : "bg-white border border-[#7B0000] text-[#7B0000] hover:bg-[#7B0000] hover:text-white hover:shadow-xl hover:-translate-y-1"
-            }
-            ${completing ? "opacity-70 cursor-not-allowed" : ""}
-          `}
-        >
-          {completing
-            ? "Menyimpan..."
-            : isCompleted
-              ? "✓ Permainan Selesai"
-              : "Tandai Wilayah Selesai"}
-        </button>
       </div>
     </aside>
   );
