@@ -13,7 +13,7 @@ type Props = {
 
 const INDONESIA_PROVINCES = [
   "Aceh",
-  "Sumandak Barat",
+  "Sumatera Barat",
   "Sumatera Utara",
   "Sumatera Barat",
   "Riau",
@@ -208,7 +208,7 @@ export default function MapToolbar({
         {isDropdownOpen && suggestions.length > 0 && (
           <div className="absolute left-0 right-0 mt-2 bg-white/95 backdrop-blur-md border border-gray-200 rounded-xl shadow-2xl overflow-hidden z-[9999] max-h-60 overflow-y-auto no-scrollbar">
             <div className="px-3 py-1.5 bg-gray-50 text-[10px] font-bold text-gray-400 uppercase tracking-wider border-b border-gray-100">
-              Saran Provinsi
+              Hasil Pencarian Provinsi
             </div>
             {suggestions.map((province) => (
               <div

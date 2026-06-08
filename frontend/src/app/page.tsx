@@ -23,8 +23,6 @@ export default function Home() {
   const [refreshRegions, setRefreshRegions] = useState(0);
   const [searchProvince, setSearchProvince] = useState("");
   const [searchTrigger, setSearchTrigger] = useState(0);
-
-  // LOGIKA BARU: Sidebar kiri dan kanan sekarang bisa terbuka secara mandiri
   const isSidebarLeftOpen = showPopularWeek;
   const isSidebarRightOpen = (selectedProvince || selectedPopularGame) !== null;
   const isSidebarOpen = isSidebarLeftOpen || isSidebarRightOpen;
@@ -32,15 +30,10 @@ export default function Home() {
   return (
     <div className="flex flex-col h-[calc(100vh-64px)] overflow-hidden">
       <div className="flex flex-1 overflow-hidden relative"> 
-        
-        {/* ========================================================= */}
-        {/* 1. SIDEBAR KIRI: Populer Minggu Ini (DIPINDAHKAN KE ATAS PETA) */}
-        {/* ========================================================= */}
         <div
           className={`h-full bg-white transition-all duration-300 ease-in-out overflow-y-auto z-20 border-r border-gray-100 shrink-0
             ${showPopularWeek ? "w-full md:w-80 lg:w-96 opacity-100" : "w-0 opacity-0 pointer-events-none border-none"}`}
         >
-          {/* Bungkus ekstra untuk memastikan komponen di dalamnya ter-scroll mandiri dengan baik */}
           <div className="w-full h-full min-w-[320px] lg:min-w-[384px]">
             <PopulerSidebar 
               refreshRegions={refreshRegions} 
@@ -48,10 +41,6 @@ export default function Home() {
             />
           </div>
         </div>
-
-        {/* ========================================================= */}
-        {/* 2. AREA TENGAH: Peta Utama Indonesia */}
-        {/* ========================================================= */}
         <div className="flex-1 relative h-full w-full overflow-hidden">
           <MapWrapper
             selectedProvince={selectedProvince}
@@ -64,18 +53,13 @@ export default function Home() {
             isSidebarOpen={isSidebarOpen}
           />
         </div>
-
-        {/* ========================================================= */}
-        {/* 3. SIDEBAR KANAN: Detail Game / Informasi Provinsi */}
-        {/* ========================================================= */}
         <div
           className={`h-full bg-white transition-all duration-300 ease-in-out overflow-y-auto z-20 border-l border-gray-100 shrink-0
             ${(selectedProvince || selectedPopularGame)
               ? "w-full md:w-105 opacity-100"
               : "w-0 opacity-0 pointer-events-none border-none"}`}
         >
-          {/* Bungkus ekstra untuk mengunci ukuran layout konten detail agar tidak ringsek saat transisi */}
-          <div className="w-full h-full min-w-[420px]">
+          <div className="w-full h-full min-w-105">
             <ProvinceSidebar
               selectedProvince={selectedProvince}
               setRefreshRegions={setRefreshRegions}
