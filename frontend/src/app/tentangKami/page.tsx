@@ -8,7 +8,7 @@ export default function TentangKamiPage() {
       {/* HERO */}
       <section className="relative overflow-hidden rounded-b-[60px] bg-[#d9d0c3]">
         <div
-          className="h-[520px] w-full bg-cover bg-center"
+          className="h-130 w-full bg-cover bg-center"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=2070&auto=format&fit=crop')",

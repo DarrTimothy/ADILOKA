@@ -23,7 +23,9 @@ export default function QuizPage() {
   const [showConfetti, setShowConfetti] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [finalScore, setFinalScore] = useState(0);
-
+  const [answers, setAnswers] = useState<
+    { question_id: number; option_id: number }[]
+  >([]);
   const [autoCompleting, setAutoCompleting] = useState(false);
 
   async function fetchQuiz() {
@@ -66,7 +68,6 @@ export default function QuizPage() {
         throw new Error(`HTTP Error: ${res?.status || "Unknown"}`);
       }
 
-      console.log("SUCCESS: Wilayah otomatis ditandai hijau via backend!");
     } catch (error) {
       console.error("AUTO COMPLETE GAME ERROR:", error);
     } finally {
@@ -108,12 +109,69 @@ export default function QuizPage() {
   const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
 
   function handleSelectOption(option: QuizOption) {
-    if (showResult) return;
+    if (showResult || !currentQuestion) return;
+
     setSelectedOptionId(option.id);
     setShowResult(true);
 
-    if (option.is_correct) {
-      setScore((prev) => prev + 1);
+    setAnswers((prev) => {
+      const updated = prev.filter((a) => a.question_id !== currentQuestion.id);
+
+      return [
+        ...updated,
+        {
+          question_id: currentQuestion.id,
+          option_id: option.id,
+        },
+      ];
+    });
+  }
+
+  async function submitQuiz() {
+    try {
+      const res = await fetchWithAuth(
+        `${process.env.NEXT_PUBLIC_API_URL}/quiz/${gameId}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            answers: answers,
+          }),
+        },
+      );
+
+      const json = await res.json();
+
+      if (json.success) {
+        await fetchQuizResult();
+      }
+    } catch (error) {
+      console.error("SUBMIT QUIZ ERROR:", error);
+    }
+  }
+
+  async function fetchQuizResult() {
+    try {
+      const res = await fetchWithAuth(
+        `${process.env.NEXT_PUBLIC_API_URL}/quiz/${gameId}/result`,
+      );
+
+      const json = await res.json();
+
+      if (json.success) {
+        setFinalScore(json.result.percentage);
+        setShowFinalResult(true);
+
+        if (json.result.percentage === 100) {
+          setShowConfetti(true);
+        }
+
+        triggerAutoCompleteGame();
+      }
+    } catch (error) {
+      console.error("FETCH RESULT ERROR:", error);
     }
   }
 
@@ -125,13 +183,7 @@ export default function QuizPage() {
       setSelectedOptionId(null);
       setShowResult(false);
     } else {
-      const finalScoreValue = Math.round((score / totalQuestions) * 100);
-      setFinalScore(finalScoreValue);
-      if (finalScoreValue === 100) {
-        setShowConfetti(true);
-      }
-      setShowFinalResult(true);
-      triggerAutoCompleteGame();
+      submitQuiz();
     }
   }
 

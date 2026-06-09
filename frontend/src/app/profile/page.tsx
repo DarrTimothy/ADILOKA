@@ -40,7 +40,7 @@ export default function ProfilePage() {
 
   if (percentage >= 75) {
     level = "Maestro Nusantara";
-    badgeColor = "bg-[#7B0000]/10 text-[#7B0000]";
+    badgeColor = "bg-[#7B0000] text-[#7B0000]";
   }
 
   return (
@@ -54,10 +54,9 @@ export default function ProfilePage() {
         priority
         className="object-contain opacity-[0.09] pointer-events-none scale-[2.5]"
       />
-      
+
       {/* Responsivitas Padding Container Utama */}
       <div className="max-w-5xl mx-auto px-4 md:px-6 py-6 md:py-10">
-        
         {/* CARD PROFILE */}
         {/* Mengubah rounded-4xl menjadi rounded-2xl di mobile agar tidak terlalu melengkung ekstrem */}
         <div className="relative overflow-hidden bg-linear-to-r from-[#7B0000] to-[#A52A2A] rounded-2xl md:rounded-4xl p-6 md:p-8 shadow-xl text-white">
@@ -76,9 +75,13 @@ export default function ProfilePage() {
 
             {/* Mengatur layout flex agar isi teks membungkus dengan rapi */}
             <div className="flex flex-col items-center md:items-start">
-              <h1 className="text-2xl md:text-3xl font-bold break-all">{user.user.username}</h1>
+              <h1 className="text-2xl md:text-3xl font-bold break-all">
+                {user.user.username}
+              </h1>
 
-              <p className="text-white/80 mt-1 text-sm md:text-base break-all">{user.user.email}</p>
+              <p className="text-white/80 mt-1 text-sm md:text-base break-all">
+                {user.user.email}
+              </p>
 
               <div
                 className={`mt-4 inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-semibold ${badgeColor}`}
@@ -103,7 +106,9 @@ export default function ProfilePage() {
           {/* Di mobile bertumpuk kebawah (grid-cols-1), di desktop kembali menyamping (md:grid-cols-3) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
             <div className="bg-[#F9F4F1] rounded-2xl p-4 md:p-5 text-center flex md:flex-col justify-between md:justify-center items-center md:items-center px-5 md:px-4">
-              <p className="text-xs md:text-sm text-gray-500">Wilayah Selesai</p>
+              <p className="text-xs md:text-sm text-gray-500">
+                Wilayah Selesai
+              </p>
               <p className="text-2xl md:text-3xl font-bold text-[#7B0000] md:mt-2">
                 {user.progress.completed_regions}
               </p>
@@ -144,7 +149,6 @@ export default function ProfilePage() {
               />
             </div>
           </div>
-
         </div>
       </div>
     </div>

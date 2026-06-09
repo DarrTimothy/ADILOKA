@@ -12,7 +12,7 @@ import Skeleton from "@/components/ui/Skeleton";
 type Props = {
   selectedProvince: Region | null;
   setRefreshRegions: React.Dispatch<React.SetStateAction<number>>;
-  onCloseSidebar?: () => void; 
+  onCloseSidebar?: () => void;
 };
 
 export default function ProvinceSidebar({
@@ -25,14 +25,17 @@ export default function ProvinceSidebar({
   const [loadingGames, setLoadingGames] = useState(false);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [games, setGames] = useState<Game[]>([]);
-  
-  // 1. HAPUS STATE LOKAL LAMA, DAN AMBIL AMUNISI BARU DARI CONTEXT DI BAWAH INI:
-  const { selectedPopularGame, setShowPopularWeek, setPreviewImage, setPreviewVideo } = useSidebar();
-  
+  const [showScoreModal, setShowScoreModal] = useState(false);
+  const [quizResult, setQuizResult] = useState<any>(null);
+  const {
+    selectedPopularGame,
+    setShowPopularWeek,
+    setPreviewImage,
+    setPreviewVideo,
+  } = useSidebar();
+
   const [isCompleted, setIsCompleted] = useState(false);
   const [completing, setCompleting] = useState(false);
-
-  // 2. FUNGSI CLOSEPREVIEW LOKAL SUDAH TIDAK DIPERLUKAN LAGI
 
   async function fetchGames(regionCode: string) {
     try {
@@ -68,6 +71,23 @@ export default function ProvinceSidebar({
     }
   }
 
+  async function handleShowScore() {
+    try {
+      const res = await fetchWithAuth(
+        `${process.env.NEXT_PUBLIC_API_URL}/quiz/${selectedGame?.id}/result`,
+      );
+
+      const json = await res.json();
+
+      if (json.success) {
+        setQuizResult(json.result);
+        setShowScoreModal(true);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   useEffect(() => {
     if (!selectedProvince?.bps_code) return;
 
@@ -80,6 +100,10 @@ export default function ProvinceSidebar({
 
     handleGameClick(selectedPopularGame);
   }, [selectedPopularGame]);
+
+  useEffect(() => {}, [showScoreModal]);
+
+  useEffect(() => {}, [quizResult]);
 
   async function handleGameClick(game: Game) {
     try {
@@ -222,7 +246,6 @@ export default function ProvinceSidebar({
   if (selectedGame) {
     return (
       <>
-        {/* 3. Di sini onPreviewImage & onPreviewVideo otomatis mengoperasikan state global context */}
         <ProvinceGameDetail
           selectedGame={selectedGame}
           selectedProvince={selectedProvince}
@@ -232,7 +255,29 @@ export default function ProvinceSidebar({
           onComplete={handleCompleteGame}
           onPreviewImage={setPreviewImage}
           onPreviewVideo={setPreviewVideo}
+          onShowScore={handleShowScore}
         />
+
+        {showScoreModal && quizResult && (
+          <div className="fixed inset-0 bg-black/60 z-9999 flex items-center justify-center p-4">
+            <div className="bg-white rounded-3xl p-8 w-full max-w-md text-center">
+              <h2 className="text-3xl font-bold text-[#7B0000]">Nilai Quiz</h2>
+
+              <p className="mt-6 text-gray-500">Nilai terakhir Anda</p>
+
+              <div className="mt-3 text-7xl font-black text-[#7B0000]">
+                {quizResult.percentage}
+              </div>
+
+              <button
+                onClick={() => setShowScoreModal(false)}
+                className="mt-8 w-full bg-[#7B0000] text-white py-4 rounded-2xl font-bold"
+              >
+                Kembali
+              </button>
+            </div>
+          </div>
+        )}
       </>
     );
   }

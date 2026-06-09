@@ -12,17 +12,17 @@ type Props = {
   onComplete: () => void;
   onPreviewImage: (url: string) => void;
   onPreviewVideo: (url: string) => void;
+  onShowScore: () => void;
 };
 
 export default function ProvinceGameDetail({
   selectedGame,
   selectedProvince,
   isCompleted,
-  completing,
   onBack,
-  onComplete,
   onPreviewImage,
   onPreviewVideo,
+  onShowScore,
 }: Props) {
   return (
     <aside className="w-full h-full bg-[#FCFCFC] border-r border-gray-100 overflow-y-auto">
@@ -181,24 +181,46 @@ export default function ProvinceGameDetail({
           </ol>
         </div>
 
-        <Link
-          href={`/quiz/${selectedGame.id}`}
-          className="
-            mt-8 w-full flex items-center justify-center gap-3
-            bg-[#7B0000]
-            hover:bg-[#5E0000]
-            text-white font-semibold text-base py-4
-            rounded-2xl
-            shadow-md shadow-[#7B0000]/20
-            hover:shadow-xl
-            hover:-translate-y-1
-            active:scale-[0.98]
-            transition-all duration-300
-          "
-        >
-          <span>Mulai Quiz</span>
-          <span className="text-xl">→</span>
-        </Link>
+        {isCompleted ? (
+          <button
+            onClick={onShowScore}
+            className="
+      mt-8 w-full flex items-center justify-center gap-3
+      bg-[#7B0000]
+      hover:bg-[#5E0000]
+      text-white font-semibold text-base py-4
+      rounded-2xl
+      shadow-md shadow-[#7B0000]/20
+      hover:shadow-xl
+      hover:-translate-y-1
+      active:scale-[0.98]
+      transition-all duration-300
+      cursor-pointer
+    "
+          >
+            <span>Lihat Nilai</span>
+            <span className="text-xl">→</span>
+          </button>
+        ) : (
+          <Link
+            href={`/quiz/${selectedGame.id}`}
+            className="
+      mt-8 w-full flex items-center justify-center gap-3
+      bg-[#7B0000]
+      hover:bg-[#5E0000]
+      text-white font-semibold text-base py-4
+      rounded-2xl
+      shadow-md shadow-[#7B0000]/20
+      hover:shadow-xl
+      hover:-translate-y-1
+      active:scale-[0.98]
+      transition-all duration-300
+    "
+          >
+            <span>Mulai Quiz</span>
+            <span className="text-xl">→</span>
+          </Link>
+        )}
       </div>
     </aside>
   );

@@ -29,12 +29,10 @@ export default function LoginPage() {
 
       await refreshUser();
 
-      // NOTIFIKASI SUKSES LOGIN
-      showNotif("Login berhasil! Selamat melanjutkan petualangan Anda 🧭", "success");
+      showNotif("Login berhasil! Selamat melanjutkan petualangan Anda", "success");
 
       router.push("/");
     } catch (err: any) {
-      // NOTIFIKASI ERROR JIKA KREDENSIAL SALAH ATAU SERVER ERROR
       showNotif(
         err.message || "Username atau password salah. Silakan coba lagi!",
         "error"

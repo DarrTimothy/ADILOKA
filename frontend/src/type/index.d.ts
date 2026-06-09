@@ -82,6 +82,11 @@ export interface Quiz {
   questions: QuizQuestion[];
 }
 
+export interface QuizAnswer {
+  question_id: number;
+  option_id: number;
+}
+
 export interface User {
   id: number;
   username: string;
