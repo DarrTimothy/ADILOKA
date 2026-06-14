@@ -152,11 +152,11 @@ class QuizSeeder extends Seeder
                     }
                 }
 
-                // MINIMAL 1 JAWABAN BENAR
-                if ($correctCount < 1) {
+                // Hanya 1 JAWABAN BENAR
+                if ($correctCount !== 1) {
 
                     $this->command->warn(
-                        "Quiz '{$quizData['title']}' memiliki soal tanpa jawaban benar"
+                        "Quiz '{$quizData['title']}' memiliki soal dengan jumlah jawaban benar lebih dari satu"
                     );
 
                     $isInvalid = true;
