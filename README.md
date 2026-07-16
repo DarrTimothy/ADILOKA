@@ -65,6 +65,7 @@ Pastikan perangkat telah terpasang:
 - npm 10 atau lebih baru
 - PostgreSQL
 - Git
+- Git LFS
 
 ---
 
@@ -74,7 +75,15 @@ Pastikan perangkat telah terpasang:
 
 ```bash
 git clone <repository-url>
-cd adiloka
+cd Adiloka
+```
+
+**Catatan**
+Proyek ini menggunakan **Git LFS (Large File Storage)** untuk menyimpan aset media seperti gambar dan video permainan tradisional. Pastikan menjalankan `git lfs pull` setelah melakukan clone repository agar seluruh file media berhasil diunduh.
+
+```bash
+git lfs install
+git lfs pull
 ```
 
 ### 2. Setup Backend
