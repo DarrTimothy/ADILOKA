@@ -26,7 +26,6 @@ export default function RegisterPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 1. Email validation
     if (!isValidEmail(email)) {
       showNotif(
         "Alamat email tidak valid. Silakan masukkan email dengan format yang benar.",
@@ -35,20 +34,17 @@ export default function RegisterPage() {
       return;
     }
 
-    // 2. Password rule validation
     const passwordError = validatePassword(password);
     if (passwordError) {
       showNotif(passwordError, "error");
       return;
     }
 
-    // 3. Confirm password
     if (password !== confirmPassword) {
       showNotif("Password dan konfirmasi password tidak sama.", "error");
       return;
     }
 
-    // 4. Agreement
     if (!agree) {
       showNotif(
         "Anda harus menyetujui syarat dan ketentuan serta kebijakan privasi.",

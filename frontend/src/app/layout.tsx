@@ -4,7 +4,7 @@ import "./globals.css";
 import "leaflet/dist/leaflet.css";
 import { SidebarProvider } from "@/context/SidebarContext";
 import { AuthProvider } from "@/context/AuthContext";
-import { NotifProvider } from "@/context/NotifContext"; // <--- 1. IMPORT NOTIFPROVIDER BARU ANDA
+import { NotifProvider } from "@/context/NotifContext"; 
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 const geistSans = Geist({

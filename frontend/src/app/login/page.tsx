@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
 import { login } from "@/service/auth";
 import { useAuth } from "@/context/AuthContext";
-import { useNotif } from "@/context/NotifContext"; // 1. IMPORT HOOK NOTIFIKASI
+import { useNotif } from "@/context/NotifContext"; 
 
 export default function LoginPage() {
   const router = useRouter();
   const { refreshUser } = useAuth();
-  const { showNotif } = useNotif(); // 2. INISIALISASI HOOK
+  const { showNotif } = useNotif(); 
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
