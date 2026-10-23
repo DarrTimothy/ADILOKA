@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class TraditionalGameRequest extends RequestForm
+class TraditionalGamesRequest extends RequestForm
 {
     public function authorize(): bool
     {

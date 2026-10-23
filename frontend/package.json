@@ -1,5 +1,5 @@
 {
-  "name": "belajar-leaflet",
+  "name": "frontend-Adiloka",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   "dependencies": {
     "leaflet": "^1.9.4",
     "lucide-react": "^0.563.0",
-    "next": "^16.2.6",
+    "next": "^16.4.1",
     "react": "19.2.3",
     "react-confetti": "^6.4.0",
     "react-dom": "19.2.3",
